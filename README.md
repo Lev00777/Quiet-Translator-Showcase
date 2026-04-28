@@ -15,13 +15,13 @@ In industrial environments, heavy machinery and ambient noise make communication
 ## 📱 Screenshots (UI Showcase)
 
 <p align="center">
-  <img src="Screen-224.jpg" width="180" alt="Home Screen">
-  <img src="Screen-124.jpg" width="180" alt="Recording Mode">
-  <img src="Screen-203.jpg" width="180" alt="Translated Text View">
+  <img src="Screenshot_20260427_200224.jpg" width="180" alt="Home Screen">
+  <img src="Screenshot_20260427_200124.jpg" width="180" alt="Recording Mode">
+  <img src="Screenshot_20260427_200203.jpg" width="180" alt="Translated Text View">
 </p>
 <p align="center">
-  <img src="Screen-058.jpg" width="180" alt="Settings Page">
-  <img src="Screen-200.jpg" width="180" alt="AWS Setup Logs">
+  <img src="Screenshot_20260427_200058.jpg" width="180" alt="Settings Page">
+  <img src="Screenshot_20260427_200020.jpg" width="180" alt="AWS Setup Logs">
 </p>
 
 ## 🛠 Architecture & Tech Stack
