@@ -2,9 +2,7 @@
 
 *Real-time AI voice translation pipeline designed specifically for high-noise industrial and assembly environments.*
 
-Leonardo_Lightning_A_digital_illustration_of_a_stylized_lion_h_3.jpg
-
-https://github.com/Lev00777/Quiet-Translator-Showcase/blob/main/Leonardo_Lightning_A_digital_illustration_of_a_stylized_lion_h_3.jpg
+![App Icon](Leonardo_Lightning_A_digital_illustration_of_a_stylized_lion_h_3.jpg)
 
 ## 🎯 The Problem
 In industrial environments, heavy machinery and ambient noise make communication between team members difficult. Traditional translation apps fail because their standard Bluetooth and microphone configurations cannot isolate voice from industrial noise, and waiting for full-sentence translation causes unacceptable delays on the floor.
