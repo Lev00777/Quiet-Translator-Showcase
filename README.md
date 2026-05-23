@@ -19,6 +19,7 @@ In industrial environments, heavy machinery and ambient noise make communication
   <img src="Screenshot_20260504_232449.jpg" width="180" alt="Home Screen">
   <img src="Screenshot_20260504_232412.jpg" width="180" alt="Recording Mode">
   <img src="Screenshot_20260504_232420.jpg" width="180" alt="Translated Text View">
+  <img src="Screenshot_20260504_232402.jpg" width="180" alt="Translated Text View">
 </p>
 
 ## 🛠 Architecture & Tech Stack
