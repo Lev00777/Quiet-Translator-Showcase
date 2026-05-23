@@ -17,7 +17,7 @@ In industrial environments, heavy machinery and ambient noise make communication
 <p align="center">
   <img src="Screenshot_20260504_231935.jpg" width="180" alt="AWS Setup Logs">
   <img src="Screenshot_20260504_232449.jpg" width="180" alt="Home Screen">
-  <img src="Screenshot_20260427_200124.jpg" width="180" alt="Recording Mode">
+  <img src="Screenshot_20260504_232420.jpg" width="180" alt="Recording Mode">
   <img src="Screenshot_20260427_200203.jpg" width="180" alt="Translated Text View">
 </p>
 
