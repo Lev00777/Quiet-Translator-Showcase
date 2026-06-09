@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Quiet Translator</title>
+<meta name="description" content="Privacy Policy for Quiet Translator by NeuroOrbit AI. Zero data retention, GDPR compliant.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cyan: #00e5ff;
+    --cyan-dim: rgba(0,229,255,.12);
+    --cyan-glow: rgba(0,229,255,.35);
+    --bg: #03080f;
+    --text: #cde8f0;
+    --text-dim: rgba(205,232,240,.55);
+    --border: rgba(0,229,255,.12);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+  #starfield { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+  body::after { content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.04) 2px, rgba(0,0,0,.04) 4px); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: linear-gradient(180deg, rgba(3,8,15,.97) 0%, transparent 100%); border-bottom: 0.5px solid var(--border); }
+  .nav-logo { font-family: 'Orbitron', monospace; font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 3px; text-decoration: none; text-shadow: 0 0 20px var(--cyan-glow); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-decoration: none; letter-spacing: 2px; text-transform: uppercase; transition: color .2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+  .nav-back { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--cyan); text-decoration: none; letter-spacing: 2px; border: 0.5px solid rgba(0,229,255,.3); padding: 6px 14px; border-radius: 2px; transition: all .2s; }
+  .nav-back:hover { background: var(--cyan-dim); }
+  .wrap { position: relative; z-index: 2; max-width: 860px; margin: 0 auto; padding: 120px 32px 80px; }
+  .doc-header { margin-bottom: 60px; }
+  .doc-badge { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--cyan); border: 0.5px solid rgba(0,229,255,.3); padding: 5px 14px; border-radius: 2px; background: var(--cyan-dim); display: inline-block; margin-bottom: 24px; }
+  .doc-title { font-family: 'Orbitron', monospace; font-size: clamp(28px, 5vw, 48px); font-weight: 900; color: #fff; text-shadow: 0 0 30px var(--cyan-glow); margin-bottom: 12px; line-height: 1.1; }
+  .doc-title span { color: var(--cyan); }
+  .doc-meta { font-family: 'Share Tech Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
+  .doc-meta span { color: var(--cyan); margin: 0 8px; }
+  .cyber-line { height: 0.5px; background: linear-gradient(90deg, var(--cyan), rgba(0,229,255,.1), transparent); margin: 40px 0; }
+  .doc-section { margin-bottom: 48px; }
+  .section-tag { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: 3px; color: var(--cyan); text-transform: uppercase; opacity: .6; margin-bottom: 6px; display: block; }
+  h2 { font-family: 'Orbitron', monospace; font-size: 15px; font-weight: 700; color: var(--cyan); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 0.5px solid var(--border); }
+  p { color: var(--text-dim); margin-bottom: 14px; font-size: 15px; }
+  p strong { color: var(--text); font-weight: 600; }
+  ul { margin: 0 0 14px 0; padding: 0; list-style: none; }
+  ul li { color: var(--text-dim); font-size: 15px; padding: 6px 0 6px 20px; position: relative; border-bottom: 0.5px solid rgba(0,229,255,.05); }
+  ul li::before { content: '→'; position: absolute; left: 0; color: var(--cyan); font-family: 'Share Tech Mono', monospace; font-size: 11px; }
+  ul li strong { color: var(--text); }
+  .data-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+  .data-table th { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); padding: 10px 14px; border-bottom: 1px solid rgba(0,229,255,.25); text-align: left; background: rgba(0,229,255,.04); }
+  .data-table td { padding: 10px 14px; color: var(--text-dim); border-bottom: 0.5px solid rgba(0,229,255,.06); vertical-align: top; }
+  .data-table td a { color: var(--cyan); text-decoration: none; font-size: 12px; }
+  .data-table td a:hover { text-decoration: underline; }
+  .data-table tr:hover td { background: rgba(0,229,255,.03); }
+  .highlight-box { background: rgba(0,229,255,.04); border: 0.5px solid rgba(0,229,255,.2); border-left: 2px solid var(--cyan); border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 20px 0; }
+  .highlight-box p { margin: 0; font-size: 14px; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  @media (max-width: 600px) { .contact-grid { grid-template-columns: 1fr; } }
+  .contact-item { padding: 16px; background: var(--cyan-dim); border: 0.5px solid var(--border); border-radius: 4px; }
+  .contact-label { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: 2px; color: var(--cyan); text-transform: uppercase; display: block; margin-bottom: 6px; }
+  .contact-value { font-size: 14px; color: var(--text); }
+  footer { position: relative; z-index: 2; border-top: 0.5px solid var(--border); padding: 32px; text-align: center; margin-top: 40px; }
+  .footer-logo { font-family: 'Orbitron', monospace; font-size: 10px; letter-spacing: 3px; color: var(--cyan); margin-bottom: 16px; }
+  .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .footer-links a { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-decoration: none; letter-spacing: 1px; transition: color .2s; }
+  .footer-links a:hover { color: var(--cyan); }
+  .footer-copy { font-family: 'Share Tech Mono', monospace; font-size: 9px; color: rgba(205,232,240,.2); letter-spacing: 1px; }
+  @media (max-width: 600px) { nav { padding: 14px 20px; } .nav-links { display: none; } .wrap { padding: 100px 20px 60px; } }
+</style>
+</head>
+<body>
+<canvas id="starfield"></canvas>
+<nav>
+  <a href="index.html" class="nav-logo">&#10216; Quiet Translator &#10217;</a>
+  <div class="nav-links">
+    <a href="privacy.html" class="active">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="index.html" class="nav-back">Back to App</a>
+  </div>
+</nav>
+<div class="wrap">
+  <div class="doc-header">
+    <div class="doc-badge">Legal Document</div>
+    <h1 class="doc-title">Privacy <span>Policy</span></h1>
+    <p class="doc-meta">
+      Effective <span>//</span> May 2, 2026
+      <span>//</span> Last Updated: May 2, 2026
+      <span>//</span> NeuroOrbit AI
+    </p>
+  </div>
+
+  <div class="highlight-box">
+    <p><strong>TL;DR:</strong> We do not store your audio. We do not store your translations. Your conversations are yours alone. We collect only what is necessary to run the app.</p>
+  </div>
+
+  <div class="cyber-line"></div>
+
+  <!-- Data Controller -->
+  <div class="doc-section">
+    <span class="section-tag">// Data Controller</span>
+    <h2>Data Controller</h2>
+    <p><strong>NeuroOrbit AI</strong> — Montreal, Quebec, Canada</p>
+    <p>Contact: <strong>mission@neuroorbitai.com</strong></p>
+  </div>
+
+  <!-- 1 -->
+  <div class="doc-section">
+    <span class="section-tag">// 01</span>
+    <h2>Introduction</h2>
+    <p>Your privacy is our top priority. Quiet Translator is designed from the ground up as a zero-retention application. Voice input is processed in real time and displayed on screen — nothing is recorded, saved, or stored anywhere.</p>
+    <p>This Privacy Policy explains exactly what data we collect, why, and what rights you have.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="doc-section">
+    <span class="section-tag">// 02</span>
+    <h2>Microphone Access and Audio Data</h2>
+    <p>Quiet Translator requires access to your device microphone solely to provide real-time speech translation.</p>
+    <p>Your audio is streamed securely over HTTPS to the following AI service providers:</p>
+    <table class="data-table">
+      <tr><th>Provider</th><th>Purpose</th></tr>
+      <tr><td>OpenAI (Whisper)</td><td>Speech transcription</td></tr>
+      <tr><td>Deepgram</td><td>Real-time transcription</td></tr>
+      <tr><td>AssemblyAI</td><td>Real-time transcription</td></tr>
+      <tr><td>DeepL via AWS Serverless Proxy</td><td>Text translation</td></tr>
+    </table>
+    <div class="highlight-box">
+      <p><strong>We do NOT save, record, or store any audio files — on your device or on our servers.</strong> Audio is streamed in real time and immediately discarded after processing. Server-side audio retention: <strong>0 days.</strong></p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="doc-section">
+    <span class="section-tag">// 03</span>
+    <h2>No Transcript Storage</h2>
+    <p>Translated text is displayed on screen during your active session only. It is not stored in any database, log, or file after the session ends.</p>
+    <div class="highlight-box">
+      <p>Server-side transcript retention: <strong>0 days.</strong> On-device transcript retention: <strong>0 days.</strong></p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="doc-section">
+    <span class="section-tag">// 04</span>
+    <h2>Metadata We Collect</h2>
+    <p>For billing, analytics, and account management we collect only the following anonymized metadata:</p>
+    <ul>
+      <li><strong>User ID</strong> — pseudonymous internal identifier</li>
+      <li><strong>Language pairs used</strong> — e.g., French to English</li>
+      <li><strong>Session duration</strong> — in seconds</li>
+      <li><strong>API character counts</strong> — for billing purposes</li>
+      <li><strong>Device OS and app version</strong> — for crash diagnostics</li>
+    </ul>
+    <p>We do <strong>not</strong> collect the content of your conversations.</p>
+    <p><strong>Account data:</strong> your email address and hashed password, stored solely for authentication and subscription management.</p>
+    <div class="highlight-box">
+      <p><strong>Metadata retention:</strong> 24 months from last activity, then automatic permanent deletion.</p>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="doc-section">
+    <span class="section-tag">// 05</span>
+    <h2>Legal Basis for Processing (GDPR Art. 6)</h2>
+    <table class="data-table">
+      <tr><th>Processing Activity</th><th>Legal Basis</th></tr>
+      <tr><td>Real-time audio streaming for translation</td><td>Performance of contract — Art. 6(1)(b)</td></tr>
+      <tr><td>Billing metadata</td><td>Performance of contract — Art. 6(1)(b)</td></tr>
+      <tr><td>Analytics and product improvement</td><td>Legitimate interests — Art. 6(1)(f)</td></tr>
+      <tr><td>Marketing communications</td><td>Your consent — Art. 6(1)(a)</td></tr>
+      <tr><td>Legal compliance</td><td>Legal obligation — Art. 6(1)(c)</td></tr>
+    </table>
+  </div>
+
+  <!-- 6 -->
+  <div class="doc-section">
+    <span class="section-tag">// 06</span>
+    <h2>Third-Party AI Sub-Processors</h2>
+    <p>Audio streaming is processed by third-party AI providers acting as data processors under signed Data Processing Agreements (DPAs). These providers do not retain your audio after processing.</p>
+    <table class="data-table">
+      <tr><th>Sub-Processor</th><th>Service</th><th>Privacy Policy</th></tr>
+      <tr><td>OpenAI</td><td>Whisper transcription</td><td><a href="https://openai.com/policies/privacy-policy" target="_blank">openai.com/policies/privacy-policy</a></td></tr>
+      <tr><td>Deepgram</td><td>Real-time transcription</td><td><a href="https://deepgram.com/privacy" target="_blank">deepgram.com/privacy</a></td></tr>
+      <tr><td>AssemblyAI</td><td>Real-time transcription</td><td><a href="https://assemblyai.com/legal/privacy-policy" target="_blank">assemblyai.com/legal/privacy-policy</a></td></tr>
+      <tr><td>DeepL</td><td>Text translation</td><td><a href="https://deepl.com/en/privacy" target="_blank">deepl.com/en/privacy</a></td></tr>
+    </table>
+  </div>
+
+  <!-- 7 -->
+  <div class="doc-section">
+    <span class="section-tag">// 07</span>
+    <h2>International Data Transfers</h2>
+    <p>Data may be processed on servers located in the United States and other countries.</p>
+    <ul>
+      <li><strong>EU/EEA and UK users:</strong> transfers are carried out under Standard Contractual Clauses (SCCs) adopted by the European Commission (Decision 2021/914)</li>
+      <li><strong>Users in the People's Republic of China:</strong> cross-border transfers occur only with your explicit consent in accordance with PIPL Chapter III</li>
+    </ul>
+  </div>
+
+  <!-- 8 -->
+  <div class="doc-section">
+    <span class="section-tag">// 08</span>
+    <h2>Your Rights</h2>
+    <p>Depending on your jurisdiction, you have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> the personal data we hold about you</li>
+      <li><strong>Correct</strong> inaccurate data</li>
+      <li><strong>Erase</strong> your data — right to be forgotten</li>
+      <li><strong>Port</strong> your data to another service</li>
+      <li><strong>Object</strong> to processing based on legitimate interests</li>
+      <li><strong>Withdraw consent</strong> at any time without affecting prior lawful processing</li>
+    </ul>
+    <p><strong>California residents (CCPA/CPRA):</strong> You have the right to know what personal information we collect, the right to delete it, and the right to opt out of the sale of personal information. We do not sell personal information.</p>
+    <p>Submit requests to: <strong>mission@neuroorbitai.com</strong></p>
+    <p>We respond within 30 days (45 days for CCPA requests).</p>
+    <p>You may also file a complaint with your local supervisory authority — for example, your EU Member State DPA, the UK ICO, the CNIL (France), or the ANPD (Brazil).</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="doc-section">
+    <span class="section-tag">// 09</span>
+    <h2>Data Security</h2>
+    <p>We implement industry-standard security measures including TLS 1.3 encryption in transit, AES-256 encryption at rest for account data, strict access controls, and regular security reviews.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="doc-section">
+    <span class="section-tag">// 10</span>
+    <h2>Changes to This Policy</h2>
+    <p>We will notify you of any material changes via email and/or in-app notification at least 14 days before changes take effect. Continued use of the application after the effective date constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <div class="cyber-line"></div>
+
+  <!-- 11 -->
+  <div class="doc-section">
+    <span class="section-tag">// 11 — Contact</span>
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <span class="contact-label">Privacy Inquiries</span>
+        <span class="contact-value">mission@neuroorbitai.com</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Developer</span>
+        <span class="contact-value">NeuroOrbit AI — Montreal, Canada</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">&#10216; NeuroOrbit AI &#10217;</div>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="index.html">Back to App</a>
+  </div>
+  <div class="footer-copy">2026 NeuroOrbit AI · Montreal, Canada · All rights reserved</div>
+</footer>
+
+<script>
+const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
+let stars = [];
+function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+function init() {
+  stars = [];
+  for (let i = 0; i < 300; i++) {
+    stars.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*1.2+0.2, a: Math.random(), speed: Math.random()*0.003+0.001, cyan: Math.random()<0.2 });
+  }
+}
+function draw() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const mw = ctx.createLinearGradient(canvas.width*.2,0,canvas.width*.8,canvas.height);
+  mw.addColorStop(0,'transparent'); mw.addColorStop(.5,'rgba(180,200,255,0.03)'); mw.addColorStop(1,'transparent');
+  ctx.fillStyle=mw; ctx.fillRect(0,0,canvas.width,canvas.height);
+  stars.forEach(s => {
+    s.a+=s.speed;
+    const alpha=(Math.sin(s.a)+1)/2*0.6+0.1;
+    ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle=s.cyan?`rgba(0,229,255,${alpha})`:`rgba(200,220,255,${alpha*.7})`;
+    ctx.fill();
+  });
+  requestAnimationFrame(draw);
+}
+window.addEventListener('resize',()=>{resize();init();});
+resize(); init(); draw();
+</script>
+</body>
+</html>
