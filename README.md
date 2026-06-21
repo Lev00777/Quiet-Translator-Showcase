@@ -15,13 +15,15 @@ In industrial environments, heavy machinery and ambient noise make communication
 ## 📱 Screenshots (UI Showcase)
 
 <p align="center">
-  <img src="Screenshot_20260504_231935.jpg" width="180" alt="AWS Setup Logs">
-  <img src="Screenshot_20260504_232449.jpg" width="180" alt="Home Screen">
-  <img src="Screenshot_20260504_232412.jpg" width="180" alt="Recording Mode">
-  <img src="Screenshot_20260504_232420.jpg" width="180" alt="Translated Text View">
-  <img src="Screenshot_20260504_232402.jpg" width="180" alt="Translated Text View">
-  <img src="Screenshot_20260504_232049.jpg" width="180" alt="Translated Text View">
-  <img src="Screenshot_20260504_232534.jpg" width="180" alt="Translated Text View">
+  <img src="screen-002.png" width="180" alt="AWS Setup Logs">
+  <img src="screen-006.png" width="180" alt="Home Screen">
+  <img src="screen-007.png" width="180" alt="Recording Mode">
+  <img src="screen-008.png" width="180" alt="Translated Text View">
+  <img src="screen-009.png" width="180" alt="Translated Text View">
+  <img src="screen-011.png" width="180" alt="Translated Text View">
+  <img src="screen-013.png" width="180" alt="Translated Text View">
+  <img src="screen-015.png" width="180" alt="Translated Text View">
+  <img src="screen-016.png" width="180" alt="Translated Text View">
 </p>
 
 ## 🛠 Architecture & Tech Stack
