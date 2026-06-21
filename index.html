@@ -502,9 +502,9 @@
   </div>
 
   <div class="modes" style="margin-top:48px;" id="modeChips">
-    <div class="mode-chip" data-mode="0">QUIET</div>
-    <div class="mode-chip active" data-mode="1">NORMAL</div>
-    <div class="mode-chip" data-mode="2">NOISY</div>
+    <div class="mode-chip" data-mode="0">MEET</div>
+    <div class="mode-chip active" data-mode="1">CHAT</div>
+    <div class="mode-chip" data-mode="2">TALK</div>
   </div>
   <div class="mode-desc">
     <div class="mode-desc-text visible" id="modeDesc">
@@ -744,22 +744,22 @@ reveals.forEach(r => observer.observe(r));
 // Mode chips with descriptions
 const modeData = [
   {
-    label: 'QUIET',
-    lines: ['Optimized for silent environments.\nConferences, offices, quiet rooms.\nUltra-sensitive voice detection.']
+    label: 'MEET',
+    lines: ['For meetings, lectures, and talks.\nHigh-precision, context-aware engine.\nBest in quiet rooms and conferences.']
   },
   {
-    label: 'NORMAL',
-    lines: ['Balanced for everyday use.\nStreet conversations and meetings.\nStandard pause detection.']
+    label: 'CHAT',
+    lines: ['For quick exchanges and short phrases.\nLow-latency live streaming.\nShops, counters, on the move.']
   },
   {
-    label: 'NOISY',
-    lines: ['Built for industrial floors.\nNoise suppression tuned in.\nHold the mic close for best results.']
+    label: 'TALK',
+    lines: ['For live, back-and-forth conversation.\nMulti-speaker, real-time diarization.\nCaptures every speaker as they talk.']
   }
 ];
 
 const chips = document.querySelectorAll('.mode-chip');
 const descEl = document.getElementById('modeDesc');
-let active = 1;
+let active = 0;
 let timer = null;
 let descTimer = null;
 
@@ -786,7 +786,7 @@ function startCycle() {
 }
 
 // Show initial
-showMode(1);
+showMode(0);
 startCycle();
 </script>
 </body>
