@@ -446,6 +446,15 @@
   }
   .mode-desc-text.visible { opacity: 1; transform: translateY(0); }
 
+  /* — VIDEO DEMO — */
+    .video-demo { text-align: center; padding: 20px; }
+    .video-demo video {
+      max-width: 340px; width: 100%;
+      border-radius: 24px;
+      border: 1px solid rgba(120,180,255,.3);
+      box-shadow: 0 0 40px rgba(80,140,255,.25);
+    }
+
   /* ── MOBILE ── */
   @media (max-width: 600px) {
     nav { padding: 14px 20px; }
@@ -468,6 +477,7 @@
   <div class="nav-links">
     <a href="#features">Features</a>
     <a href="#screenshots">Screenshots</a>
+    <a href="#demo">Demo</a>
     <a href="#tech">Tech</a>
     <a href="privacy.html">Privacy</a>
   </div>
@@ -571,6 +581,17 @@
   </div>
 </section>
 
+<!-- VIDEO DEMO -->
+    <section id="demo" class="screenshots-section">
+      <div style="max-width:1100px;margin:0 auto;">
+        <div class="section-label">// DEMO</div>
+        <h2 class="section-title">See It Work</h2>
+      </div>
+      <div class="video-demo reveal">
+        <video src="demo.mp4" controls autoplay muted loop playsinline></video>
+      </div>
+    </section>
+  
 <!-- SCREENSHOTS -->
 <section id="screenshots" class="screenshots-section">
   <div style="max-width:1100px;margin:0 auto;">
