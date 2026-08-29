@@ -446,14 +446,21 @@
   }
   .mode-desc-text.visible { opacity: 1; transform: translateY(0); }
 
-  /* — VIDEO DEMO — */
-    .video-demo { text-align: center; padding: 20px; }
-    .video-demo video {
-      max-width: 340px; width: 100%;
-      border-radius: 24px;
-      border: 1px solid rgba(120,180,255,.3);
-      box-shadow: 0 0 40px rgba(80,140,255,.25);
-    }
+    /* — VIDEO DEMO — */
+  .video-demo {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .video-demo video {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid rgba(120,180,255,.3);
+    box-shadow: 0 0 40px rgba(80,140,255,.25);
+  }
 
   /* ── MOBILE ── */
   @media (max-width: 600px) {
