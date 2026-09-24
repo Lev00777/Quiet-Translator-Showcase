@@ -501,20 +501,42 @@
   }
   .mode-desc-text.visible { opacity: 1; transform: translateY(0); }
 
-    /* — VIDEO DEMO — */
+  /* — VIDEO DEMOS — */
   .video-demo {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 300px));
     justify-content: center;
-    padding: 20px;
+    align-items: start;
+    gap: 28px;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px 20px 0;
   }
-  .video-demo video {
+  .video-card { min-width: 0; text-align: center; }
+  .video-card video {
+    display: block;
     width: 100%;
-    max-width: 300px;
-    aspect-ratio: 9/16;
-    object-fit: cover;
+    aspect-ratio: 9 / 16;
+    object-fit: contain;
+    background: #03080f;
     border-radius: 24px;
     border: 1px solid rgba(120,180,255,.3);
     box-shadow: 0 0 40px rgba(80,140,255,.25);
+  }
+  .video-card h3 {
+    margin: 18px 0 6px;
+    color: #fff;
+    font-family: 'Orbitron', monospace;
+    font-size: 13px;
+    letter-spacing: .5px;
+  }
+  .video-card p {
+    color: var(--text-dim);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  @media (max-width: 700px) {
+    .video-demo { grid-template-columns: minmax(0, 300px); gap: 40px; }
   }
 
   /* ── MOBILE ── */
@@ -666,16 +688,28 @@
   </div>
 </section>
 
-<!-- VIDEO DEMO -->
-    <section id="demo" class="screenshots-section">
-      <div style="max-width:1100px;margin:0 auto;">
-        <div class="section-label">// DEMO</div>
-        <h2 class="section-title">See It Work</h2>
-      </div>
-      <div class="video-demo">
-        <video src="Demo.mp4" poster="quiet-translator-og.png" controls autoplay muted loop playsinline></video>
-      </div>
-    </section>
+<!-- VIDEO DEMOS -->
+<section id="demo" class="screenshots-section">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="section-label">// DEMO</div>
+    <h2 class="section-title">See Quiet Translator in Real Life</h2>
+  </div>
+  <div class="video-demo">
+    <div class="video-card">
+      <video src="Demo.mp4" poster="quiet-translator-og.png" controls autoplay muted loop playsinline preload="metadata" aria-label="Quiet Translator app demonstration"></video>
+      <h3>See It Work</h3>
+      <p>A closer look at Quiet Translator.</p>
+    </div>
+    <div class="video-card">
+      <video controls playsinline preload="metadata" aria-label="Truck driver at a warehouse — language barrier story">
+        <source src="Truck%20driver.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <h3>On the Road</h3>
+      <p>A truck driver encounters a language barrier at a warehouse.</p>
+    </div>
+  </div>
+</section>
   
 <!-- SCREENSHOTS -->
 <section id="screenshots" class="screenshots-section">
