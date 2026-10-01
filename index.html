@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiet Translator — Real-Time AI Voice Translation</title>
-<meta name="description" content="Quiet Translator helps you understand live conversations in your own language — at work, while traveling, and in everyday life. Available on iOS, Android closed beta.">
+<title>Quiet Translator — Understand What's Being Said</title>
+<meta name="description" content="Quiet Translator turns live speech into your language in real time — for people living somewhere they're still learning the language. Available on iPhone and Android.">
 
 <!-- Open Graph — LinkedIn / Twitter preview -->
-<meta property="og:title" content="Quiet Translator — Real-Time AI Voice Translation">
-<meta property="og:description" content="Understand live conversations in your language. Available now on the App Store; Android closed beta open to testers.">
+<meta property="og:title" content="Quiet Translator — Stop Nodding Along">
+<meta property="og:description" content="You're in the room, but out of the loop. Quiet Translator turns live speech into your language, as it happens.">
 <meta property="og:image" content="https://lev00777.github.io/Quiet-Translator-Showcase/quiet-translator-og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -87,72 +87,36 @@
   .hero {
     min-height: 100vh;
     display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    padding: 120px 24px 80px;
+    align-items: center; justify-content: flex-start;
+    padding: 104px 24px 80px;
     position: relative; text-align: center;
-  }
-
-  .hero-badge {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
-    color: var(--cyan); border: 0.5px solid var(--cyan-glow);
-    padding: 6px 16px; border-radius: 2px;
-    background: var(--cyan-dim);
-    margin-bottom: 32px;
-    animation: fadeup .8s ease both;
   }
 
   .hero-title {
     font-family: 'Orbitron', monospace;
-    font-size: clamp(36px, 7vw, 80px);
-    font-weight: 900; line-height: 1.05;
+    font-size: clamp(27px, 6.2vw, 66px);
+    font-weight: 900; line-height: 1.08;
     color: #fff;
     text-shadow: 0 0 40px var(--cyan-glow), 0 0 80px rgba(0,229,255,.2);
-    margin-bottom: 12px;
-    animation: fadeup .8s .1s ease both;
+    margin-bottom: 14px;
+    max-width: 14ch;
+    animation: fadeup .8s ease both;
   }
-  .hero-title span { color: var(--cyan); }
 
   .hero-sub {
-    font-family: 'Orbitron', monospace;
-    font-size: clamp(12px, 2vw, 18px);
-    font-weight: 400; color: var(--cyan);
-    letter-spacing: 4px; text-transform: uppercase;
-    margin-bottom: 24px;
-    animation: fadeup .8s .2s ease both;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: clamp(10px, 1.6vw, 12px);
+    color: var(--cyan);
+    letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 18px;
+    animation: fadeup .8s .1s ease both;
   }
 
   .hero-desc {
-    max-width: 600px; font-size: 17px; line-height: 1.7;
-    color: var(--text-dim); margin-bottom: 48px;
-    animation: fadeup .8s .3s ease both;
+    max-width: 44ch; font-size: 16px; line-height: 1.6;
+    color: var(--text-dim); margin-bottom: 30px;
+    animation: fadeup .8s .2s ease both;
   }
-
-  .hero-btns {
-    display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
-    animation: fadeup .8s .4s ease both;
-  }
-
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 10px;
-    padding: 16px 36px;
-    background: var(--cyan); color: #03080f;
-    font-family: 'Orbitron', monospace;
-    font-size: 13px; font-weight: 700; letter-spacing: 2px;
-    text-decoration: none; border-radius: 2px;
-    box-shadow: 0 0 30px var(--cyan-glow), 0 0 60px rgba(0,229,255,.15);
-    transition: all .2s;
-    position: relative; overflow: hidden;
-  }
-  .btn-primary::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.3) 50%, transparent 100%);
-    transform: translateX(-100%);
-    transition: transform .4s;
-  }
-  .btn-primary:hover::before { transform: translateX(100%); }
-  .btn-primary:hover { box-shadow: 0 0 50px var(--cyan-glow), 0 0 100px rgba(0,229,255,.2); transform: translateY(-2px); }
 
   .btn-ghost {
     display: inline-flex; align-items: center; gap: 10px;
@@ -171,32 +135,23 @@
     box-shadow: 0 0 20px var(--cyan-dim);
   }
 
-  .btn-beta {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 9px; background: rgba(255,45,85,.2);
-    color: var(--red); border: 0.5px solid var(--red);
-    padding: 2px 6px; border-radius: 2px; letter-spacing: 1px;
-    vertical-align: middle; margin-left: 4px;
-  }
-
-  /* ── MATCHED STORE BUTTONS ── */
+  /* ── STORE BUTTONS: stacked, Apple first ── */
   .store-row {
-    width: min(100%, 900px);
-    margin-left: auto;
-    margin-right: auto;
+    width: min(100%, 420px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: fadeup .8s .3s ease both;
   }
-  .store-row .store-link {
-    flex: 1 1 0;
-    min-width: 0;
-    min-height: 68px;
-    padding: 16px 20px;
+  .store-link {
+    width: 100%;
+    min-height: 62px;
+    padding: 14px 20px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    background: var(--cyan);
-    color: #03080f;
-    border: 1px solid var(--cyan);
     border-radius: 3px;
     font-family: 'Orbitron', monospace;
     font-size: 13px;
@@ -204,14 +159,38 @@
     letter-spacing: 1px;
     text-decoration: none;
     white-space: nowrap;
+    transition: transform .2s, box-shadow .2s, background .2s;
+  }
+  .store-link.primary {
+    background: var(--cyan);
+    color: #03080f;
+    border: 1px solid var(--cyan);
     box-shadow: 0 0 30px var(--cyan-glow);
-    transition: transform .2s, box-shadow .2s;
   }
-  .store-row .store-link:hover,
-  .store-row .store-link:focus-visible {
+  .store-link.secondary {
+    background: rgba(0,229,255,.06);
+    color: var(--cyan);
+    border: 1px solid rgba(0,229,255,.45);
+  }
+  .store-link:hover,
+  .store-link:focus-visible {
     transform: translateY(-2px);
-    box-shadow: 0 0 50px var(--cyan-glow);
   }
+  .store-link.primary:hover { box-shadow: 0 0 50px var(--cyan-glow); }
+  .store-link.secondary:hover { background: var(--cyan-dim); border-color: var(--cyan); }
+
+  .beta-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 3px 7px;
+    border-radius: 2px;
+    background: rgba(0,229,255,.12);
+    border: 0.5px solid rgba(0,229,255,.45);
+    color: var(--cyan);
+  }
+
   .store-icon {
     width: 23px;
     height: 23px;
@@ -225,18 +204,21 @@
     stroke-linecap: round;
     stroke-linejoin: round;
   }
-  @media (max-width: 600px) {
-    .store-row { flex-direction: column; }
-    .store-row .store-link {
-      width: 100%;
-      flex: none;
-      font-size: 12px;
-    }
+
+  .store-note {
+    margin-top: 14px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--text-dim);
+    letter-spacing: .5px;
+    max-width: 42ch;
+    animation: fadeup .8s .35s ease both;
   }
 
   /* ── CORE VISUAL ── */
   .core-visual {
-    margin: 60px auto 0;
+    margin: 56px auto 0;
     width: 180px; height: 180px;
     position: relative;
     animation: fadeup .8s .5s ease both;
@@ -460,20 +442,6 @@
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* ── GLITCH TITLE ── */
-  .glitch { position: relative; display: inline-block; }
-  .glitch::before, .glitch::after {
-    content: attr(data-text);
-    position: absolute; top: 0; left: 0;
-    font-family: 'Orbitron', monospace;
-    font-size: inherit; font-weight: inherit; color: inherit;
-    pointer-events: none;
-  }
-  .glitch::before { color: var(--red); animation: glitch1 4s infinite; clip-path: polygon(0 20%, 100% 20%, 100% 40%, 0 40%); }
-  .glitch::after { color: var(--cyan); animation: glitch2 4s infinite; clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%); }
-  @keyframes glitch1 { 0%,90%,100% { transform: translate(0); opacity:0; } 92% { transform: translate(-3px,1px); opacity:.6; } 94% { transform: translate(3px,-1px); opacity:.6; } 96% { transform: translate(-2px,0); opacity:.6; } }
-  @keyframes glitch2 { 0%,92%,100% { transform: translate(0); opacity:0; } 94% { transform: translate(3px,1px); opacity:.5; } 96% { transform: translate(-3px,-1px); opacity:.5; } 98% { transform: translate(2px,0); opacity:.5; } }
-
   /* ── NOISE MODES ── */
   .modes { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 32px 0 0; }
   .mode-chip {
@@ -502,15 +470,20 @@
   .mode-desc-text.visible { opacity: 1; transform: translateY(0); }
 
   /* — VIDEO DEMOS — */
+  .hero-videos {
+    width: 100%;
+    margin-top: 44px;
+    animation: fadeup .8s .45s ease both;
+  }
   .video-demo {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 300px));
+    grid-template-columns: repeat(2, minmax(0, 280px));
     justify-content: center;
     align-items: start;
     gap: 28px;
     max-width: 680px;
     margin: 0 auto;
-    padding: 20px 20px 0;
+    padding: 0 4px;
   }
   .video-card { min-width: 0; text-align: center; }
   .video-card video {
@@ -524,7 +497,7 @@
     box-shadow: 0 0 40px rgba(80,140,255,.25);
   }
   .video-card h3 {
-    margin: 18px 0 6px;
+    margin: 16px 0 6px;
     color: #fff;
     font-family: 'Orbitron', monospace;
     font-size: 13px;
@@ -532,11 +505,11 @@
   }
   .video-card p {
     color: var(--text-dim);
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.5;
   }
   @media (max-width: 700px) {
-    .video-demo { grid-template-columns: minmax(0, 300px); gap: 40px; }
+    .video-demo { grid-template-columns: minmax(0, 300px); gap: 36px; }
   }
 
   /* ── MOBILE ── */
@@ -544,7 +517,9 @@
     nav { padding: 14px 20px; }
     .nav-links { display: none; }
     section { padding: 70px 20px; }
-    .hero { padding: 100px 20px 60px; }
+    .hero { padding: 92px 20px 60px; }
+    .hero-desc { font-size: 15px; margin-bottom: 26px; }
+    .store-link { font-size: 12px; min-height: 58px; }
     .problem-card, .solution-card { padding: 28px 24px; }
   }
 </style>
@@ -576,9 +551,9 @@
 <nav>
   <div class="nav-logo">⟨ Quiet Translator ⟩</div>
   <div class="nav-links">
+    <a href="#demo">Demo</a>
     <a href="#features">Features</a>
     <a href="#screenshots">Screenshots</a>
-    <a href="#demo">Demo</a>
     <a href="#tech">Tech</a>
     <a href="privacy.html">Privacy</a>
   </div>
@@ -586,31 +561,49 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">iOS AVAILABLE · ANDROID BETA</div>
 
-  <h1 class="hero-title glitch" data-text="QUIET TRANSLATOR">
-    QUIET <span>TRANSLATOR</span>
-  </h1>
-  <p class="hero-sub">Real-Time AI Voice Translation</p>
+  <h1 class="hero-title">Stop Nodding Along</h1>
+  <p class="hero-sub">Quiet Translator · Real-Time AI Voice Translation</p>
   <p class="hero-desc">
-    Understand conversations in your own language — at work, while traveling, or in everyday life. Live translation delivered as text and audio.
+    You're in the room, but out of the loop. Quiet Translator turns live speech into your language as it happens — on screen, or straight into your earpiece.
   </p>
 
-  <div class="hero-btns store-row">
-    <a href="https://groups.google.com/u/2/g/quiet-translator-testers"
-       target="_blank" rel="noopener noreferrer" class="store-link">
-      <svg class="store-icon android-icon" aria-hidden="true"><use href="#icon-android"></use></svg>
-      <span>Google Play Beta</span>
-    </a>
+  <div class="store-row">
     <a href="https://apps.apple.com/ca/app/quiet-translator/id6775271414"
-       target="_blank" rel="noopener noreferrer" class="store-link">
+       target="_blank" rel="noopener noreferrer" class="store-link primary">
       <svg class="store-icon" aria-hidden="true"><use href="#icon-apple"></use></svg>
       <span>App Store</span>
     </a>
+    <a href="https://groups.google.com/u/2/g/quiet-translator-testers"
+       target="_blank" rel="noopener noreferrer" class="store-link secondary">
+      <svg class="store-icon android-icon" aria-hidden="true"><use href="#icon-android"></use></svg>
+      <span>Google Play</span>
+      <span class="beta-tag">Beta</span>
+    </a>
   </div>
-  <p style="margin-top:16px;font-size:13px;color:var(--text-dim);">
-    Android beta: join the tester group to get access on Google Play.
+
+  <p class="store-note">
+    Android: join the testers group — you'll get the install link there.
   </p>
+
+  <!-- VIDEO DEMOS -->
+  <div class="hero-videos" id="demo">
+    <div class="video-demo">
+      <div class="video-card">
+        <video src="Demo.mp4" poster="quiet-translator-og.png" controls autoplay muted loop playsinline preload="metadata" aria-label="Quiet Translator app demonstration"></video>
+        <h3>See It Work</h3>
+        <p>A closer look at Quiet Translator.</p>
+      </div>
+      <div class="video-card">
+        <video poster="quiet-translator-og.png" controls playsinline preload="metadata" aria-label="Truck driver at a warehouse — language barrier story">
+          <source src="Truck%20driver.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <h3>On the Road</h3>
+        <p>A truck driver meets a language barrier at a warehouse.</p>
+      </div>
+    </div>
+  </div>
 
   <div class="core-visual">
     <div class="core-ring"></div>
@@ -627,9 +620,9 @@
   </div>
   <div class="mode-desc">
     <div class="mode-desc-text visible" id="modeDesc">
-      Balanced sensitivity for<br>
-      everyday conversations and meetings.<br>
-      Standard pause detection.
+      For meetings, lectures, and talks.<br>
+      High-precision, context-aware engine.<br>
+      Best in quiet rooms and conferences.
     </div>
   </div>
 </section>
@@ -688,29 +681,6 @@
   </div>
 </section>
 
-<!-- VIDEO DEMOS -->
-<section id="demo" class="screenshots-section">
-  <div style="max-width:1100px;margin:0 auto;">
-    <div class="section-label">// DEMO</div>
-    <h2 class="section-title">See Quiet Translator in Real Life</h2>
-  </div>
-  <div class="video-demo">
-    <div class="video-card">
-      <video src="Demo.mp4" poster="quiet-translator-og.png" controls autoplay muted loop playsinline preload="metadata" aria-label="Quiet Translator app demonstration"></video>
-      <h3>See It Work</h3>
-      <p>A closer look at Quiet Translator.</p>
-    </div>
-    <div class="video-card">
-      <video controls playsinline preload="metadata" aria-label="Truck driver at a warehouse — language barrier story">
-        <source src="Truck%20driver.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
-      <h3>On the Road</h3>
-      <p>A truck driver encounters a language barrier at a warehouse.</p>
-    </div>
-  </div>
-</section>
-  
 <!-- SCREENSHOTS -->
 <section id="screenshots" class="screenshots-section">
   <div style="max-width:1100px;margin:0 auto;">
@@ -729,7 +699,7 @@
     <div class="screenshot-frame"><img src="screen-016.png" alt="Screen 9"></div>
   </div>
 </section>
-  
+
 <!-- TECH STACK -->
 <section id="tech">
   <div class="cyber-divider"><span>// POWERED BY</span></div>
@@ -765,20 +735,21 @@
 <!-- CTA -->
 <section class="cta-section">
   <div class="section-label" style="text-align:center;">// LAUNCH</div>
-  <h2 class="section-title reveal" style="text-align:center;">Ready to Break the Language Barrier?</h2>
+  <h2 class="section-title reveal" style="text-align:center;">Be Part of the Conversation</h2>
   <p class="section-desc reveal" style="margin: 0 auto 40px; text-align:center;">
-        Available now on the App Store. Android closed beta testing is also open to new testers.
+    Available now on iPhone. Android early access is open to new testers.
   </p>
-  <div class="hero-btns store-row reveal">
-    <a href="https://groups.google.com/u/2/g/quiet-translator-testers"
-       target="_blank" rel="noopener noreferrer" class="store-link">
-      <svg class="store-icon android-icon" aria-hidden="true"><use href="#icon-android"></use></svg>
-      <span>Google Play Beta</span>
-    </a>
+  <div class="store-row reveal">
     <a href="https://apps.apple.com/ca/app/quiet-translator/id6775271414"
-       target="_blank" rel="noopener noreferrer" class="store-link">
+       target="_blank" rel="noopener noreferrer" class="store-link primary">
       <svg class="store-icon" aria-hidden="true"><use href="#icon-apple"></use></svg>
       <span>App Store</span>
+    </a>
+    <a href="https://groups.google.com/u/2/g/quiet-translator-testers"
+       target="_blank" rel="noopener noreferrer" class="store-link secondary">
+      <svg class="store-icon android-icon" aria-hidden="true"><use href="#icon-android"></use></svg>
+      <span>Google Play</span>
+      <span class="beta-tag">Beta</span>
     </a>
   </div>
   <div style="text-align:center;margin-top:24px;">
