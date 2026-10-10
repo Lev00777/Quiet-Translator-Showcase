@@ -28,7 +28,7 @@
 
 <!-- Open Graph — LinkedIn / Twitter preview -->
 <meta property="og:title" content="Quiet Translator — Ne faites plus semblant de comprendre">
-<meta property="og:description" content="Vous êtes dans la pièce, mais hors de la conversation. Quiet Translator traduit la parole dans votre langue, au fil de la discussion.">
+<meta property="og:description" content="Vous êtes là, mais la conversation vous passe au-dessus de la tête. Quiet Translator traduit la parole dans votre langue, au fil de l'échange.">
 <meta property="og:image" content="https://lev00777.github.io/Quiet-Translator-Showcase/quiet-translator-og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -674,7 +674,7 @@
   <h1 class="hero-title">Ne faites plus semblant de comprendre</h1>
   <p class="hero-sub">Quiet Translator · Traduction vocale par IA en temps réel</p>
   <p class="hero-desc">
-    Vous êtes là, mais la conversation vous échappe. Quiet Translator traduit la parole dans votre langue au moment même où elle est prononcée : à l'écran ou directement dans votre oreillette.
+    Vous êtes là, mais la conversation vous passe au-dessus de la tête. Quiet Translator traduit la parole dans votre langue au fil de l'échange : à l'écran ou directement dans votre oreillette.
   </p>
 
   <div class="store-row">
@@ -730,8 +730,8 @@
   <div class="mode-desc">
     <div class="mode-desc-text visible" id="modeDesc">
       Pour les réunions, les cours et les conférences.<br>
-      Moteur de haute précision qui tient compte du contexte.<br>
-      Idéal dans les salles calmes et les congrès.
+      Le mode le plus précis, attentif au contexte.<br>
+      Idéal dans une salle calme.
     </div>
   </div>
 </section>
@@ -742,12 +742,12 @@
   <br><br>
   <div class="two-col reveal">
     <div class="problem-card" data-label="⚠ LE PROBLÈME">
-      <h3>Le bruit industriel étouffe la communication</h3>
-      <p>Machines lourdes, bourdonnement permanent, ateliers bondés : communiquer en équipe devient presque impossible. Les applications de traduction classiques échouent : leurs réglages de micro n'isolent pas la voix, et attendre la fin de chaque phrase est inacceptable sur une ligne de production.</p>
+      <h3>Dans le vacarme, impossible de se comprendre</h3>
+      <p>Machines lourdes, bourdonnement permanent, ateliers bondés : se comprendre en équipe devient presque impossible. Les applis de traduction classiques n'y arrivent pas. Elles ne savent pas isoler la voix du bruit, et sur une chaîne de production, personne n'a le temps d'attendre la fin de chaque phrase.</p>
     </div>
     <div class="solution-card" data-label="✦ LA SOLUTION">
       <h3>Un traitement audio en deux phases</h3>
-      <p>Quiet Translator impose le bon micro et applique un filtre de bruit ambiant pour percer les interférences. Parlez dans le micro principal et recevez la traduction audio directement dans votre oreillette, sans déranger votre entourage.</p>
+      <p>Quiet Translator choisit le bon micro et filtre le bruit ambiant. Parlez dans le micro principal et écoutez la traduction dans votre oreillette, sans déranger personne.</p>
     </div>
   </div>
 </section>
@@ -760,17 +760,17 @@
     <div class="feature-card">
       <span class="feature-icon">🔊</span>
       <div class="feature-title">3 modes selon le bruit</div>
-      <div class="feature-desc">Calme / Normal / Bruyant. Chaque mode ajuste la suppression des pauses et la sensibilité audio à votre environnement.</div>
+      <div class="feature-desc">Calme / Normal / Bruyant. Chaque mode adapte la sensibilité du micro et les pauses entre les phrases à votre environnement.</div>
     </div>
     <div class="feature-card">
       <span class="feature-icon">🎧</span>
       <div class="feature-title">Compatible casques Bluetooth</div>
-      <div class="feature-desc">Parlez dans le micro du téléphone, écoutez la traduction dans votre oreillette. La traduction reste discrète : pas de haut-parleur à plein volume dans une salle pleine.</div>
+      <div class="feature-desc">Parlez dans le micro du téléphone, écoutez la traduction dans votre oreillette. Vous seul l'entendez : pas besoin de haut-parleur devant tout le monde.</div>
     </div>
     <div class="feature-card">
       <span class="feature-icon">⚡</span>
       <div class="feature-title">Traduction en continu</div>
-      <div class="feature-desc">Flux audio via WebSocket. La traduction s'affiche mot à mot pendant que vous parlez, sans attendre la fin des phrases.</div>
+      <div class="feature-desc">Le son est transmis en continu et la traduction s'affiche mot à mot pendant qu'on vous parle, sans attendre la fin de la phrase.</div>
     </div>
     <div class="feature-card">
       <span class="feature-icon">🌐</span>
@@ -780,7 +780,7 @@
     <div class="feature-card">
       <span class="feature-icon">🛸</span>
       <div class="feature-title">Boutons de mode</div>
-      <div class="feature-desc">MEET / CHAT / TALK : chaque bouton mémorise vos réglages audio pour une situation donnée. Un seul geste pour changer.</div>
+      <div class="feature-desc">MEET / CHAT / TALK : chaque bouton garde vos réglages audio pour une situation précise. On passe de l'un à l'autre d'un simple toucher.</div>
     </div>
     <div class="feature-card">
       <span class="feature-icon">🔒</span>
@@ -990,7 +990,7 @@ const observer = new IntersectionObserver(entries => {
 reveals.forEach(r => observer.observe(r));
 
 // Mode chips with descriptions
-const modeData = [["Pour les réunions, les cours et les conférences.", "Moteur de haute précision qui tient compte du contexte.", "Idéal dans les salles calmes et les congrès."], ["Pour les échanges rapides et les phrases courtes.", "Diffusion en direct à faible latence.", "Commerces, guichets, en déplacement."], ["Pour les vraies conversations, dans les deux sens.", "Plusieurs interlocuteurs, identifiés en temps réel.", "Suit chaque personne pendant qu'elle parle."]];
+const modeData = [["Pour les réunions, les cours et les conférences.", "Le mode le plus précis, attentif au contexte.", "Idéal dans une salle calme."], ["Pour les questions rapides et les phrases courtes.", "Traduction quasi instantanée.", "Au magasin, au guichet, entre deux courses."], ["Pour une vraie conversation à plusieurs.", "Reconnaît qui parle.", "Traduit chacun dès qu'il prend la parole."]];
 
 const chips = document.querySelectorAll('.mode-chip');
 const descEl = document.getElementById('modeDesc');
