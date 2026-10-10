@@ -560,6 +560,28 @@
   @media (max-width: 700px) {
     .video-demo { grid-template-columns: minmax(0, 300px); gap: 36px; }
   }
+  /* Scrollable strip when a page has its own promo video (first card). */
+  .video-demo.video-strip {
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+    max-width: 880px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 4px 14px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cyan) rgba(255,255,255,.08);
+  }
+  .video-strip .video-card { flex: 0 0 270px; scroll-snap-align: center; }
+  /* Centre the cards when they fit, without hiding the first one when they overflow. */
+  .video-strip > :first-child { margin-inline-start: auto; }
+  .video-strip > :last-child { margin-inline-end: auto; }
+  .video-strip::-webkit-scrollbar { height: 6px; }
+  .video-strip::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 3px; }
+  .video-strip::-webkit-scrollbar-track { background: rgba(255,255,255,.08); border-radius: 3px; }
+  @media (max-width: 700px) {
+    .video-strip .video-card { flex-basis: 78%; }
+  }
 
   /* ── MOBILE ── */
   @media (max-width: 600px) {
@@ -698,7 +720,12 @@
 
   <!-- VIDEO DEMOS -->
   <div class="hero-videos" id="demo">
-    <div class="video-demo">
+    <div class="video-demo video-strip">
+      <div class="video-card">
+        <video src="../video/promo_ru.mp4" poster="../video/promo_ru.jpg" controls autoplay muted loop playsinline preload="auto" aria-label="Рекламный ролик Quiet Translator: перевод речи врача на ваш язык"></video>
+        <h3>За 15 секунд</h3>
+        <p>Врач объясняет, а перевод сразу появляется на вашем языке.</p>
+      </div>
       <div class="video-card">
         <video src="../Demo.mp4" poster="../quiet-translator-og.png" controls autoplay muted loop playsinline preload="metadata" aria-label="Демонстрация приложения Quiet Translator"></video>
         <h3>Как это работает</h3>

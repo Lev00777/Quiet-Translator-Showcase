@@ -44,6 +44,9 @@ LANGS = [
     ("he", "עברית", "rtl", "he", "he_IL", ("Noto Sans Hebrew", True)),
 ]
 
+# Keys a language may define only when it has its own promo video (video/promo_<code>.mp4).
+OPTIONAL_KEYS = {"video0_title", "video0_desc", "video0_aria"}
+
 # Scripts where wide letter-spacing hurts readability (or breaks Arabic joining).
 NO_TRACKING = {"ar", "he", "th", "zh", "ko"}
 # Scripts with stacked marks above/below letters that collide at the tight hero line-height.
@@ -69,7 +72,7 @@ def load_strings():
     ref = set(data["en"])
     ok = True
     for code, d in data.items():
-        missing, extra = ref - set(d), set(d) - ref
+        missing, extra = ref - set(d), set(d) - ref - OPTIONAL_KEYS
         if missing or extra:
             ok = False
             print(f"[{code}] missing: {sorted(missing)} extra: {sorted(extra)}", file=sys.stderr)
@@ -139,11 +142,28 @@ def build_page(template, code, strings):
     modes = [strings["mode_meet"], strings["mode_chat"], strings["mode_talk"]]
     mode_json = json.dumps(modes, ensure_ascii=False).replace("</", "<\\/")
 
+    base = "" if code == "en" else "../"
+    promo_card, strip_class = "", ""
+    if (ROOT / "video" / f"promo_{code}.mp4").exists():
+        missing = OPTIONAL_KEYS - set(strings)
+        if missing:
+            sys.exit(f"[{code}] promo video needs keys: {sorted(missing)}")
+        poster = f"video/promo_{code}.jpg" if (ROOT / "video" / f"promo_{code}.jpg").exists() else "quiet-translator-og.png"
+        strip_class = " video-strip"
+        promo_card = (
+            '      <div class="video-card">\n'
+            f'        <video src="{base}video/promo_{code}.mp4" poster="{base}{poster}" controls autoplay muted loop playsinline '
+            f'preload="auto" aria-label="{esc(strings["video0_aria"])}"></video>\n'
+            f'        <h3>{esc(strings["video0_title"])}</h3>\n'
+            f'        <p>{esc(strings["video0_desc"])}</p>\n'
+            "      </div>\n"
+        )
+
     legal = strings["legal_note"]
     values = {
         "lang": code if code != "zh" else "zh-Hans",
         "dir": direction,
-        "base": "" if code == "en" else "../",
+        "base": base,
         "canonical": url_for(code),
         "hreflang_links": hreflang,
         "og_locales": og_locales,
@@ -153,6 +173,8 @@ def build_page(template, code, strings):
         "lang_css": lang_css,
         "mode_data_json": mode_json,
         "mode0_html": "<br>\n      ".join(esc(x) for x in modes[0]),
+        "promo_card": promo_card,
+        "video_strip_class": strip_class,
         "legal_note": f'<p class="legal-note">{esc(legal)}</p>' if legal else "",
     }
     for k, v in strings.items():
