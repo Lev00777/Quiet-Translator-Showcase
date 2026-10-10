@@ -69,7 +69,7 @@ def load_strings():
     for code, *_ in LANGS:
         path = I18N / "strings" / f"{code}.json"
         data[code] = json.loads(path.read_text(encoding="utf-8"))
-    ref = set(data["en"])
+    ref = set(data["en"]) - OPTIONAL_KEYS
     ok = True
     for code, d in data.items():
         missing, extra = ref - set(d), set(d) - ref - OPTIONAL_KEYS
