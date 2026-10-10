@@ -33,3 +33,12 @@ In industrial environments, heavy machinery and ambient noise make communication
 * **Speech-to-Text (STT):** Deepgram / AssemblyAI via WebSockets
 * **Translation:** DeepL API
 * **Security:** JWT Token generation, Custom Headers, Obfuscated compiled binaries
+
+## 🌐 Website languages
+
+The landing page is published in 17 languages: English at the root, the rest in folders (`/es/`, `/fr/`, `/de/`, `/pt/`, `/pl/`, `/tr/`, `/id/`, `/el/`, `/ru/`, `/uk/`, `/vi/`, `/th/`, `/zh/`, `/ko/`, `/ar/`, `/he/`).
+
+* Layout lives in `i18n/template.html`, texts in `i18n/strings/<code>.json`.
+* After editing either, run `python3 i18n/build.py` and commit the regenerated `index.html`, `<code>/index.html` and `sitemap.xml`.
+* Do not edit the generated `index.html` files by hand: the next build overwrites them.
+* To add a text, add the key to every JSON file (the build stops and lists missing keys) and use `{{key}}` in the template.
