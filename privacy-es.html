@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de privacidad — Quiet Translator</title>
+<meta name="description" content="Política de privacidad de Quiet Translator, de NeuroOrbit AI. Traducción de voz en tiempo real sin retención de datos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cyan: #00e5ff;
+    --cyan-dim: rgba(0,229,255,.12);
+    --cyan-glow: rgba(0,229,255,.35);
+    --bg: #03080f;
+    --text: #cde8f0;
+    --text-dim: rgba(205,232,240,.55);
+    --border: rgba(0,229,255,.12);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+  #starfield { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+  body::after { content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.04) 2px, rgba(0,0,0,.04) 4px); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: linear-gradient(180deg, rgba(3,8,15,.97) 0%, transparent 100%); border-bottom: 0.5px solid var(--border); }
+  .nav-logo { font-family: 'Orbitron', monospace; font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 3px; text-decoration: none; text-shadow: 0 0 20px var(--cyan-glow); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-decoration: none; letter-spacing: 2px; text-transform: uppercase; transition: color .2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+  .nav-back { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--cyan); text-decoration: none; letter-spacing: 2px; border: 0.5px solid rgba(0,229,255,.3); padding: 6px 14px; border-radius: 2px; transition: all .2s; }
+  .nav-back:hover { background: var(--cyan-dim); }
+  .wrap { position: relative; z-index: 2; max-width: 860px; margin: 0 auto; padding: 120px 32px 80px; }
+  .doc-header { margin-bottom: 60px; }
+  .doc-badge { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--cyan); border: 0.5px solid rgba(0,229,255,.3); padding: 5px 14px; border-radius: 2px; background: var(--cyan-dim); display: inline-block; margin-bottom: 24px; }
+  .doc-title { font-family: 'Orbitron', monospace; font-size: clamp(24px, 4.5vw, 44px); font-weight: 900; color: #fff; text-shadow: 0 0 30px var(--cyan-glow); margin-bottom: 12px; line-height: 1.1; }
+  .doc-title span { color: var(--cyan); }
+  .doc-meta { font-family: 'Share Tech Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
+  .doc-meta span { color: var(--cyan); margin: 0 8px; }
+  .cyber-line { height: 0.5px; background: linear-gradient(90deg, var(--cyan), rgba(0,229,255,.1), transparent); margin: 40px 0; }
+  .doc-section { margin-bottom: 48px; }
+  .section-tag { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: 3px; color: var(--cyan); text-transform: uppercase; opacity: .6; margin-bottom: 6px; display: block; }
+  h2 { font-family: 'Orbitron', monospace; font-size: 15px; font-weight: 700; color: var(--cyan); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 0.5px solid var(--border); }
+  h3 { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: 2px; color: var(--text); text-transform: uppercase; margin: 22px 0 8px; }
+  p { color: var(--text-dim); margin-bottom: 14px; font-size: 15px; }
+  p strong { color: var(--text); font-weight: 600; }
+  ul { margin: 0 0 14px 0; padding: 0; list-style: none; }
+  ul li { color: var(--text-dim); font-size: 15px; padding: 8px 0 8px 20px; position: relative; border-bottom: 0.5px solid rgba(0,229,255,.05); }
+  ul li::before { content: '→'; position: absolute; left: 0; color: var(--cyan); font-family: 'Share Tech Mono', monospace; font-size: 11px; }
+  ul li strong { color: var(--text); }
+  .highlight-box { background: rgba(0,229,255,.04); border: 0.5px solid rgba(0,229,255,.2); border-left: 2px solid var(--cyan); border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 20px 0; }
+  .highlight-box p { margin: 0; font-size: 14px; }
+  .warning-box { background: rgba(255,45,85,.04); border: 0.5px solid rgba(255,45,85,.25); border-left: 2px solid #ff2d55; border-radius: 0 4px 4px 0; padding: 20px 24px; margin: 24px 0; }
+  .warning-box p { margin: 0; font-size: 15px; color: rgba(255,120,140,.95); }
+  .alert-box { background: rgba(255,200,0,.04); border: 0.5px solid rgba(255,200,0,.2); border-left: 2px solid #ffcc00; border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 20px 0; }
+  .alert-box p { margin: 0; font-size: 14px; color: rgba(255,200,0,.85); }
+  .doc-section a { color: var(--cyan); text-decoration: none; }
+  .doc-section a:hover { text-decoration: underline; }
+  .tablewrap { overflow-x: auto; margin: 0 0 14px; }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 14px; }
+  th { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); text-align: left; padding: 10px 12px; border-bottom: 0.5px solid var(--border); opacity: .75; }
+  td { color: var(--text-dim); padding: 10px 12px; border-bottom: 0.5px solid rgba(0,229,255,.05); vertical-align: top; }
+  td:first-child { color: var(--text); }
+  footer { position: relative; z-index: 2; border-top: 0.5px solid var(--border); padding: 32px; text-align: center; margin-top: 40px; }
+  .footer-logo { font-family: 'Orbitron', monospace; font-size: 10px; letter-spacing: 3px; color: var(--cyan); margin-bottom: 16px; }
+  .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .footer-links a { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-decoration: none; letter-spacing: 1px; transition: color .2s; }
+  .footer-links a:hover { color: var(--cyan); }
+  .footer-copy { font-family: 'Share Tech Mono', monospace; font-size: 9px; color: rgba(205,232,240,.2); letter-spacing: 1px; }
+  @media (max-width: 600px) { nav { padding: 14px 20px; } .nav-links { display: none; } .wrap { padding: 100px 20px 60px; } }
+  .lang-note { font-size: 13px; color: var(--text-dim); margin-top: 14px; } .lang-note a { color: var(--cyan); }
+</style>
+</head>
+<body>
+<canvas id="starfield"></canvas>
+
+<nav>
+  <a href="index.html" class="nav-logo">&#10216; Quiet Translator &#10217;</a>
+  <div class="nav-links">
+    <a href="privacy-es.html" class="active">Privacidad</a>
+    <a href="terms-es.html">Términos</a>
+    <a href="disclaimer.html">Aviso legal</a>
+    <a href="index.html" class="nav-back">Volver a la app</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="doc-header">
+    <div class="doc-badge">Documento legal</div>
+    <h1 class="doc-title">Política de <span>privacidad</span></h1>
+    <p class="doc-meta">
+      Vigencia <span>//</span> 5 de octubre de 2026
+      <span>//</span> Última actualización: 5 de octubre de 2026
+      <span>//</span> Responsable del tratamiento: NeuroOrbit AI
+    </p>
+    <p class="lang-note">Esta es una traducción que se ofrece para su comodidad. Si difiere de la <a href="privacy.html">versión en inglés</a>, prevalecerá la versión en inglés.</p>
+  </div>
+
+  <div class="highlight-box">
+    <p><strong>Quiet Translator está diseñada como una aplicación de cero retención.</strong> La entrada de voz se procesa en tiempo real y se muestra en pantalla: el audio nunca se graba, guarda ni almacena en nuestros servidores ni en su dispositivo.</p>
+  </div>
+
+  <div class="cyber-line"></div>
+
+  <!-- 1 -->
+  <div class="doc-section">
+    <span class="section-tag">// 01</span>
+    <h2>Acceso al micrófono y datos de audio</h2>
+    <p>Quiet Translator necesita acceso al micrófono de su dispositivo únicamente para ofrecer traducción de voz en tiempo real durante una sesión activa.</p>
+    <p>Su audio se transmite mediante conexiones cifradas (HTTPS/WSS) a los proveedores de reconocimiento de voz indicados en la Sección 06, donde se transcribe a texto en tiempo real.</p>
+    <div class="highlight-box">
+      <p><strong>NO guardamos, grabamos ni almacenamos ningún archivo de audio</strong>, ni en su dispositivo ni en nuestros servidores. El audio se transmite en tiempo real y se descarta inmediatamente después de procesarse. Retención de audio en el servidor: <strong>0 días</strong>.</p>
+    </div>
+    <p>Los proveedores de reconocimiento de voz y de traducción pueden procesar el audio de forma transitoria para prestar el servicio. No controlamos su procesamiento interno y le recomendamos revisar sus políticas de privacidad. Cuando existe esa opción, seleccionamos proveedores que no conservan el audio para entrenamiento después de procesarlo.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="doc-section">
+    <span class="section-tag">// 02</span>
+    <h2>No almacenamos transcripciones</h2>
+    <p>El texto traducido se muestra en pantalla solo durante su sesión activa. No almacenamos transcripciones en ninguna base de datos, registro ni archivo una vez finalizada la sesión.</p>
+    <p>Retención de transcripciones en el servidor: <strong>0 días</strong>. Retención de transcripciones en el dispositivo: <strong>0 días</strong>.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="doc-section">
+    <span class="section-tag">// 03</span>
+    <h2>Datos que recopilamos</h2>
+    <h3>Datos de la cuenta</h3>
+    <ul>
+      <li>Dirección de correo electrónico (mediante Firebase Authentication)</li>
+      <li>Un identificador de usuario seudónimo</li>
+      <li>Si inicia sesión con Google o Apple, recibimos de esos proveedores identificadores básicos de la cuenta; no recibimos ni almacenamos su contraseña</li>
+    </ul>
+    <h3>Datos de uso</h3>
+    <ul>
+      <li>Tiempo de escucha utilizado, en minutos</li>
+      <li>Su plan de suscripción actual y los minutos restantes</li>
+      <li>Pares de idiomas utilizados (por ejemplo, inglés → ucraniano)</li>
+      <li>Versión de la aplicación y sistema operativo del dispositivo, con fines de diagnóstico</li>
+    </ul>
+    <h3>Identificador del dispositivo (prevención de abusos)</h3>
+    <p>Para evitar el uso abusivo de la prueba gratuita única, utilizamos una señal a nivel de dispositivo: Apple DeviceCheck en iOS o el Android ID en Android. Se utiliza únicamente para hacer cumplir los límites de la prueba y de uso. No se utiliza con fines publicitarios, no se comparte con anunciantes y no se utiliza para rastrearlo en otras aplicaciones ni sitios web.</p>
+    <h3>Datos de suscripción</h3>
+    <p>El estado de su suscripción, su plan y los eventos de compra y renovación, según los proporcionan Apple (App Store), Google (Google Play) y nuestro proveedor de gestión de suscripciones (RevenueCat). No recibimos ni almacenamos los datos completos de su tarjeta de pago: el pago lo gestionan Apple o Google.</p>
+    <p><strong>No recopilamos el contenido de sus conversaciones.</strong></p>
+    <p><strong>Conservación:</strong> los datos de la cuenta y de uso se conservan mientras su cuenta esté activa y hasta 24 meses después de su última actividad; luego se eliminan de forma permanente. Puede eliminar su cuenta en cualquier momento (Sección 07).</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="doc-section">
+    <span class="section-tag">// 04</span>
+    <h2>Base jurídica del tratamiento — GDPR (RGPD) Art. 6</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Actividad de tratamiento</th><th>Base jurídica</th></tr></thead>
+        <tbody>
+          <tr><td>Transmisión de audio en tiempo real para la traducción</td><td>Ejecución de un contrato — Art. 6(1)(b)</td></tr>
+          <tr><td>Gestión de la cuenta y de la suscripción</td><td>Ejecución de un contrato — Art. 6(1)(b)</td></tr>
+          <tr><td>Límites de uso y facturación</td><td>Ejecución de un contrato — Art. 6(1)(b)</td></tr>
+          <tr><td>Identificador del dispositivo para la prueba gratuita y la prevención de abusos</td><td>Intereses legítimos — Art. 6(1)(f)</td></tr>
+          <tr><td>Diagnóstico y mejora del producto</td><td>Intereses legítimos — Art. 6(1)(f)</td></tr>
+          <tr><td>Comunicaciones de marketing, si las hubiera</td><td>Su consentimiento — Art. 6(1)(a)</td></tr>
+          <tr><td>Cumplimiento legal</td><td>Obligación legal — Art. 6(1)(c)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="doc-section">
+    <span class="section-tag">// 05</span>
+    <h2>Captar la voz de otras personas: su responsabilidad</h2>
+    <div class="warning-box">
+      <p>En algunas regiones, la ley exige el consentimiento de otras personas antes de que su voz sea captada o procesada. <strong>Usted es responsable</strong> de utilizar Quiet Translator de conformidad con todas las leyes aplicables en su ubicación.</p>
+    </div>
+    <p>Como Quiet Translator no almacena audio ni transcripciones, nosotros no creamos ni conservamos ninguna grabación de otras personas.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="doc-section">
+    <span class="section-tag">// 06</span>
+    <h2>Subencargados del tratamiento externos</h2>
+    <p>Utilizamos los siguientes proveedores, que actúan como encargados del tratamiento por cuenta nuestra. El audio transmitido a los proveedores de voz se utiliza únicamente para devolver una transcripción y nosotros no lo conservamos.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Subencargado</th><th>Servicio</th><th>Política de privacidad</th></tr></thead>
+        <tbody>
+          <tr><td>Google (Firebase)</td><td>Autenticación, base de datos de cuentas</td><td>firebase.google.com/support/privacy</td></tr>
+          <tr><td>Amazon Web Services</td><td>Backend sin servidor, base de datos de uso</td><td>aws.amazon.com/privacy</td></tr>
+          <tr><td>OpenAI</td><td>Transcripción de voz (Whisper), traducción de texto</td><td>openai.com/policies/privacy-policy</td></tr>
+          <tr><td>Deepgram</td><td>Transcripción de voz en tiempo real</td><td>deepgram.com/privacy</td></tr>
+          <tr><td>AssemblyAI</td><td>Transcripción de voz en tiempo real</td><td>assemblyai.com/legal/privacy-policy</td></tr>
+          <tr><td>DeepL</td><td>Traducción de texto (respaldo)</td><td>deepl.com/en/privacy</td></tr>
+          <tr><td>RevenueCat</td><td>Gestión de suscripciones</td><td>revenuecat.com/privacy</td></tr>
+          <tr><td>Apple</td><td>Pagos y suscripciones de App Store; DeviceCheck (iOS)</td><td>apple.com/legal/privacy</td></tr>
+          <tr><td>Google (Google Play)</td><td>Pagos y suscripciones de Google Play (Android)</td><td>policies.google.com/privacy</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="doc-section">
+    <span class="section-tag">// 07</span>
+    <h2>Sus derechos y eliminación de la cuenta</h2>
+    <p>Según su jurisdicción, incluso en virtud del GDPR (RGPD), el UK GDPR, la PIPEDA de Canadá y la CCPA/CPRA, usted tiene derecho a:</p>
+    <ul>
+      <li><strong>Acceder</strong> a los datos personales que tenemos sobre usted</li>
+      <li><strong>Rectificar</strong> datos inexactos</li>
+      <li><strong>Suprimir</strong> sus datos (derecho al olvido)</li>
+      <li><strong>Portar</strong> sus datos a otro servicio</li>
+      <li><strong>Oponerse</strong> al tratamiento basado en intereses legítimos</li>
+      <li><strong>Retirar su consentimiento</strong> en cualquier momento, sin que ello afecte a la licitud del tratamiento previo</li>
+    </ul>
+    <div class="highlight-box">
+      <p><strong>Eliminación de la cuenta.</strong> Elimine su cuenta directamente en la aplicación: Configuración → Eliminar cuenta (Settings → Delete Account). Esto elimina su cuenta y los datos de uso asociados de nuestros sistemas. La cancelación de la suscripción se gestiona desde la configuración de su Apple ID (iOS) o de su cuenta de Google Play (Android). Eliminar su cuenta no cancela una suscripción activa.</p>
+    </div>
+    <p><strong>Residentes de California (CCPA/CPRA):</strong> usted tiene derecho a saber qué información personal recopilamos, derecho a eliminarla y derecho a excluirse de la «venta» o del «intercambio» de información personal. No vendemos su información personal.</p>
+    <p>Solicitudes: <a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a>. Respondemos en un plazo de 30 días (45 días para las solicitudes de la CCPA). También puede presentar una reclamación ante su autoridad de control local, por ejemplo, la autoridad de protección de datos (DPA) de su Estado miembro de la UE, la ICO del Reino Unido, la CNIL, el Comisionado de Privacidad de Canadá (Office of the Privacy Commissioner of Canada), la Commission d'accès à l'information du Québec o la ANPD.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="doc-section">
+    <span class="section-tag">// 08</span>
+    <h2>Transferencias internacionales de datos</h2>
+    <p>Los datos pueden tratarse en servidores ubicados en los Estados Unidos y en otros países.</p>
+    <p><strong>Usuarios de la UE/EEE y del Reino Unido:</strong> las transferencias se realizan conforme a las Cláusulas Contractuales Tipo adoptadas por la Comisión Europea (Decisión 2021/914).</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="doc-section">
+    <span class="section-tag">// 09</span>
+    <h2>Seguridad de los datos</h2>
+    <p>Aplicamos medidas de seguridad estándar del sector, entre ellas cifrado TLS en tránsito, cifrado en reposo de los datos de la cuenta, controles de acceso estrictos y revisiones de seguridad periódicas.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="doc-section">
+    <span class="section-tag">// 10</span>
+    <h2>Privacidad de los menores</h2>
+    <p>Quiet Translator no está dirigida a menores de 13 años ni de la edad mínima exigida en su jurisdicción. No recopilamos a sabiendas datos personales de menores. Si cree que un menor nos ha proporcionado datos, comuníquese con nosotros y los eliminaremos.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="doc-section">
+    <span class="section-tag">// 11</span>
+    <h2>Cambios en esta política</h2>
+    <p>Le notificaremos cualquier cambio sustancial por correo electrónico o mediante una notificación en la aplicación, o por ambos medios, con al menos <strong>14 días</strong> de antelación a su entrada en vigor. El uso continuado de la aplicación después de la fecha de entrada en vigor implica su aceptación de la política actualizada.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="doc-section">
+    <span class="section-tag">// Contacto</span>
+    <h2>Consultas sobre privacidad</h2>
+    <p>Consultas sobre privacidad &nbsp;&nbsp;<a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a></p>
+    <p>Persona responsable de la protección de la información personal (Ley 25 de Quebec): <strong>Alex Klimenko</strong>, <a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">&#10216; NeuroOrbit AI &#10217;</div>
+  <div class="footer-links">
+    <a href="privacy-es.html">Política de privacidad</a>
+    <a href="terms-es.html">Términos de uso</a>
+    <a href="disclaimer.html">Aviso legal</a>
+    <a href="index.html">Volver a la app</a>
+  </div>
+  <div class="footer-copy">2026 NeuroOrbit AI · Montreal, Canadá · Todos los derechos reservados</div>
+</footer>
+
+<script>
+const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
+let stars = [];
+function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+function init() {
+  stars = [];
+  for (let i = 0; i < 300; i++) {
+    stars.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*1.2+0.2, a: Math.random(), speed: Math.random()*0.003+0.001, cyan: Math.random()<0.2 });
+  }
+}
+function draw() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const mw = ctx.createLinearGradient(canvas.width*.2,0,canvas.width*.8,canvas.height);
+  mw.addColorStop(0,'transparent'); mw.addColorStop(.5,'rgba(180,200,255,0.03)'); mw.addColorStop(1,'transparent');
+  ctx.fillStyle=mw; ctx.fillRect(0,0,canvas.width,canvas.height);
+  stars.forEach(s => {
+    s.a+=s.speed;
+    const alpha=(Math.sin(s.a)+1)/2*0.6+0.1;
+    ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle=s.cyan?`rgba(0,229,255,${alpha})`:`rgba(200,220,255,${alpha*.7})`;
+    ctx.fill();
+  });
+  requestAnimationFrame(draw);
+}
+window.addEventListener('resize',()=>{resize();init();});
+resize(); init(); draw();
+</script>
+</body>
+</html>
