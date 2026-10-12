@@ -32,6 +32,7 @@ LANGS = [
     ("pt", "Português", "ltr", "pt", "pt_BR", None),
     ("pl", "Polski", "ltr", "pl", "pl_PL", ("Exo 2", False)),
     ("tr", "Türkçe", "ltr", "tr", "tr_TR", ("Exo 2", False)),
+    ("ro", "Română", "ltr", "ro", "ro_RO", ("Exo 2", False)),
     ("id", "Bahasa Indonesia", "ltr", "id", "id_ID", None),
     ("el", "Ελληνικά", "ltr", "el", "el_GR", ("Noto Sans", True)),
     ("ru", "Русский", "ltr", "ru", "ru_RU", ("Exo 2", True)),
