@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私政策 — Quiet Translator</title>
+<meta name="description" content="Quiet Translator（NeuroOrbit AI 出品）隐私政策。零留存的实时语音翻译。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cyan: #00e5ff;
+    --cyan-dim: rgba(0,229,255,.12);
+    --cyan-glow: rgba(0,229,255,.35);
+    --bg: #03080f;
+    --text: #cde8f0;
+    --text-dim: rgba(205,232,240,.55);
+    --border: rgba(0,229,255,.12);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+  #starfield { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+  body::after { content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.04) 2px, rgba(0,0,0,.04) 4px); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: linear-gradient(180deg, rgba(3,8,15,.97) 0%, transparent 100%); border-bottom: 0.5px solid var(--border); }
+  .nav-logo { font-family: 'Orbitron', monospace; font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 3px; text-decoration: none; text-shadow: 0 0 20px var(--cyan-glow); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-decoration: none; letter-spacing: 2px; text-transform: uppercase; transition: color .2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+  .nav-back { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--cyan); text-decoration: none; letter-spacing: 2px; border: 0.5px solid rgba(0,229,255,.3); padding: 6px 14px; border-radius: 2px; transition: all .2s; }
+  .nav-back:hover { background: var(--cyan-dim); }
+  .wrap { position: relative; z-index: 2; max-width: 860px; margin: 0 auto; padding: 120px 32px 80px; }
+  .doc-header { margin-bottom: 60px; }
+  .doc-badge { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--cyan); border: 0.5px solid rgba(0,229,255,.3); padding: 5px 14px; border-radius: 2px; background: var(--cyan-dim); display: inline-block; margin-bottom: 24px; }
+  .doc-title { font-family: 'Orbitron', monospace; font-size: clamp(24px, 4.5vw, 44px); font-weight: 900; color: #fff; text-shadow: 0 0 30px var(--cyan-glow); margin-bottom: 12px; line-height: 1.1; }
+  .doc-title span { color: var(--cyan); }
+  .doc-meta { font-family: 'Share Tech Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
+  .doc-meta span { color: var(--cyan); margin: 0 8px; }
+  .cyber-line { height: 0.5px; background: linear-gradient(90deg, var(--cyan), rgba(0,229,255,.1), transparent); margin: 40px 0; }
+  .doc-section { margin-bottom: 48px; }
+  .section-tag { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: 3px; color: var(--cyan); text-transform: uppercase; opacity: .6; margin-bottom: 6px; display: block; }
+  h2 { font-family: 'Orbitron', monospace; font-size: 15px; font-weight: 700; color: var(--cyan); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 0.5px solid var(--border); }
+  h3 { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: 2px; color: var(--text); text-transform: uppercase; margin: 22px 0 8px; }
+  p { color: var(--text-dim); margin-bottom: 14px; font-size: 15px; }
+  p strong { color: var(--text); font-weight: 600; }
+  ul { margin: 0 0 14px 0; padding: 0; list-style: none; }
+  ul li { color: var(--text-dim); font-size: 15px; padding: 8px 0 8px 20px; position: relative; border-bottom: 0.5px solid rgba(0,229,255,.05); }
+  ul li::before { content: '→'; position: absolute; left: 0; color: var(--cyan); font-family: 'Share Tech Mono', monospace; font-size: 11px; }
+  ul li strong { color: var(--text); }
+  .highlight-box { background: rgba(0,229,255,.04); border: 0.5px solid rgba(0,229,255,.2); border-left: 2px solid var(--cyan); border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 20px 0; }
+  .highlight-box p { margin: 0; font-size: 14px; }
+  .warning-box { background: rgba(255,45,85,.04); border: 0.5px solid rgba(255,45,85,.25); border-left: 2px solid #ff2d55; border-radius: 0 4px 4px 0; padding: 20px 24px; margin: 24px 0; }
+  .warning-box p { margin: 0; font-size: 15px; color: rgba(255,120,140,.95); }
+  .alert-box { background: rgba(255,200,0,.04); border: 0.5px solid rgba(255,200,0,.2); border-left: 2px solid #ffcc00; border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 20px 0; }
+  .alert-box p { margin: 0; font-size: 14px; color: rgba(255,200,0,.85); }
+  .doc-section a { color: var(--cyan); text-decoration: none; }
+  .doc-section a:hover { text-decoration: underline; }
+  .tablewrap { overflow-x: auto; margin: 0 0 14px; }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 14px; }
+  th { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); text-align: left; padding: 10px 12px; border-bottom: 0.5px solid var(--border); opacity: .75; }
+  td { color: var(--text-dim); padding: 10px 12px; border-bottom: 0.5px solid rgba(0,229,255,.05); vertical-align: top; }
+  td:first-child { color: var(--text); }
+  footer { position: relative; z-index: 2; border-top: 0.5px solid var(--border); padding: 32px; text-align: center; margin-top: 40px; }
+  .footer-logo { font-family: 'Orbitron', monospace; font-size: 10px; letter-spacing: 3px; color: var(--cyan); margin-bottom: 16px; }
+  .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .footer-links a { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-decoration: none; letter-spacing: 1px; transition: color .2s; }
+  .footer-links a:hover { color: var(--cyan); }
+  .footer-copy { font-family: 'Share Tech Mono', monospace; font-size: 9px; color: rgba(205,232,240,.2); letter-spacing: 1px; }
+  @media (max-width: 600px) { nav { padding: 14px 20px; } .nav-links { display: none; } .wrap { padding: 100px 20px 60px; } }
+  .lang-note { font-size: 13px; color: var(--text-dim); margin-top: 14px; } .lang-note a { color: var(--cyan); }
+  /* zh-Hans font overrides */
+  body { font-family: 'Rajdhani', 'Noto Sans SC', sans-serif; line-height: 1.8; }
+  h2, .doc-title { font-family: 'Orbitron', 'Noto Sans SC', sans-serif; letter-spacing: 0; text-transform: none; }
+  h3 { font-family: 'Share Tech Mono', 'Noto Sans SC', sans-serif; letter-spacing: 0; text-transform: none; }
+  .doc-badge, .doc-meta, .section-tag, .nav-links a, .nav-back, .footer-links a, .footer-copy, th { font-family: 'Share Tech Mono', 'Noto Sans SC', sans-serif; }
+  .doc-title { line-height: 1.3; }
+</style>
+</head>
+<body>
+<canvas id="starfield"></canvas>
+
+<nav>
+  <a href="index.html" class="nav-logo">&#10216; Quiet Translator &#10217;</a>
+  <div class="nav-links">
+    <a href="privacy-zh.html" class="active">隐私</a>
+    <a href="terms-zh.html">条款</a>
+    <a href="disclaimer.html">免责声明</a>
+    <a href="index.html" class="nav-back">返回应用</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="doc-header">
+    <div class="doc-badge">法律文件</div>
+    <h1 class="doc-title">隐私<span>政策</span></h1>
+    <p class="doc-meta">
+      生效日期 <span>//</span> 2026年10月5日
+      <span>//</span> 最后更新：2026年10月5日
+      <span>//</span> 数据控制者：NeuroOrbit AI
+    </p>
+    <p class="lang-note">本译本仅为方便阅读而提供。如本译本与<a href="privacy.html">英文版本</a>有任何不一致之处，以英文版本为准。</p>
+  </div>
+
+  <div class="highlight-box">
+    <p><strong>Quiet Translator 是一款按“零留存”原则设计的应用程序。</strong>语音输入会被实时处理并显示在屏幕上——音频绝不会被录制、保存或存储在我们的服务器或您的设备上。</p>
+  </div>
+
+  <div class="cyber-line"></div>
+
+  <!-- 1 -->
+  <div class="doc-section">
+    <span class="section-tag">// 01</span>
+    <h2>麦克风权限与音频数据</h2>
+    <p>Quiet Translator 需要访问您设备的麦克风，其唯一目的是在会话进行期间提供实时语音翻译。</p>
+    <p>您的音频将通过加密连接（HTTPS/WSS）以流式方式传输至第 06 条所列的语音识别服务提供商，并由其实时转写为文字。</p>
+    <div class="highlight-box">
+      <p><strong>我们不会保存、录制或存储任何音频文件</strong>——无论是在您的设备上还是在我们的服务器上。音频以实时流方式传输，并在处理完成后立即丢弃。服务器端音频保留期限：<strong>0 天</strong>。</p>
+    </div>
+    <p>语音识别和翻译服务提供商可能为提供服务而对音频进行临时处理。我们无法控制其内部处理流程，建议您查阅其隐私政策。在有相应选项可供选择的情况下，我们会选择在处理完成后不留存音频用于模型训练的服务提供商。</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="doc-section">
+    <span class="section-tag">// 02</span>
+    <h2>不存储转写文本</h2>
+    <p>翻译后的文本仅在您的会话进行期间显示于屏幕上。会话结束后，我们不会将转写文本存储于任何数据库、日志或文件中。</p>
+    <p>服务器端转写文本保留期限：<strong>0 天</strong>。设备端转写文本保留期限：<strong>0 天</strong>。</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="doc-section">
+    <span class="section-tag">// 03</span>
+    <h2>我们收集的数据</h2>
+    <h3>账户数据</h3>
+    <ul>
+      <li>电子邮箱地址（通过 Firebase Authentication 获取）</li>
+      <li>一个假名化的用户标识符</li>
+      <li>如果您使用 Google 或 Apple 账号登录，我们会从上述服务提供商处获得基本的账户标识信息——我们不会获取或存储您的密码</li>
+    </ul>
+    <h3>使用数据</h3>
+    <ul>
+      <li>已使用的收听时长（以分钟计）</li>
+      <li>您当前的订阅方案及剩余分钟数</li>
+      <li>所使用的语言组合（例如：英语 → 乌克兰语）</li>
+      <li>应用版本及设备操作系统，用于故障诊断</li>
+    </ul>
+    <h3>设备标识符（防滥用）</h3>
+    <p>为防止一次性免费试用被滥用，我们使用设备层面的信号：iOS 上为 Apple DeviceCheck，Android 上为 Android ID。该信号仅用于执行试用和使用限额，不用于广告，不与广告商共享，也不用于在其他应用或网站上追踪您。</p>
+    <h3>订阅数据</h3>
+    <p>由 Apple（App Store）、Google（Google Play）及我们的订阅管理服务提供商（RevenueCat）提供的您的订阅状态、订阅方案、购买及续订事件。我们不会获取或存储您完整的支付卡信息——付款由 Apple 或 Google 处理。</p>
+    <p><strong>我们不会收集您的对话内容。</strong></p>
+    <p><strong>保留期限：</strong>账户数据和使用数据在您的账户有效期间予以保留，并在您最后一次活动后最长保留 24 个月，届时将被永久删除。您可以随时删除您的账户（见第 07 条）。</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="doc-section">
+    <span class="section-tag">// 04</span>
+    <h2>处理的法律依据——GDPR 第 6 条</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>处理活动</th><th>法律依据</th></tr></thead>
+        <tbody>
+          <tr><td>为翻译而进行的实时音频流传输</td><td>履行合同——第 6(1)(b) 条</td></tr>
+          <tr><td>账户与订阅管理</td><td>履行合同——第 6(1)(b) 条</td></tr>
+          <tr><td>使用限额与计费</td><td>履行合同——第 6(1)(b) 条</td></tr>
+          <tr><td>用于试用管理和防止滥用的设备标识符</td><td>正当利益——第 6(1)(f) 条</td></tr>
+          <tr><td>产品诊断与改进</td><td>正当利益——第 6(1)(f) 条</td></tr>
+          <tr><td>营销信息（如有）</td><td>您的同意——第 6(1)(a) 条</td></tr>
+          <tr><td>遵守法律规定</td><td>法定义务——第 6(1)(c) 条</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="doc-section">
+    <span class="section-tag">// 05</span>
+    <h2>录制他人语音——由您负责</h2>
+    <div class="warning-box">
+      <p>在某些地区，法律要求在采集或处理他人语音之前须征得其同意。<strong>您应负责</strong>确保在使用 Quiet Translator 时遵守您所在地的所有适用法律。</p>
+    </div>
+    <p>由于 Quiet Translator 不存储音频或转写文本，我们不会制作或留存任何他人的录音。</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="doc-section">
+    <span class="section-tag">// 06</span>
+    <h2>第三方次级处理者</h2>
+    <p>我们使用以下服务提供商，其作为数据处理者代表我们处理数据。以流方式传输至语音服务提供商的音频仅用于返回转写结果，我们不会留存。</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>次级处理者</th><th>服务内容</th><th>隐私政策</th></tr></thead>
+        <tbody>
+          <tr><td>Google (Firebase)</td><td>身份验证、账户数据库</td><td>firebase.google.com/support/privacy</td></tr>
+          <tr><td>Amazon Web Services</td><td>无服务器后端、使用数据库</td><td>aws.amazon.com/privacy</td></tr>
+          <tr><td>OpenAI</td><td>语音转写（Whisper）、文本翻译</td><td>openai.com/policies/privacy-policy</td></tr>
+          <tr><td>Deepgram</td><td>实时语音转写</td><td>deepgram.com/privacy</td></tr>
+          <tr><td>AssemblyAI</td><td>实时语音转写</td><td>assemblyai.com/legal/privacy-policy</td></tr>
+          <tr><td>DeepL</td><td>文本翻译（备用）</td><td>deepl.com/en/privacy</td></tr>
+          <tr><td>RevenueCat</td><td>订阅管理</td><td>revenuecat.com/privacy</td></tr>
+          <tr><td>Apple</td><td>App Store 支付与订阅；DeviceCheck（iOS）</td><td>apple.com/legal/privacy</td></tr>
+          <tr><td>Google (Google Play)</td><td>Google Play 支付与订阅（Android）</td><td>policies.google.com/privacy</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="doc-section">
+    <span class="section-tag">// 07</span>
+    <h2>您的权利与账户删除</h2>
+    <p>根据您所在的司法管辖区——包括依据 GDPR（欧盟《通用数据保护条例》）、UK GDPR（英国《通用数据保护条例》）、加拿大 PIPEDA（《个人信息保护和电子文件法》）以及 CCPA/CPRA（美国加利福尼亚州《消费者隐私法》及《隐私权法》）——您享有以下权利：</p>
+    <ul>
+      <li><strong>查阅</strong>我们所持有的关于您的个人数据</li>
+      <li><strong>更正</strong>不准确的数据</li>
+      <li><strong>删除</strong>您的数据（被遗忘权）</li>
+      <li>将您的数据<strong>转移</strong>至其他服务（可携带权）</li>
+      <li>对基于正当利益的处理提出<strong>反对</strong></li>
+      <li>随时<strong>撤回同意</strong>，且不影响撤回前已依法进行的处理</li>
+    </ul>
+    <div class="highlight-box">
+      <p><strong>账户删除。</strong>您可直接在应用内删除账户：设置 → 删除账户（Settings → Delete Account）。此操作将从我们的系统中删除您的账户及相关使用数据。订阅的取消需通过您的 Apple ID 设置（iOS）或 Google Play 账户设置（Android）进行管理。删除账户并不会取消仍然有效的订阅。</p>
+    </div>
+    <p><strong>加利福尼亚州居民（CCPA/CPRA）：</strong>您有权了解我们收集哪些个人信息，有权要求删除该等信息，并有权选择拒绝个人信息的“出售”或“共享”。我们不会出售您的个人信息。</p>
+    <p>提出请求：<a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a>——我们将在 30 天内予以答复（CCPA 请求为 45 天）。您也可以向当地的监管机构投诉，例如您所在欧盟成员国的数据保护机构（DPA）、英国信息专员办公室（ICO）、法国国家信息与自由委员会（CNIL）、加拿大隐私专员办公室（Office of the Privacy Commissioner of Canada）、魁北克信息获取委员会（Commission d'accès à l'information du Québec）或巴西国家数据保护局（ANPD）。</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="doc-section">
+    <span class="section-tag">// 08</span>
+    <h2>数据跨境传输</h2>
+    <p>数据可能在位于美国及其他国家的服务器上进行处理。</p>
+    <p><strong>欧盟/欧洲经济区及英国用户：</strong>数据传输依据欧盟委员会通过的标准合同条款（第 2021/914 号决定）进行。</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="doc-section">
+    <span class="section-tag">// 09</span>
+    <h2>数据安全</h2>
+    <p>我们采取符合行业标准的安全措施，包括传输过程中的 TLS 加密、账户数据的静态加密、严格的访问控制以及定期的安全审查。</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="doc-section">
+    <span class="section-tag">// 10</span>
+    <h2>儿童隐私</h2>
+    <p>Quiet Translator 并非面向未满 13 周岁（或您所在司法管辖区规定的最低年龄）的儿童。我们不会在知情的情况下收集儿童的个人数据。如果您认为有儿童向我们提供了数据，请与我们联系，我们将予以删除。</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="doc-section">
+    <span class="section-tag">// 11</span>
+    <h2>本政策的变更</h2>
+    <p>如有任何重大变更，我们将至少在变更生效前 <strong>14 天</strong>通过电子邮件和/或应用内通知告知您。在生效日期之后继续使用本应用，即视为您接受更新后的政策。</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="doc-section">
+    <span class="section-tag">// Contact</span>
+    <h2>隐私咨询</h2>
+    <p>隐私咨询 &nbsp;&nbsp;<a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a></p>
+    <p>个人信息保护负责人（魁北克第 25 号法律，Québec Law 25）：<strong>Alex Klimenko</strong>，<a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">&#10216; NeuroOrbit AI &#10217;</div>
+  <div class="footer-links">
+    <a href="privacy-zh.html">隐私政策</a>
+    <a href="terms-zh.html">使用条款</a>
+    <a href="disclaimer.html">免责声明</a>
+    <a href="index.html">返回应用</a>
+  </div>
+  <div class="footer-copy">2026 NeuroOrbit AI · 加拿大蒙特利尔 · 保留所有权利</div>
+</footer>
+
+<script>
+const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
+let stars = [];
+function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+function init() {
+  stars = [];
+  for (let i = 0; i < 300; i++) {
+    stars.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*1.2+0.2, a: Math.random(), speed: Math.random()*0.003+0.001, cyan: Math.random()<0.2 });
+  }
+}
+function draw() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const mw = ctx.createLinearGradient(canvas.width*.2,0,canvas.width*.8,canvas.height);
+  mw.addColorStop(0,'transparent'); mw.addColorStop(.5,'rgba(180,200,255,0.03)'); mw.addColorStop(1,'transparent');
+  ctx.fillStyle=mw; ctx.fillRect(0,0,canvas.width,canvas.height);
+  stars.forEach(s => {
+    s.a+=s.speed;
+    const alpha=(Math.sin(s.a)+1)/2*0.6+0.1;
+    ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle=s.cyan?`rgba(0,229,255,${alpha})`:`rgba(200,220,255,${alpha*.7})`;
+    ctx.fill();
+  });
+  requestAnimationFrame(draw);
+}
+window.addEventListener('resize',()=>{resize();init();});
+resize(); init(); draw();
+</script>
+</body>
+</html>
