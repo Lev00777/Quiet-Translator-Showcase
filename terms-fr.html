@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions d'utilisation — Quiet Translator</title>
+<meta name="description" content="Conditions d'utilisation et contrat de licence d'utilisateur final (CLUF) de Quiet Translator par NeuroOrbit AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cyan: #00e5ff;
+    --cyan-dim: rgba(0,229,255,.12);
+    --cyan-glow: rgba(0,229,255,.35);
+    --bg: #03080f;
+    --text: #cde8f0;
+    --text-dim: rgba(205,232,240,.55);
+    --border: rgba(0,229,255,.12);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+  #starfield { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+  body::after { content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.04) 2px, rgba(0,0,0,.04) 4px); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: linear-gradient(180deg, rgba(3,8,15,.97) 0%, transparent 100%); border-bottom: 0.5px solid var(--border); }
+  .nav-logo { font-family: 'Orbitron', monospace; font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 3px; text-decoration: none; text-shadow: 0 0 20px var(--cyan-glow); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-decoration: none; letter-spacing: 2px; text-transform: uppercase; transition: color .2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+  .nav-back { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--cyan); text-decoration: none; letter-spacing: 2px; border: 0.5px solid rgba(0,229,255,.3); padding: 6px 14px; border-radius: 2px; transition: all .2s; }
+  .nav-back:hover { background: var(--cyan-dim); }
+  .wrap { position: relative; z-index: 2; max-width: 860px; margin: 0 auto; padding: 120px 32px 80px; }
+  .doc-header { margin-bottom: 60px; }
+  .doc-badge { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--cyan); border: 0.5px solid rgba(0,229,255,.3); padding: 5px 14px; border-radius: 2px; background: var(--cyan-dim); display: inline-block; margin-bottom: 24px; }
+  .doc-title { font-family: 'Orbitron', monospace; font-size: clamp(24px, 4.5vw, 44px); font-weight: 900; color: #fff; text-shadow: 0 0 30px var(--cyan-glow); margin-bottom: 12px; line-height: 1.1; }
+  .doc-title span { color: var(--cyan); }
+  .doc-meta { font-family: 'Share Tech Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
+  .doc-meta span { color: var(--cyan); margin: 0 8px; }
+  .cyber-line { height: 0.5px; background: linear-gradient(90deg, var(--cyan), rgba(0,229,255,.1), transparent); margin: 40px 0; }
+  .doc-section { margin-bottom: 48px; }
+  .section-tag { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: 3px; color: var(--cyan); text-transform: uppercase; opacity: .6; margin-bottom: 6px; display: block; }
+  h2 { font-family: 'Orbitron', monospace; font-size: 15px; font-weight: 700; color: var(--cyan); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 0.5px solid var(--border); }
+  p { color: var(--text-dim); margin-bottom: 14px; font-size: 15px; }
+  p strong { color: var(--text); font-weight: 600; }
+  ul { margin: 0 0 14px 0; padding: 0; list-style: none; }
+  ul li { color: var(--text-dim); font-size: 15px; padding: 8px 0 8px 20px; position: relative; border-bottom: 0.5px solid rgba(0,229,255,.05); }
+  ul li::before { content: '→'; position: absolute; left: 0; color: var(--cyan); font-family: 'Share Tech Mono', monospace; font-size: 11px; }
+  ul li strong { color: var(--text); }
+  .highlight-box { background: rgba(0,229,255,.04); border: 0.5px solid rgba(0,229,255,.2); border-left: 2px solid var(--cyan); border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 20px 0; }
+  .highlight-box p { margin: 0; font-size: 14px; }
+  .warning-box { background: rgba(255,45,85,.04); border: 0.5px solid rgba(255,45,85,.25); border-left: 2px solid #ff2d55; border-radius: 0 4px 4px 0; padding: 20px 24px; margin: 24px 0; }
+  .warning-box p { margin: 0; font-size: 15px; color: rgba(255,120,140,.95); }
+  .alert-box { background: rgba(255,200,0,.04); border: 0.5px solid rgba(255,200,0,.2); border-left: 2px solid #ffcc00; border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 20px 0; }
+  .alert-box p { margin: 0; font-size: 14px; color: rgba(255,200,0,.85); }
+  .doc-section a { color: var(--cyan); text-decoration: none; }
+  .doc-section a:hover { text-decoration: underline; }
+  footer { position: relative; z-index: 2; border-top: 0.5px solid var(--border); padding: 32px; text-align: center; margin-top: 40px; }
+  .footer-logo { font-family: 'Orbitron', monospace; font-size: 10px; letter-spacing: 3px; color: var(--cyan); margin-bottom: 16px; }
+  .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .footer-links a { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-decoration: none; letter-spacing: 1px; transition: color .2s; }
+  .footer-links a:hover { color: var(--cyan); }
+  .footer-copy { font-family: 'Share Tech Mono', monospace; font-size: 9px; color: rgba(205,232,240,.2); letter-spacing: 1px; }
+  @media (max-width: 600px) { nav { padding: 14px 20px; } .nav-links { display: none; } .wrap { padding: 100px 20px 60px; } }
+  .lang-note { font-size: 13px; color: var(--text-dim); margin-top: 14px; } .lang-note a { color: var(--cyan); }
+  .lang-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  .lang-switch a { font-family: 'Share Tech Mono', 'Noto Sans SC', 'Noto Kufi Arabic', monospace; font-size: 12px; color: var(--text-dim); text-decoration: none; border: 0.5px solid var(--border); padding: 5px 12px; border-radius: 2px; letter-spacing: 0; transition: all .2s; }
+  .lang-switch a:hover { color: var(--cyan); border-color: rgba(0,229,255,.4); }
+  .lang-switch a[aria-current] { color: var(--cyan); border-color: var(--cyan); background: var(--cyan-dim); }
+</style>
+<link rel="alternate" hreflang="en" href="https://lev00777.github.io/Quiet-Translator-Showcase/terms.html">
+<link rel="alternate" hreflang="fr" href="https://lev00777.github.io/Quiet-Translator-Showcase/terms-fr.html">
+<link rel="alternate" hreflang="es" href="https://lev00777.github.io/Quiet-Translator-Showcase/terms-es.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://lev00777.github.io/Quiet-Translator-Showcase/terms-zh.html">
+<link rel="alternate" hreflang="ar" href="https://lev00777.github.io/Quiet-Translator-Showcase/terms-ar.html">
+<link rel="alternate" hreflang="x-default" href="https://lev00777.github.io/Quiet-Translator-Showcase/terms.html">
+</head>
+<body>
+<canvas id="starfield"></canvas>
+
+<nav>
+  <a href="fr/" class="nav-logo">&#10216; Quiet Translator &#10217;</a>
+  <div class="nav-links">
+    <a href="privacy-fr.html">Confidentialité</a>
+    <a href="terms-fr.html" class="active">Conditions</a>
+    <a href="disclaimer.html">Avis juridique</a>
+    <a href="fr/" class="nav-back">Retour à l'application</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="doc-header">
+    <div class="lang-switch" role="navigation" aria-label="Language">
+      <a href="terms.html" hreflang="en" lang="en">English</a>
+      <a href="terms-fr.html" hreflang="fr" lang="fr" aria-current="page">Français</a>
+      <a href="terms-es.html" hreflang="es" lang="es">Español</a>
+      <a href="terms-zh.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+      <a href="terms-ar.html" hreflang="ar" lang="ar">العربية</a>
+    </div>
+    <div class="doc-badge">Document juridique</div>
+    <h1 class="doc-title">Conditions d'utilisation <span>et CLUF</span></h1>
+    <p class="doc-meta">
+      En vigueur <span>//</span> 19 juillet 2026
+      <span>//</span> Dernière mise à jour&nbsp;: 19 juillet 2026
+    </p>
+    <p class="lang-note">Ce document est également disponible en <a href="terms.html">anglais</a>.</p>
+  </div>
+
+  <div class="highlight-box">
+    <p><strong>En utilisant Quiet Translator, vous acceptez les présentes conditions.</strong> Elles constituent une entente ayant force obligatoire entre vous et NeuroOrbit AI. Veuillez les lire attentivement avant d'utiliser l'application.</p>
+  </div>
+
+  <div class="cyber-line"></div>
+
+  <!-- 1 -->
+  <div class="doc-section">
+    <span class="section-tag">// 01</span>
+    <h2>Octroi de licence</h2>
+    <p>NeuroOrbit AI vous accorde une licence <strong>limitée, révocable, non exclusive, non transférable et ne pouvant faire l'objet d'une sous-licence</strong> vous permettant d'installer et d'utiliser Quiet Translator uniquement à des fins personnelles ou à des fins internes à votre entreprise, sous réserve des présentes conditions d'utilisation.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="doc-section">
+    <span class="section-tag">// 02</span>
+    <h2>Abonnements, renouvellement automatique et paiement</h2>
+    <p>Quiet Translator propose des abonnements à renouvellement automatique. Les conditions suivantes s'appliquent à tous les forfaits payants&nbsp;:</p>
+    <ul>
+      <li><strong>Forfaits et prix.</strong> Les options d'abonnement, les prix, la période de facturation et le temps d'écoute mensuel inclus sont indiqués dans l'application avant l'achat. Les prix sont affichés dans votre devise locale par l'App Store ou Google Play.</li>
+      <li><strong>Temps d'écoute gratuit.</strong> Les nouveaux comptes peuvent recevoir un temps d'écoute gratuit unique. Il est accordé une seule fois par compte et n'est pas renouvelé.</li>
+      <li><strong>Facturation.</strong> Le paiement est porté à votre identifiant Apple ou à votre compte Google Play au moment de la confirmation de l'achat.</li>
+      <li><strong>Renouvellement automatique.</strong> Votre abonnement est renouvelé automatiquement pour la même durée, sauf si vous désactivez le renouvellement automatique au moins 24 heures avant la fin de la période en cours. Les frais de renouvellement sont portés à votre compte dans les 24 heures précédant la fin de la période en cours.</li>
+      <li><strong>Gestion et annulation.</strong> Gérez ou annulez votre abonnement dans les réglages de votre identifiant Apple ou de votre compte Google Play. L'annulation met fin aux renouvellements futurs; vous conservez l'accès jusqu'à la fin de la période payée en cours.</li>
+      <li><strong>Limites d'utilisation raisonnable.</strong> Chaque forfait comprend un temps d'écoute mensuel mesuré en minutes. Lorsque ce temps est épuisé, l'écoute est suspendue jusqu'à la période de facturation suivante ou jusqu'à ce que vous passiez à un forfait supérieur.</li>
+      <li><strong>Remboursements.</strong> Les achats sont traités par Apple et Google. Les demandes de remboursement sont assujetties à leurs politiques et sont gérées par leur intermédiaire.</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="doc-section">
+    <span class="section-tag">// 03</span>
+    <h2>Activités interdites</h2>
+    <p>Toute violation de l'une des interdictions suivantes peut entraîner la suspension ou la résiliation de votre compte. Il vous est interdit&nbsp;:</p>
+    <ul>
+      <li><strong>(a)</strong> de procéder à l'ingénierie inverse, de décompiler ou de désassembler l'application</li>
+      <li><strong>(b)</strong> de tenter d'extraire des clés d'API, des jetons d'authentification ou des identifiants exclusifs</li>
+      <li><strong>(c)</strong> d'utiliser des robots ou des scripts automatisés pour générer des demandes de traduction frauduleuses</li>
+      <li><strong>(d)</strong> de revendre ou de sous-licencier l'accès à votre compte, ou de le partager avec un tiers</li>
+      <li><strong>(e)</strong> de contourner ou de désactiver toute protection technique, limite d'utilisation ou mesure de sécurité</li>
+      <li><strong>(f)</strong> d'utiliser l'application en violation de toute loi applicable, y compris les lois régissant l'enregistrement ou le traitement des paroles d'autres personnes</li>
+    </ul>
+  </div>
+
+  <!-- 4 -->
+  <div class="doc-section">
+    <span class="section-tag">// 04</span>
+    <h2>Propriété intellectuelle</h2>
+    <p>Tous les droits, titres et intérêts relatifs à l'application, y compris son interface utilisateur, son design, son code source, ses algorithmes, son image de marque et ses marques de commerce, demeurent la propriété exclusive de NeuroOrbit AI. Les présentes conditions ne vous confèrent aucun droit de propriété sur l'application ni sur sa propriété intellectuelle.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="doc-section">
+    <span class="section-tag">// 05</span>
+    <h2>Modifications du service et limites</h2>
+    <p>NeuroOrbit AI se réserve le droit de modifier les fonctionnalités, les limites d'utilisation, les prix ou les présentes conditions moyennant un <strong>préavis d'au moins 14 jours</strong> transmis par courriel ou par notification dans l'application. Les modifications de prix visant les abonnements existants sont traitées conformément aux règles de l'App Store et de Google Play, qui peuvent exiger votre consentement.</p>
+    <p>Le service peut être temporairement suspendu pour des travaux d'entretien planifiés ou urgents; il sera rétabli aussi rapidement qu'il est raisonnablement possible de le faire.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="doc-section">
+    <span class="section-tag">// 06</span>
+    <h2>Résiliation du compte</h2>
+    <p>NeuroOrbit AI peut suspendre ou résilier votre accès en cas de manquement important aux présentes conditions. Vous pouvez supprimer votre compte à tout moment à partir de l'écran Réglages (Settings). La suppression entraîne l'effacement définitif de votre compte et des données d'utilisation associées. L'annulation de l'abonnement se gère dans les réglages de votre compte Apple ou Google.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="doc-section">
+    <span class="section-tag">// 07</span>
+    <h2>Exclusion de garanties</h2>
+    <p>L'APPLICATION EST FOURNIE «&nbsp;TELLE QUELLE&nbsp;» ET «&nbsp;SELON LA DISPONIBILITÉ&nbsp;», SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS, SANS S'Y LIMITER, LES GARANTIES IMPLICITES DE QUALITÉ MARCHANDE, D'ADÉQUATION À UN USAGE PARTICULIER ET D'ABSENCE DE CONTREFAÇON.</p>
+    <div class="alert-box">
+      <p>Les traductions sont produites par des systèmes automatisés et peuvent contenir des erreurs. Ne vous y fiez pas pour prendre des décisions critiques, juridiques, médicales ou liées à la sécurité sans vérification indépendante.</p>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="doc-section">
+    <span class="section-tag">// 08</span>
+    <h2>Limitation de responsabilité</h2>
+    <p>Dans toute la mesure permise par la loi applicable, NeuroOrbit AI ne pourra être tenue responsable de dommages indirects, accessoires, spéciaux, consécutifs ou punitifs découlant de votre utilisation de l'application ou de votre incapacité à l'utiliser.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="doc-section">
+    <span class="section-tag">// 09</span>
+    <h2>Indemnisation</h2>
+    <p>Vous acceptez d'indemniser, de défendre et de tenir indemnes NeuroOrbit AI ainsi que ses dirigeants, employés, entrepreneurs et mandataires à l'égard de toute réclamation, de tous dommages, pertes, responsabilités et frais (y compris des honoraires d'avocat raisonnables) découlant&nbsp;: (a) de votre utilisation de l'application en violation des présentes conditions, (b) de votre violation de toute loi ou de tout règlement applicable, ou (c) de votre atteinte aux droits d'un tiers.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="doc-section">
+    <span class="section-tag">// 10</span>
+    <h2>Droit applicable et règlement des différends</h2>
+    <p>Les présentes conditions sont régies par les lois de la <strong>province de Québec, Canada</strong>, sans égard aux règles de conflit de lois.</p>
+    <p>Les utilisateurs de l'UE/EEE conservent le droit d'intenter une action devant les tribunaux de l'État membre de leur résidence habituelle, conformément au règlement (UE) n° 1215/2012. Aucune disposition des présentes conditions ne limite les droits impératifs en matière de protection des consommateurs dont vous bénéficiez dans votre pays de résidence.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="doc-section">
+    <span class="section-tag">// 11</span>
+    <h2>Divisibilité et intégralité de l'entente</h2>
+    <p>Si une disposition des présentes conditions est jugée invalide ou inapplicable par un tribunal compétent, les autres dispositions demeurent pleinement en vigueur.</p>
+    <p>Les présentes conditions d'utilisation, ainsi que la Politique de confidentialité et l'Avis juridique, constituent l'intégralité de l'entente entre vous et NeuroOrbit AI concernant Quiet Translator.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="doc-section">
+    <span class="section-tag">// Contact</span>
+    <h2>Questions juridiques</h2>
+    <p>Questions juridiques &nbsp;&nbsp;<a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a></p>
+    <p>Questions relatives à la confidentialité &nbsp;&nbsp;<a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">&#10216; NeuroOrbit AI &#10217;</div>
+  <div class="footer-links">
+    <a href="privacy-fr.html">Politique de confidentialité</a>
+    <a href="terms-fr.html">Conditions d'utilisation</a>
+    <a href="disclaimer.html">Avis juridique</a>
+    <a href="fr/">Retour à l'application</a>
+  </div>
+  <div class="footer-copy">2026 NeuroOrbit AI · Montréal, Canada · Tous droits réservés</div>
+</footer>
+
+<script>
+const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
+let stars = [];
+function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+function init() {
+  stars = [];
+  for (let i = 0; i < 300; i++) {
+    stars.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*1.2+0.2, a: Math.random(), speed: Math.random()*0.003+0.001, cyan: Math.random()<0.2 });
+  }
+}
+function draw() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const mw = ctx.createLinearGradient(canvas.width*.2,0,canvas.width*.8,canvas.height);
+  mw.addColorStop(0,'transparent'); mw.addColorStop(.5,'rgba(180,200,255,0.03)'); mw.addColorStop(1,'transparent');
+  ctx.fillStyle=mw; ctx.fillRect(0,0,canvas.width,canvas.height);
+  stars.forEach(s => {
+    s.a+=s.speed;
+    const alpha=(Math.sin(s.a)+1)/2*0.6+0.1;
+    ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle=s.cyan?`rgba(0,229,255,${alpha})`:`rgba(200,220,255,${alpha*.7})`;
+    ctx.fill();
+  });
+  requestAnimationFrame(draw);
+}
+window.addEventListener('resize',()=>{resize();init();});
+resize(); init(); draw();
+</script>
+</body>
+</html>

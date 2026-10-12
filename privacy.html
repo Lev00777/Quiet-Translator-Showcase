@@ -67,7 +67,17 @@
   .footer-links a:hover { color: var(--cyan); }
   .footer-copy { font-family: 'Share Tech Mono', monospace; font-size: 9px; color: rgba(205,232,240,.2); letter-spacing: 1px; }
   @media (max-width: 600px) { nav { padding: 14px 20px; } .nav-links { display: none; } .wrap { padding: 100px 20px 60px; } }
+  .lang-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  .lang-switch a { font-family: 'Share Tech Mono', 'Noto Sans SC', 'Noto Kufi Arabic', monospace; font-size: 12px; color: var(--text-dim); text-decoration: none; border: 0.5px solid var(--border); padding: 5px 12px; border-radius: 2px; letter-spacing: 0; transition: all .2s; }
+  .lang-switch a:hover { color: var(--cyan); border-color: rgba(0,229,255,.4); }
+  .lang-switch a[aria-current] { color: var(--cyan); border-color: var(--cyan); background: var(--cyan-dim); }
 </style>
+<link rel="alternate" hreflang="en" href="https://lev00777.github.io/Quiet-Translator-Showcase/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://lev00777.github.io/Quiet-Translator-Showcase/privacy-fr.html">
+<link rel="alternate" hreflang="es" href="https://lev00777.github.io/Quiet-Translator-Showcase/privacy-es.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://lev00777.github.io/Quiet-Translator-Showcase/privacy-zh.html">
+<link rel="alternate" hreflang="ar" href="https://lev00777.github.io/Quiet-Translator-Showcase/privacy-ar.html">
+<link rel="alternate" hreflang="x-default" href="https://lev00777.github.io/Quiet-Translator-Showcase/privacy.html">
 </head>
 <body>
 <canvas id="starfield"></canvas>
@@ -84,6 +94,13 @@
 
 <div class="wrap">
   <div class="doc-header">
+    <div class="lang-switch" role="navigation" aria-label="Language">
+      <a href="privacy.html" hreflang="en" lang="en" aria-current="page">English</a>
+      <a href="privacy-fr.html" hreflang="fr" lang="fr">Français</a>
+      <a href="privacy-es.html" hreflang="es" lang="es">Español</a>
+      <a href="privacy-zh.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+      <a href="privacy-ar.html" hreflang="ar" lang="ar">العربية</a>
+    </div>
     <div class="doc-badge">Legal Document</div>
     <h1 class="doc-title">Privacy <span>Policy</span></h1>
     <p class="doc-meta">
