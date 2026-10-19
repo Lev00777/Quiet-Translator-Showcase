@@ -1,6 +1,6 @@
 # Privacy Policy — Quiet Translator
 
-**Last Updated: October 5, 2026**
+**Last Updated: October 19, 2026**
 **Effective Date: October 5, 2026**
 
 ---
@@ -67,6 +67,12 @@ we collect the following limited data:
 - A pseudonymous user identifier (uid)
 - If you sign in with Google or Apple, we receive basic account identifiers
   from those providers; we do not receive or store your password.
+
+**Using the App Without an Account (Guest Mode)**
+- If you tap “Try without an account”, we create an anonymous account through Firebase Authentication. It contains only a random user identifier; we do not collect your email, name or any contact details.
+- Guest use is limited to 15 minutes of listening. To enforce this limit, we record the minutes used and the device identifier described below.
+- If you later sign in with Apple, Google or email, the anonymous account is linked to that account and the minutes already used carry over.
+- Guest data follows the same retention rules as other accounts (see below). You can delete it at any time in the app (Settings → Delete Account) or by contacting us.
 
 **Usage data (for billing and fair-use limits)**
 - Listening time used, in minutes
