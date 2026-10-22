@@ -537,8 +537,9 @@
     padding: 0 4px;
   }
   .video-card { min-width: 0; text-align: center; }
-  .video-card video {
+  .video-card video, .video-card img {
     display: block;
+    height: auto;
     width: 100%;
     aspect-ratio: 9 / 16;
     object-fit: contain;
@@ -727,6 +728,12 @@
   <!-- VIDEO DEMOS -->
   <div class="hero-videos" id="demo">
     <div class="video-demo video-strip">
+      <div class="video-card">
+        <img src="../img/hero/listen_th.jpg" width="540" height="960" alt="Quiet Translator: ไม่ต้องพิมพ์ แค่ฟังก็พอ">
+      </div>
+      <div class="video-card">
+        <img src="../img/hero/bus_th.jpg" width="540" height="960" alt="Quiet Translator: ฟังคนตรงหน้า ไม่ใช่ฟังโทรศัพท์ คำแปลดังในหูฟังทันที" loading="lazy">
+      </div>
       <div class="video-card">
         <video src="../video/promo_th.mp4" poster="../video/promo_th.jpg" controls autoplay muted loop playsinline preload="auto" aria-label="วิดีโอแนะนำ Quiet Translator: คำพูดของหมอถูกแปลเป็นภาษาของคุณทันที"></video>
         <h3>ดูใน 15 วินาที</h3>
