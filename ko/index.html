@@ -537,8 +537,9 @@
     padding: 0 4px;
   }
   .video-card { min-width: 0; text-align: center; }
-  .video-card video {
+  .video-card video, .video-card img {
     display: block;
+    height: auto;
     width: 100%;
     aspect-ratio: 9 / 16;
     object-fit: contain;
@@ -726,6 +727,12 @@
   <!-- VIDEO DEMOS -->
   <div class="hero-videos" id="demo">
     <div class="video-demo video-strip">
+      <div class="video-card">
+        <img src="../img/hero/listen_ko.jpg" width="540" height="960" alt="Quiet Translator: 입력하지 마세요. 그냥 들으세요.">
+      </div>
+      <div class="video-card">
+        <img src="../img/hero/bus_ko.jpg" width="540" height="960" alt="Quiet Translator: 휴대폰 말고, 사람에게 귀 기울이세요. 번역이 이어폰으로 바로 들려요" loading="lazy">
+      </div>
       <div class="video-card">
         <video src="../video/promo_ko.mp4" poster="../video/promo_ko.jpg" controls autoplay muted loop playsinline preload="auto" aria-label="Quiet Translator 홍보 영상: 의사의 말이 바로 내 언어로 번역됩니다"></video>
         <h3>15초 만에 보기</h3>

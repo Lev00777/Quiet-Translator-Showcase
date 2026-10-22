@@ -537,8 +537,9 @@
     padding: 0 4px;
   }
   .video-card { min-width: 0; text-align: center; }
-  .video-card video {
+  .video-card video, .video-card img {
     display: block;
+    height: auto;
     width: 100%;
     aspect-ratio: 9 / 16;
     object-fit: contain;
@@ -726,6 +727,12 @@
   <!-- VIDEO DEMOS -->
   <div class="hero-videos" id="demo">
     <div class="video-demo video-strip">
+      <div class="video-card">
+        <img src="../img/hero/listen_he.jpg" width="540" height="960" alt="Quiet Translator: בלי להקליד. רק להקשיב.">
+      </div>
+      <div class="video-card">
+        <img src="../img/hero/bus_he.jpg" width="540" height="960" alt="Quiet Translator: תקשיבו לאנשים, לא לטלפון. התרגום נשמע ישר באוזנייה" loading="lazy">
+      </div>
       <div class="video-card">
         <video src="../video/promo_he.mp4" poster="../video/promo_he.jpg" controls autoplay muted loop playsinline preload="auto" aria-label="סרטון תדמית של Quiet Translator: דברי הרופא מתורגמים מיד לשפה שלכם"></video>
         <h3>ב-15 שניות</h3>

@@ -46,7 +46,7 @@ LANGS = [
 ]
 
 # Keys a language may define only when it has its own promo video (video/promo_<code>.mp4).
-OPTIONAL_KEYS = {"video0_title", "video0_desc", "video0_aria"}
+OPTIONAL_KEYS = {"video0_title", "video0_desc", "video0_aria", "image1_alt", "image2_alt"}
 
 # Scripts where wide letter-spacing hurts readability (or breaks Arabic joining).
 NO_TRACKING = {"ar", "he", "th", "zh", "ko"}
@@ -159,6 +159,20 @@ def build_page(template, code, strings):
             f'        <p>{esc(strings["video0_desc"])}</p>\n'
             "      </div>\n"
         )
+
+    # Ad images (img/hero/listen_<code>.jpg, bus_<code>.jpg) go first in the strip.
+    image_cards = ""
+    for i, name in enumerate(("listen", "bus"), 1):
+        if (ROOT / "img" / "hero" / f"{name}_{code}.jpg").exists():
+            image_cards += (
+                '      <div class="video-card">\n'
+                f'        <img src="{base}img/hero/{name}_{code}.jpg" width="540" height="960" '
+                f'alt="{esc(strings[f"image{i}_alt"])}"{"" if i == 1 else " loading=\"lazy\""}>\n'
+                "      </div>\n"
+            )
+    if image_cards:
+        promo_card = image_cards + promo_card
+        strip_class = " video-strip"
 
     legal = strings["legal_note"]
     values = {
