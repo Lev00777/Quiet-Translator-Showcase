@@ -15,15 +15,12 @@ In industrial environments, heavy machinery and ambient noise make communication
 ## 📱 Screenshots (UI Showcase)
 
 <p align="center">
-  <img src="screen-002.png" width="180" alt="AWS Setup Logs">
-  <img src="screen-006.png" width="180" alt="Home Screen">
-  <img src="screen-007.png" width="180" alt="Recording Mode">
-  <img src="screen-008.png" width="180" alt="Translated Text View">
-  <img src="screen-009.png" width="180" alt="Translated Text View">
-  <img src="screen-011.png" width="180" alt="Translated Text View">
-  <img src="screen-013.png" width="180" alt="Translated Text View">
-  <img src="screen-015.png" width="180" alt="Translated Text View">
-  <img src="screen-016.png" width="180" alt="Translated Text View">
+  <img src="screen-main.png" width="180" alt="Home screen">
+  <img src="screen-languages.png" width="180" alt="Language picker">
+  <img src="screen-006.png" width="180" alt="Lock screen">
+  <img src="screen-settings.png" width="180" alt="Settings">
+  <img src="screen-category.png" width="180" alt="Translation category">
+  <img src="screen-help.png" width="180" alt="Help & Guide">
 </p>
 
 ## 🛠 Architecture & Tech Stack
