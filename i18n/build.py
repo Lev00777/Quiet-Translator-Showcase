@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 I18N = ROOT / "i18n"
-SITE = "https://lev00777.github.io/Quiet-Translator-Showcase/"
+SITE = "https://quiettranslator.com/"
 
 # code, native name, text direction, hreflang, og:locale, font override
 # Font override: Google Fonts family that replaces the Latin-only display/mono
