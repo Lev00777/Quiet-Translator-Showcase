@@ -1,6 +1,6 @@
 # Privacy Policy — Quiet Translator
 
-**Last Updated: October 19, 2026**
+**Last Updated: November 9, 2026**
 **Effective Date: October 5, 2026**
 
 ---
@@ -19,7 +19,8 @@ Person in charge of the protection of personal information
 
 Your privacy is our top priority. Quiet Translator is designed from the ground up
 as a zero-retention application. Voice input is processed in real time and displayed
-on screen — audio is never recorded, saved, or stored on our servers or on your device.
+on screen — audio is never saved on our servers, and is not kept on your device
+after it has been processed.
 
 This Privacy Policy explains exactly what data we collect, why we collect it,
 who processes it on our behalf, and what rights you have.
@@ -35,8 +36,11 @@ Your audio is streamed securely over encrypted connections (HTTPS/WSS) to the
 speech-recognition providers listed in Section 7, where it is transcribed into
 text in real time.
 
-**We do NOT save, record, or store any audio files — on your device or on our servers.**
+**We do NOT keep any audio recordings — on your device or on our servers.**
 Audio is streamed in real time and immediately discarded after processing.
+In one of the listening modes, short audio segments are briefly held in a temporary
+file on your device while they are sent for transcription, and that file is deleted
+as soon as processing finishes.
 Our server-side audio retention is **0 days**.
 
 Please note: speech-recognition and translation providers may process audio
@@ -67,6 +71,9 @@ we collect the following limited data:
 - A pseudonymous user identifier (uid)
 - If you sign in with Google or Apple, we receive basic account identifiers
   from those providers; we do not receive or store your password.
+- Your name, if you provide it or if Apple or Google share it when you sign in.
+- An optional profile photo, if you choose one: it is reduced to a small image,
+  stored with your account, and deleted when you delete your account.
 
 **Using the App Without an Account (Guest Mode)**
 - If you tap “Try without an account”, we create an anonymous account through Firebase Authentication. It contains only a random user identifier; we do not collect your email, name or any contact details.
