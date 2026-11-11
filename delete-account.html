@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Delete Account — Quiet Translator</title>
-<meta name="description" content="How to delete your Quiet Translator account and all associated data — in-app or by email. Zero data retention by NeuroOrbit AI.">
+<meta name="description" content="How to delete your Quiet Translator account and your data — in-app or by email. By NeuroOrbit AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
@@ -57,6 +57,7 @@
   .data-table tr:hover td { background: rgba(0,229,255,.03); }
   .tag-del { color: #ff5c7a; font-family: 'Share Tech Mono', monospace; font-size: 12px; }
   .tag-none { color: var(--cyan); font-family: 'Share Tech Mono', monospace; font-size: 12px; }
+  .tag-keep { color: #ffcc00; font-family: 'Share Tech Mono', monospace; font-size: 12px; }
   .highlight-box { background: rgba(0,229,255,.04); border: 0.5px solid rgba(0,229,255,.2); border-left: 2px solid var(--cyan); border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 20px 0; }
   .highlight-box p { margin: 0; font-size: 14px; }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
@@ -91,13 +92,13 @@
     <h1 class="doc-title">Delete <span>Account</span></h1>
     <p class="doc-meta">
       Effective <span>//</span> June 20, 2026
-      <span>//</span> Last Updated: June 20, 2026
+      <span>//</span> Last Updated: November 11, 2026
       <span>//</span> NeuroOrbit AI
     </p>
   </div>
 
   <div class="highlight-box">
-    <p><strong>TL;DR:</strong> You can delete your account and all associated data at any time &mdash; directly in the app in a few taps, or by email. There is no recovery after deletion.</p>
+    <p><strong>TL;DR:</strong> You can delete your account at any time &mdash; directly in the app in a few taps, or by email. Deleting in the app removes your sign-in account and profile right away. A few other records are deleted on request by email (see below). There is no recovery after deletion.</p>
   </div>
 
   <div class="cyber-line"></div>
@@ -112,9 +113,9 @@
       <li>Go to <strong>Settings</strong>.</li>
       <li>Tap <strong>Delete Account</strong> at the bottom of the screen.</li>
       <li>Confirm your identity when prompted (sign in again with Apple, Google, or email).</li>
-      <li>Your account and all associated data are permanently deleted, and you are signed out. You will see the confirmation <strong>&ldquo;Your account has been deleted.&rdquo;</strong></li>
+      <li>Your sign-in account and profile are permanently deleted, and you are signed out. You will see the confirmation <strong>&ldquo;Your account has been deleted.&rdquo;</strong></li>
     </ol>
-    <p>If you signed in with <strong>Sign in with Apple</strong>, your Apple authorization token is also revoked as part of the deletion, so the app is removed from your Apple ID.</p>
+    <p>If you signed in with <strong>Sign in with Apple</strong>, the app also asks Apple to revoke its authorization, so the app is removed from your Apple ID.</p>
   </div>
 
   <!-- Email -->
@@ -127,6 +128,7 @@
       <li><strong>Subject:</strong> Account Deletion Request</li>
       <li>Your registered email address</li>
       <li>The text: <strong>&ldquo;I request permanent deletion of my account and all associated data.&rdquo;</strong></li>
+      <li>If you already deleted your account in the app, say so: we will delete the remaining records listed below</li>
     </ul>
     <p>We will process your request within <strong>30 days</strong>.</p>
   </div>
@@ -140,12 +142,12 @@
         <tr><th>Data</th><th>Action</th></tr>
       </thead>
       <tbody>
-        <tr><td>Email address</td><td><span class="tag-del">Permanently deleted</span></td></tr>
-        <tr><td>Password (hashed)</td><td><span class="tag-del">Permanently deleted</span></td></tr>
-        <tr><td>User ID</td><td><span class="tag-del">Permanently deleted</span></td></tr>
-        <tr><td>Session metadata</td><td><span class="tag-del">Permanently deleted</span></td></tr>
-        <tr><td>Audio data</td><td><span class="tag-none">Never stored &mdash; nothing to delete</span></td></tr>
-        <tr><td>Translation text</td><td><span class="tag-none">Never stored &mdash; nothing to delete</span></td></tr>
+        <tr><td>Sign-in account (email, user ID, sign-in method)</td><td><span class="tag-del">Deleted in the app, immediately</span></td></tr>
+        <tr><td>Profile (name, profile photo)</td><td><span class="tag-del">Deleted in the app, immediately</span></td></tr>
+        <tr><td>Usage record (minutes used, plan, device identifier)</td><td><span class="tag-keep">Deleted on request by email, within 30 days</span></td></tr>
+        <tr><td>Subscription record at RevenueCat</td><td><span class="tag-keep">Deleted on request by email, within 30 days</span></td></tr>
+        <tr><td>Technical server logs (no audio or text)</td><td><span class="tag-keep">Deleted automatically within 30 days</span></td></tr>
+        <tr><td>Audio and translation text</td><td><span class="tag-none">Not stored on our servers &mdash; nothing to delete</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -153,8 +155,10 @@
   <!-- Retention -->
   <div class="doc-section">
     <span class="section-tag">// 04</span>
-    <h2>What We May Retain</h2>
-    <p>Anonymized billing records may be retained for up to <strong>90 days</strong> for legal and financial compliance purposes. These records contain no audio, no translations, and no readable personal identifiers.</p>
+    <h2>What We Keep</h2>
+    <p><strong>Free-trial counter.</strong> To prevent abuse of the free trial, we keep a count of free minutes used on each device, linked to a device identifier. After your deletion request, this counter is no longer linked to your account.</p>
+    <p><strong>Purchase records.</strong> Apple and Google keep their own records of your purchases under their policies. Deleting your account does not cancel an active subscription: cancel it in your Apple ID or Google Play settings.</p>
+    <p><strong>Audio on your device (app versions 1.0.5 and earlier).</strong> In one listening mode, these versions kept a copy of short audio segments in the app&rsquo;s storage on your device; on iPhone they could also be included in your device backup. Deleting the app removes them, and the next app update deletes them automatically.</p>
   </div>
 
   <!-- Contact -->

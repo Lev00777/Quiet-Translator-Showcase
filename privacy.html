@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Quiet Translator</title>
-<meta name="description" content="Privacy Policy for Quiet Translator by NeuroOrbit AI. Zero-retention real-time voice translation.">
+<meta name="description" content="Privacy Policy for Quiet Translator by NeuroOrbit AI. Real-time voice translation that keeps as little data as possible.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
@@ -105,13 +105,13 @@
     <h1 class="doc-title">Privacy <span>Policy</span></h1>
     <p class="doc-meta">
       Effective <span>//</span> October 5, 2026
-      <span>//</span> Last Updated: November 9, 2026
+      <span>//</span> Last Updated: November 11, 2026
       <span>//</span> Controller: NeuroOrbit AI
     </p>
   </div>
 
   <div class="highlight-box">
-    <p><strong>Quiet Translator is built as a zero-retention application.</strong> Voice input is processed in real time and displayed on screen — audio is never saved on our servers, and is not kept on your device after it has been processed.</p>
+    <p><strong>Quiet Translator is designed to keep as little data as possible.</strong> Your speech is processed in real time to show you the translation. We do not store your audio, transcripts or translations on our servers.</p>
   </div>
 
   <div class="cyber-line"></div>
@@ -123,9 +123,12 @@
     <p>Quiet Translator requires access to your device microphone solely to provide real-time speech translation during an active session.</p>
     <p>Your audio is streamed over encrypted connections (HTTPS/WSS) to the speech-recognition providers listed in Section 06, where it is transcribed into text in real time.</p>
     <div class="highlight-box">
-      <p><strong>We do NOT keep any audio recordings</strong> — on your device or on our servers. Audio is streamed in real time and discarded immediately after processing. In one of the listening modes, short audio segments are briefly held in a temporary file on your device while they are sent for transcription, and that file is deleted as soon as processing finishes. Server-side audio retention: <strong>0 days</strong>.</p>
+      <p><strong>We do NOT keep audio recordings on our servers.</strong> Audio is streamed in real time and discarded after processing. In one of the listening modes, short audio segments are briefly held in a temporary file on your device while they are sent for transcription, and that file is deleted as soon as processing finishes. Server-side audio retention: <strong>0 days</strong>.</p>
     </div>
-    <p>Speech-recognition and translation providers may process audio transiently to deliver the service. We do not control their internal processing and encourage you to review their privacy policies. We select providers that do not retain audio for training after processing where such options are available.</p>
+    <div class="alert-box">
+      <p><strong>App versions 1.0.5 and earlier:</strong> in that listening mode, these versions also kept a copy of each audio segment in the app&rsquo;s storage on your device, and on iPhone it could be included in your device backup. These copies were never sent to our servers. Deleting the app removes them, and the next app update deletes them automatically.</p>
+    </div>
+    <p>Speech-recognition and translation providers process audio and text to deliver the service, under their own terms. Some of them may keep limited data for a period of time (for example, OpenAI may keep translation requests for up to 30 days to monitor for abuse), and, depending on the provider and plan, may use data to improve their models. We do not control their internal processing and encourage you to review their privacy policies (Section 06).</p>
   </div>
 
   <!-- 2 -->
@@ -159,15 +162,14 @@
     <ul>
       <li>Listening time used, in minutes</li>
       <li>Your current subscription plan and remaining minutes</li>
-      <li>Language pairs used (for example, English → Ukrainian)</li>
-      <li>App version and device operating system, for diagnostics</li>
+      <li>The target language of each translation request (used to process the request, not stored)</li>
     </ul>
     <h3>Device Identifier (Anti-Abuse)</h3>
     <p>To prevent abuse of the one-time free trial, we use a device-level signal: Apple DeviceCheck on iOS, or the Android ID on Android. It is used only to enforce trial and usage limits. It is not used for advertising, is not shared with advertisers, and is not used to track you across other apps or websites.</p>
     <h3>Subscription Data</h3>
     <p>Your subscription status, plan, purchase and renewal events, as provided by Apple (App Store), Google (Google Play), and our subscription-management provider (RevenueCat). We do not receive or store your full payment card details — payment is handled by Apple or Google.</p>
-    <p><strong>We do not collect the content of your conversations.</strong></p>
-    <p><strong>Retention:</strong> account and usage data are kept while your account is active and for up to 24 months after your last activity, then permanently deleted. You may delete your account at any time (Section 07).</p>
+    <p><strong>We do not store the content of your conversations.</strong> It passes through our servers and the providers listed in Section 06 only to produce the transcription and translation you see.</p>
+    <p><strong>Retention:</strong> account and usage data are kept while your account is active. Section 07 explains what is deleted when you delete your account. Our server also keeps technical logs (an account identifier, request type, data sizes, timing and error codes, but no audio, transcripts or translations) for up to 30 days.</p>
   </div>
 
   <!-- 4 -->
@@ -182,7 +184,7 @@
           <tr><td>Account and subscription management</td><td>Performance of contract — Art. 6(1)(b)</td></tr>
           <tr><td>Usage limits and billing</td><td>Performance of contract — Art. 6(1)(b)</td></tr>
           <tr><td>Device identifier for trial and abuse prevention</td><td>Legitimate interests — Art. 6(1)(f)</td></tr>
-          <tr><td>Product diagnostics and improvement</td><td>Legitimate interests — Art. 6(1)(f)</td></tr>
+          <tr><td>Technical logs, security and troubleshooting</td><td>Legitimate interests — Art. 6(1)(f)</td></tr>
           <tr><td>Marketing communications, if any</td><td>Your consent — Art. 6(1)(a)</td></tr>
           <tr><td>Legal compliance</td><td>Legal obligation — Art. 6(1)(c)</td></tr>
         </tbody>
@@ -197,14 +199,14 @@
     <div class="warning-box">
       <p>In some regions, laws require the consent of other people before their speech is captured or processed. <strong>You are responsible</strong> for using Quiet Translator in compliance with all applicable laws in your location.</p>
     </div>
-    <p>Because Quiet Translator does not store audio or transcripts, no recording of other people is created or retained by us.</p>
+    <p>Because we do not store audio or transcripts on our servers, no recording of other people is created or retained by us.</p>
   </div>
 
   <!-- 6 -->
   <div class="doc-section">
     <span class="section-tag">// 06</span>
     <h2>Third-Party Sub-Processors</h2>
-    <p>We use the following providers, acting as data processors on our behalf. Audio streamed to speech providers is used only to return a transcription and is not retained by us.</p>
+    <p>We use the following providers, acting as data processors on our behalf. Audio and text sent to them are used to return a transcription or translation and are not stored by us. In two of the listening modes the app connects directly to Deepgram or AssemblyAI, so these providers also see your IP address.</p>
     <div class="tablewrap">
       <table>
         <thead><tr><th>Sub-Processor</th><th>Service</th><th>Privacy Policy</th></tr></thead>
@@ -214,10 +216,11 @@
           <tr><td>OpenAI</td><td>Speech transcription (Whisper), text translation</td><td>openai.com/policies/privacy-policy</td></tr>
           <tr><td>Deepgram</td><td>Real-time speech transcription</td><td>deepgram.com/privacy</td></tr>
           <tr><td>AssemblyAI</td><td>Real-time speech transcription</td><td>assemblyai.com/legal/privacy-policy</td></tr>
-          <tr><td>DeepL</td><td>Text translation (backup)</td><td>deepl.com/en/privacy</td></tr>
+          <tr><td>DeepL</td><td>Text translation (automatic backup)</td><td>deepl.com/en/privacy</td></tr>
           <tr><td>RevenueCat</td><td>Subscription management</td><td>revenuecat.com/privacy</td></tr>
           <tr><td>Apple</td><td>App Store payments and subscriptions; DeviceCheck (iOS)</td><td>apple.com/legal/privacy</td></tr>
           <tr><td>Google (Google Play)</td><td>Google Play payments and subscriptions (Android)</td><td>policies.google.com/privacy</td></tr>
+          <tr><td>Google (Google Fonts)</td><td>Fonts used in the app, downloaded the first time they are shown (Google sees your IP address)</td><td>policies.google.com/privacy</td></tr>
         </tbody>
       </table>
     </div>
@@ -237,7 +240,7 @@
       <li><strong>Withdraw consent</strong> at any time without affecting prior lawful processing</li>
     </ul>
     <div class="highlight-box">
-      <p><strong>Account deletion.</strong> Delete your account directly in the app: Settings → Delete Account. This removes your account and associated usage data from our systems. Subscription cancellation is managed through your Apple ID settings (iOS) or Google Play account settings (Android). Deleting your account does not cancel an active subscription.</p>
+      <p><strong>Account deletion.</strong> Delete your account directly in the app: Settings → Delete Account. This permanently deletes your sign-in account and profile (email, name, profile photo). Your usage record (minutes used, plan, device identifier) and your subscription record at RevenueCat are deleted on request: email us and we will delete them within 30 days. Technical logs are deleted automatically within 30 days. A free-trial minute counter per device is kept to prevent abuse, without a link to your account. Details: <a href="delete-account.html">Delete Account</a>. Subscription cancellation is managed through your Apple ID settings (iOS) or Google Play account settings (Android). Deleting your account does not cancel an active subscription.</p>
     </div>
     <p><strong>California residents (CCPA/CPRA):</strong> you have the right to know what personal information we collect, the right to delete it, and the right to opt out of the "sale" or "sharing" of personal information. We do not sell your personal information.</p>
     <p>Requests: <a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a> — we respond within 30 days (45 days for CCPA requests). You may also file a complaint with your local supervisory authority, for example your EU Member State DPA, the UK ICO, the CNIL, the Office of the Privacy Commissioner of Canada, the Commission d'accès à l'information du Québec, or the ANPD.</p>
@@ -262,7 +265,7 @@
   <div class="doc-section">
     <span class="section-tag">// 10</span>
     <h2>Children's Privacy</h2>
-    <p>Quiet Translator is not directed to children under 13, or the minimum age required in your jurisdiction. We do not knowingly collect personal data from children. If you believe a child has provided us data, contact us and we will delete it.</p>
+    <p>Quiet Translator is not directed to children under 13 (under 16 in the EU/EEA), or under the higher minimum age required in your jurisdiction. We do not knowingly collect personal data from children. If you believe a child has provided us data, contact us and we will delete it.</p>
   </div>
 
   <!-- 11 -->
