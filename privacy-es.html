@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Política de privacidad — Quiet Translator</title>
-<meta name="description" content="Política de privacidad de Quiet Translator, de NeuroOrbit AI. Traducción de voz en tiempo real sin retención de datos.">
+<meta name="description" content="Política de privacidad de Quiet Translator, de NeuroOrbit AI. Traducción de voz en tiempo real que guarda la menor cantidad de datos posible.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
@@ -106,14 +106,14 @@
     <h1 class="doc-title">Política de <span>privacidad</span></h1>
     <p class="doc-meta">
       Vigencia <span>//</span> 5 de octubre de 2026
-      <span>//</span> Última actualización: 9 de noviembre de 2026
+      <span>//</span> Última actualización: 11 de noviembre de 2026
       <span>//</span> Responsable del tratamiento: NeuroOrbit AI
     </p>
     <p class="lang-note">Esta es una traducción que se ofrece para su comodidad. Si difiere de la <a href="privacy.html">versión en inglés</a>, prevalecerá la versión en inglés.</p>
   </div>
 
   <div class="highlight-box">
-    <p><strong>Quiet Translator está diseñada como una aplicación de cero retención.</strong> La entrada de voz se procesa en tiempo real y se muestra en pantalla: el audio nunca se guarda en nuestros servidores y no se conserva en su dispositivo una vez procesado.</p>
+    <p><strong>Quiet Translator está diseñada para guardar la menor cantidad de datos posible.</strong> Su voz se procesa en tiempo real para mostrarle la traducción. No almacenamos su audio, sus transcripciones ni sus traducciones en nuestros servidores.</p>
   </div>
 
   <div class="cyber-line"></div>
@@ -125,9 +125,12 @@
     <p>Quiet Translator necesita acceso al micrófono de su dispositivo únicamente para ofrecer traducción de voz en tiempo real durante una sesión activa.</p>
     <p>Su audio se transmite mediante conexiones cifradas (HTTPS/WSS) a los proveedores de reconocimiento de voz indicados en la Sección 06, donde se transcribe a texto en tiempo real.</p>
     <div class="highlight-box">
-      <p><strong>NO conservamos ninguna grabación de audio</strong>, ni en su dispositivo ni en nuestros servidores. El audio se transmite en tiempo real y se descarta inmediatamente después de procesarse. En uno de los modos de escucha, breves fragmentos de audio se guardan por un momento en un archivo temporal en su dispositivo mientras se envían para su transcripción; ese archivo se elimina en cuanto termina el procesamiento. Retención de audio en el servidor: <strong>0 días</strong>.</p>
+      <p><strong>NO conservamos grabaciones de audio en nuestros servidores.</strong> El audio se transmite en tiempo real y se descarta después de procesarse. En uno de los modos de escucha, breves fragmentos de audio se guardan por un momento en un archivo temporal en su dispositivo mientras se envían para su transcripción; ese archivo se elimina en cuanto termina el procesamiento. Retención de audio en el servidor: <strong>0 días</strong>.</p>
     </div>
-    <p>Los proveedores de reconocimiento de voz y de traducción pueden procesar el audio de forma transitoria para prestar el servicio. No controlamos su procesamiento interno y le recomendamos revisar sus políticas de privacidad. Cuando existe esa opción, seleccionamos proveedores que no conservan el audio para entrenamiento después de procesarlo.</p>
+    <div class="alert-box">
+      <p><strong>Versiones 1.0.5 y anteriores de la aplicación:</strong> en ese modo de escucha, estas versiones también guardaban una copia de cada fragmento de audio en el almacenamiento de la aplicación en su dispositivo y, en iPhone, podía incluirse en la copia de seguridad del dispositivo. Esas copias nunca se enviaron a nuestros servidores. Al eliminar la aplicación se borran, y la próxima actualización las elimina automáticamente.</p>
+    </div>
+    <p>Los proveedores de reconocimiento de voz y de traducción procesan el audio y el texto para prestar el servicio, según sus propias condiciones. Algunos pueden conservar datos limitados durante un tiempo (por ejemplo, OpenAI puede conservar las solicitudes de traducción hasta 30 días para detectar abusos) y, según el proveedor y el plan, pueden usar los datos para mejorar sus modelos. No controlamos su procesamiento interno y le recomendamos revisar sus políticas de privacidad (Sección 06).</p>
   </div>
 
   <!-- 2 -->
@@ -161,15 +164,14 @@
     <ul>
       <li>Tiempo de escucha utilizado, en minutos</li>
       <li>Su plan de suscripción actual y los minutos restantes</li>
-      <li>Pares de idiomas utilizados (por ejemplo, inglés → ucraniano)</li>
-      <li>Versión de la aplicación y sistema operativo del dispositivo, con fines de diagnóstico</li>
+      <li>El idioma de destino de cada solicitud de traducción (se usa para procesarla, no se almacena)</li>
     </ul>
     <h3>Identificador del dispositivo (prevención de abusos)</h3>
     <p>Para evitar el uso abusivo de la prueba gratuita única, utilizamos una señal a nivel de dispositivo: Apple DeviceCheck en iOS o el Android ID en Android. Se utiliza únicamente para hacer cumplir los límites de la prueba y de uso. No se utiliza con fines publicitarios, no se comparte con anunciantes y no se utiliza para rastrearlo en otras aplicaciones ni sitios web.</p>
     <h3>Datos de suscripción</h3>
     <p>El estado de su suscripción, su plan y los eventos de compra y renovación, según los proporcionan Apple (App Store), Google (Google Play) y nuestro proveedor de gestión de suscripciones (RevenueCat). No recibimos ni almacenamos los datos completos de su tarjeta de pago: el pago lo gestionan Apple o Google.</p>
-    <p><strong>No recopilamos el contenido de sus conversaciones.</strong></p>
-    <p><strong>Conservación:</strong> los datos de la cuenta y de uso se conservan mientras su cuenta esté activa y hasta 24 meses después de su última actividad; luego se eliminan de forma permanente. Puede eliminar su cuenta en cualquier momento (Sección 07).</p>
+    <p><strong>No almacenamos el contenido de sus conversaciones.</strong> Pasa por nuestros servidores y por los proveedores de la Sección 06 solo para generar la transcripción y la traducción que usted ve.</p>
+    <p><strong>Conservación:</strong> los datos de la cuenta y de uso se conservan mientras su cuenta esté activa. La Sección 07 explica qué se elimina cuando elimina su cuenta. Nuestro servidor también guarda registros técnicos (un identificador de cuenta, el tipo de solicitud, el tamaño de los datos, los tiempos y los códigos de error, pero nunca audio, transcripciones ni traducciones) durante un máximo de 30 días.</p>
   </div>
 
   <!-- 4 -->
@@ -184,7 +186,7 @@
           <tr><td>Gestión de la cuenta y de la suscripción</td><td>Ejecución de un contrato — Art. 6(1)(b)</td></tr>
           <tr><td>Límites de uso y facturación</td><td>Ejecución de un contrato — Art. 6(1)(b)</td></tr>
           <tr><td>Identificador del dispositivo para la prueba gratuita y la prevención de abusos</td><td>Intereses legítimos — Art. 6(1)(f)</td></tr>
-          <tr><td>Diagnóstico y mejora del producto</td><td>Intereses legítimos — Art. 6(1)(f)</td></tr>
+          <tr><td>Registros técnicos, seguridad y resolución de problemas</td><td>Intereses legítimos — Art. 6(1)(f)</td></tr>
           <tr><td>Comunicaciones de marketing, si las hubiera</td><td>Su consentimiento — Art. 6(1)(a)</td></tr>
           <tr><td>Cumplimiento legal</td><td>Obligación legal — Art. 6(1)(c)</td></tr>
         </tbody>
@@ -199,14 +201,14 @@
     <div class="warning-box">
       <p>En algunas regiones, la ley exige el consentimiento de otras personas antes de que su voz sea captada o procesada. <strong>Usted es responsable</strong> de utilizar Quiet Translator de conformidad con todas las leyes aplicables en su ubicación.</p>
     </div>
-    <p>Como Quiet Translator no almacena audio ni transcripciones, nosotros no creamos ni conservamos ninguna grabación de otras personas.</p>
+    <p>Como no almacenamos audio ni transcripciones en nuestros servidores, nosotros no creamos ni conservamos ninguna grabación de otras personas.</p>
   </div>
 
   <!-- 6 -->
   <div class="doc-section">
     <span class="section-tag">// 06</span>
     <h2>Subencargados del tratamiento externos</h2>
-    <p>Utilizamos los siguientes proveedores, que actúan como encargados del tratamiento por cuenta nuestra. El audio transmitido a los proveedores de voz se utiliza únicamente para devolver una transcripción y nosotros no lo conservamos.</p>
+    <p>Utilizamos los siguientes proveedores, que actúan como encargados del tratamiento por cuenta nuestra. El audio y el texto que se les envían se utilizan para devolver una transcripción o una traducción, y nosotros no los almacenamos. En dos de los modos de escucha, la aplicación se conecta directamente a Deepgram o AssemblyAI, por lo que estos proveedores también ven su dirección IP.</p>
     <div class="tablewrap">
       <table>
         <thead><tr><th>Subencargado</th><th>Servicio</th><th>Política de privacidad</th></tr></thead>
@@ -216,10 +218,11 @@
           <tr><td>OpenAI</td><td>Transcripción de voz (Whisper), traducción de texto</td><td>openai.com/policies/privacy-policy</td></tr>
           <tr><td>Deepgram</td><td>Transcripción de voz en tiempo real</td><td>deepgram.com/privacy</td></tr>
           <tr><td>AssemblyAI</td><td>Transcripción de voz en tiempo real</td><td>assemblyai.com/legal/privacy-policy</td></tr>
-          <tr><td>DeepL</td><td>Traducción de texto (respaldo)</td><td>deepl.com/en/privacy</td></tr>
+          <tr><td>DeepL</td><td>Traducción de texto (respaldo automático)</td><td>deepl.com/en/privacy</td></tr>
           <tr><td>RevenueCat</td><td>Gestión de suscripciones</td><td>revenuecat.com/privacy</td></tr>
           <tr><td>Apple</td><td>Pagos y suscripciones de App Store; DeviceCheck (iOS)</td><td>apple.com/legal/privacy</td></tr>
           <tr><td>Google (Google Play)</td><td>Pagos y suscripciones de Google Play (Android)</td><td>policies.google.com/privacy</td></tr>
+          <tr><td>Google (Google Fonts)</td><td>Fuentes tipográficas de la aplicación, que se descargan la primera vez que se muestran (Google ve su dirección IP)</td><td>policies.google.com/privacy</td></tr>
         </tbody>
       </table>
     </div>
@@ -239,7 +242,7 @@
       <li><strong>Retirar su consentimiento</strong> en cualquier momento, sin que ello afecte a la licitud del tratamiento previo</li>
     </ul>
     <div class="highlight-box">
-      <p><strong>Eliminación de la cuenta.</strong> Elimine su cuenta directamente en la aplicación: Configuración → Eliminar cuenta (Settings → Delete Account). Esto elimina su cuenta y los datos de uso asociados de nuestros sistemas. La cancelación de la suscripción se gestiona desde la configuración de su Apple ID (iOS) o de su cuenta de Google Play (Android). Eliminar su cuenta no cancela una suscripción activa.</p>
+      <p><strong>Eliminación de la cuenta.</strong> Elimine su cuenta directamente en la aplicación: Configuración → Eliminar cuenta (Settings → Delete Account). Esto elimina de forma permanente su cuenta de acceso y su perfil (correo electrónico, nombre, foto de perfil). Su registro de uso (minutos utilizados, plan, identificador del dispositivo) y su registro de suscripción en RevenueCat se eliminan a petición: escríbanos y los eliminaremos en un plazo de 30 días. Los registros técnicos se eliminan automáticamente en un plazo de 30 días. Para evitar abusos, se conserva un contador de minutos de prueba gratuita por dispositivo, sin vínculo con su cuenta. Más información: <a href="delete-account.html">Eliminar cuenta</a>. La cancelación de la suscripción se gestiona desde la configuración de su Apple ID (iOS) o de su cuenta de Google Play (Android). Eliminar su cuenta no cancela una suscripción activa.</p>
     </div>
     <p><strong>Residentes de California (CCPA/CPRA):</strong> usted tiene derecho a saber qué información personal recopilamos, derecho a eliminarla y derecho a excluirse de la «venta» o del «intercambio» de información personal. No vendemos su información personal.</p>
     <p>Solicitudes: <a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a>. Respondemos en un plazo de 30 días (45 días para las solicitudes de la CCPA). También puede presentar una reclamación ante su autoridad de control local, por ejemplo, la autoridad de protección de datos (DPA) de su Estado miembro de la UE, la ICO del Reino Unido, la CNIL, el Comisionado de Privacidad de Canadá (Office of the Privacy Commissioner of Canada), la Commission d'accès à l'information du Québec o la ANPD.</p>
@@ -264,7 +267,7 @@
   <div class="doc-section">
     <span class="section-tag">// 10</span>
     <h2>Privacidad de los menores</h2>
-    <p>Quiet Translator no está dirigida a menores de 13 años ni de la edad mínima exigida en su jurisdicción. No recopilamos a sabiendas datos personales de menores. Si cree que un menor nos ha proporcionado datos, comuníquese con nosotros y los eliminaremos.</p>
+    <p>Quiet Translator no está dirigida a menores de 13 años (16 en la UE/EEE) ni a menores de la edad mínima exigida en su jurisdicción, si es mayor. No recopilamos a sabiendas datos personales de menores. Si cree que un menor nos ha proporcionado datos, comuníquese con nosotros y los eliminaremos.</p>
   </div>
 
   <!-- 11 -->
