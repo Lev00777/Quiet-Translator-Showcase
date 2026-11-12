@@ -116,7 +116,7 @@
     <h1 class="doc-title">隐私<span>政策</span></h1>
     <p class="doc-meta">
       生效日期 <span>//</span> 2026年10月5日
-      <span>//</span> 最后更新：2026年11月11日
+      <span>//</span> 最后更新：2026年11月12日
       <span>//</span> 数据控制者：NeuroOrbit AI
     </p>
     <p class="lang-note">本译本仅为方便阅读而提供。如本译本与<a href="privacy.html">英文版本</a>有任何不一致之处，以英文版本为准。</p>
@@ -140,7 +140,7 @@
     <div class="alert-box">
       <p><strong>1.0.5 及更早版本：</strong>在该收听模式下，这些版本还会把每个音频片段的副本保存在您设备上的应用存储空间中；在 iPhone 上，这些副本可能被纳入设备备份。这些副本从未发送到我们的服务器。删除应用即可将其清除，下一次应用更新也会自动删除它们。</p>
     </div>
-    <p>语音识别和翻译服务提供商会按照其自身条款处理音频和文本，以提供服务。部分提供商可能会在一段时间内保留有限的数据（例如，OpenAI 可能将翻译请求最多保留 30 天，用于监测滥用行为）；视提供商和套餐而定，也可能使用这些数据改进其模型。我们无法控制其内部处理流程，建议您查阅其隐私政策（见第 06 条）。</p>
+    <p>语音识别和翻译由 OpenAI 完成。OpenAI 不会使用通过其 API 发送的数据训练模型；为监测滥用行为，它可能将请求最多保留 30 天。1.0.5 及更早版本的应用还会使用 Deepgram 和 AssemblyAI 进行语音识别；视提供商和套餐而定，它们可能会保留数据或使用数据改进其模型。我们无法控制服务提供商的内部处理流程，建议您查阅其隐私政策（见第 06 条）。</p>
   </div>
 
   <!-- 2 -->
@@ -218,17 +218,16 @@
   <div class="doc-section">
     <span class="section-tag">// 06</span>
     <h2>第三方次级处理者</h2>
-    <p>我们使用以下服务提供商，其作为数据处理者代表我们处理数据。发送给它们的音频和文本用于返回转写或翻译结果，我们不会存储。在其中两种收听模式下，应用会直接连接 Deepgram 或 AssemblyAI，因此这些提供商也能看到您的 IP 地址。</p>
+    <p>我们使用以下服务提供商，其作为数据处理者代表我们处理数据。发送给它们的音频和文本用于返回转写或翻译结果，我们不会存储。在其中两种收听模式下，应用会直接连接 OpenAI（1.0.5 及更早版本则连接 Deepgram 或 AssemblyAI），因此这些提供商也能看到您的 IP 地址。</p>
     <div class="tablewrap">
       <table>
         <thead><tr><th>次级处理者</th><th>服务内容</th><th>隐私政策</th></tr></thead>
         <tbody>
           <tr><td>Google (Firebase)</td><td>身份验证、账户数据库</td><td>firebase.google.com/support/privacy</td></tr>
           <tr><td>Amazon Web Services</td><td>无服务器后端、使用数据库</td><td>aws.amazon.com/privacy</td></tr>
-          <tr><td>OpenAI</td><td>语音转写（Whisper）、文本翻译</td><td>openai.com/policies/privacy-policy</td></tr>
-          <tr><td>Deepgram</td><td>实时语音转写</td><td>deepgram.com/privacy</td></tr>
-          <tr><td>AssemblyAI</td><td>实时语音转写</td><td>assemblyai.com/legal/privacy-policy</td></tr>
-          <tr><td>DeepL</td><td>文本翻译（自动备用）</td><td>deepl.com/en/privacy</td></tr>
+          <tr><td>OpenAI</td><td>语音识别与文本翻译</td><td>openai.com/policies/privacy-policy</td></tr>
+          <tr><td>Deepgram</td><td>实时语音识别（1.0.5 及更早版本的应用）</td><td>deepgram.com/privacy</td></tr>
+          <tr><td>AssemblyAI</td><td>实时语音识别（1.0.5 及更早版本的应用）</td><td>assemblyai.com/legal/privacy-policy</td></tr>
           <tr><td>RevenueCat</td><td>订阅管理</td><td>revenuecat.com/privacy</td></tr>
           <tr><td>Apple</td><td>App Store 支付与订阅；DeviceCheck（iOS）</td><td>apple.com/legal/privacy</td></tr>
           <tr><td>Google (Google Play)</td><td>Google Play 支付与订阅（Android）</td><td>policies.google.com/privacy</td></tr>
