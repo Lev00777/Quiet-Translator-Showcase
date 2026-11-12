@@ -109,7 +109,7 @@
     <h1 class="doc-title">Privacy <span>Policy</span></h1>
     <p class="doc-meta">
       Effective <span>//</span> October 5, 2026
-      <span>//</span> Last Updated: November 11, 2026
+      <span>//</span> Last Updated: November 12, 2026
       <span>//</span> Controller: NeuroOrbit AI
     </p>
   </div>
@@ -132,7 +132,7 @@
     <div class="alert-box">
       <p><strong>App versions 1.0.5 and earlier:</strong> in that listening mode, these versions also kept a copy of each audio segment in the app&rsquo;s storage on your device, and on iPhone it could be included in your device backup. These copies were never sent to our servers. Deleting the app removes them, and the next app update deletes them automatically.</p>
     </div>
-    <p>Speech-recognition and translation providers process audio and text to deliver the service, under their own terms. Some of them may keep limited data for a period of time (for example, OpenAI may keep translation requests for up to 30 days to monitor for abuse), and, depending on the provider and plan, may use data to improve their models. We do not control their internal processing and encourage you to review their privacy policies (Section 06).</p>
+    <p>Speech recognition and translation are performed by OpenAI. OpenAI does not use data sent through its API to train its models; it may keep requests for up to 30 days to monitor for abuse. App versions 1.0.5 and earlier also use Deepgram and AssemblyAI for speech recognition; depending on the provider and plan, they may keep data or use it to improve their models. We do not control providers&rsquo; internal processing and encourage you to review their privacy policies (Section 06).</p>
   </div>
 
   <!-- 2 -->
@@ -210,17 +210,16 @@
   <div class="doc-section">
     <span class="section-tag">// 06</span>
     <h2>Third-Party Sub-Processors</h2>
-    <p>We use the following providers, acting as data processors on our behalf. Audio and text sent to them are used to return a transcription or translation and are not stored by us. In two of the listening modes the app connects directly to Deepgram or AssemblyAI, so these providers also see your IP address.</p>
+    <p>We use the following providers, acting as data processors on our behalf. Audio and text sent to them are used to return a transcription or translation and are not stored by us. In two of the listening modes the app connects directly to OpenAI (in app versions 1.0.5 and earlier, to Deepgram or AssemblyAI), so these providers also see your IP address.</p>
     <div class="tablewrap">
       <table>
         <thead><tr><th>Sub-Processor</th><th>Service</th><th>Privacy Policy</th></tr></thead>
         <tbody>
           <tr><td>Google (Firebase)</td><td>Authentication, account database</td><td>firebase.google.com/support/privacy</td></tr>
           <tr><td>Amazon Web Services</td><td>Serverless backend, usage database</td><td>aws.amazon.com/privacy</td></tr>
-          <tr><td>OpenAI</td><td>Speech transcription (Whisper), text translation</td><td>openai.com/policies/privacy-policy</td></tr>
-          <tr><td>Deepgram</td><td>Real-time speech transcription</td><td>deepgram.com/privacy</td></tr>
-          <tr><td>AssemblyAI</td><td>Real-time speech transcription</td><td>assemblyai.com/legal/privacy-policy</td></tr>
-          <tr><td>DeepL</td><td>Text translation (automatic backup)</td><td>deepl.com/en/privacy</td></tr>
+          <tr><td>OpenAI</td><td>Speech recognition and text translation</td><td>openai.com/policies/privacy-policy</td></tr>
+          <tr><td>Deepgram</td><td>Real-time speech recognition (app versions 1.0.5 and earlier)</td><td>deepgram.com/privacy</td></tr>
+          <tr><td>AssemblyAI</td><td>Real-time speech recognition (app versions 1.0.5 and earlier)</td><td>assemblyai.com/legal/privacy-policy</td></tr>
           <tr><td>RevenueCat</td><td>Subscription management</td><td>revenuecat.com/privacy</td></tr>
           <tr><td>Apple</td><td>App Store payments and subscriptions; DeviceCheck (iOS)</td><td>apple.com/legal/privacy</td></tr>
           <tr><td>Google (Google Play)</td><td>Google Play payments and subscriptions (Android)</td><td>policies.google.com/privacy</td></tr>

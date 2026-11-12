@@ -1,6 +1,6 @@
 # Privacy Policy — Quiet Translator
 
-**Last Updated: November 11, 2026**
+**Last Updated: November 12, 2026**
 **Effective Date: October 5, 2026**
 
 ---
@@ -47,12 +47,12 @@ a copy of each audio segment in the app's storage on your device, and on iPhone 
 could be included in your device backup. These copies were never sent to our servers.
 Deleting the app removes them, and the next app update deletes them automatically.
 
-Please note: speech-recognition and translation providers process audio and text
-to deliver the service, under their own terms. Some of them may keep limited data
-for a period of time (for example, OpenAI may keep translation requests for up to
-30 days to monitor for abuse), and, depending on the provider and plan, may use
-data to improve their models. We do not control their internal processing and
-encourage you to review their privacy policies (Section 7).
+Please note: speech recognition and translation are performed by OpenAI. OpenAI
+does not use data sent through its API to train its models; it may keep requests
+for up to 30 days to monitor for abuse. App versions 1.0.5 and earlier also use
+Deepgram and AssemblyAI for speech recognition; depending on the provider and plan,
+they may keep data or use it to improve their models. We do not control providers'
+internal processing and encourage you to review their privacy policies (Section 7).
 
 ---
 
@@ -144,16 +144,16 @@ other people is created or retained by us.
 We use the following third-party providers, acting as data processors on our behalf.
 Audio and text sent to them are used to return a transcription or translation and
 are not stored by us. In two of the listening modes the app connects directly to
-Deepgram or AssemblyAI, so these providers also see your IP address. We encourage you to review each provider's privacy policy.
+OpenAI (in app versions 1.0.5 and earlier, to Deepgram or AssemblyAI), so these
+providers also see your IP address. We encourage you to review each provider's privacy policy.
 
 | Sub-Processor | Service | Privacy Policy |
 |---|---|---|
 | Google (Firebase) | Authentication and account database | firebase.google.com/support/privacy |
 | Amazon Web Services (AWS) | Serverless backend, usage database | aws.amazon.com/privacy |
-| OpenAI | Speech transcription (Whisper) and text translation | openai.com/policies/privacy-policy |
-| Deepgram | Real-time speech transcription | deepgram.com/privacy |
-| AssemblyAI | Real-time speech transcription | assemblyai.com/legal/privacy-policy |
-| DeepL | Text translation (automatic backup) | deepl.com/en/privacy |
+| OpenAI | Speech recognition and text translation | openai.com/policies/privacy-policy |
+| Deepgram | Real-time speech recognition (app versions 1.0.5 and earlier) | deepgram.com/privacy |
+| AssemblyAI | Real-time speech recognition (app versions 1.0.5 and earlier) | assemblyai.com/legal/privacy-policy |
 | RevenueCat | Subscription management | revenuecat.com/privacy |
 | Apple | App Store payments and subscriptions; DeviceCheck (iOS) | apple.com/legal/privacy |
 | Google (Google Play) | Google Play payments and subscriptions (Android) | policies.google.com/privacy |

@@ -110,7 +110,7 @@
     <h1 class="doc-title">Politique de <span>confidentialité</span></h1>
     <p class="doc-meta">
       En vigueur <span>//</span> 5 octobre 2026
-      <span>//</span> Dernière mise à jour&nbsp;: 11 novembre 2026
+      <span>//</span> Dernière mise à jour&nbsp;: 12 novembre 2026
       <span>//</span> Responsable du traitement&nbsp;: NeuroOrbit AI
     </p>
     <p class="lang-note">Ce document est également disponible en <a href="privacy.html">anglais</a>.</p>
@@ -134,7 +134,7 @@
     <div class="alert-box">
       <p><strong>Versions 1.0.5 et antérieures de l'application&nbsp;:</strong> dans ce mode d'écoute, ces versions gardaient aussi une copie de chaque segment audio dans le stockage de l'application sur votre appareil et, sur iPhone, cette copie pouvait être incluse dans la sauvegarde de l'appareil. Ces copies n'ont jamais été envoyées à nos serveurs. Désinstaller l'application les supprime, et la prochaine mise à jour les supprimera automatiquement.</p>
     </div>
-    <p>Les fournisseurs de reconnaissance vocale et de traduction traitent l'audio et le texte pour fournir le service, selon leurs propres conditions. Certains peuvent conserver des données limitées pendant un certain temps (par exemple, OpenAI peut conserver les demandes de traduction jusqu'à 30 jours pour détecter les abus) et, selon le fournisseur et le forfait, utiliser les données pour améliorer leurs modèles. Nous ne contrôlons pas leur traitement interne et vous invitons à consulter leurs politiques de confidentialité (section 06).</p>
+    <p>La reconnaissance vocale et la traduction sont effectuées par OpenAI. OpenAI n'utilise pas les données transmises par son API pour entraîner ses modèles; elle peut conserver les requêtes jusqu'à 30 jours pour détecter les abus. Les versions 1.0.5 et antérieures de l'application utilisent aussi Deepgram et AssemblyAI pour la reconnaissance vocale; selon le fournisseur et le forfait, ceux-ci peuvent conserver des données ou les utiliser pour améliorer leurs modèles. Nous ne contrôlons pas le traitement interne des fournisseurs et vous invitons à consulter leurs politiques de confidentialité (section 06).</p>
   </div>
 
   <!-- 2 -->
@@ -212,17 +212,16 @@
   <div class="doc-section">
     <span class="section-tag">// 06</span>
     <h2>Sous-traitants tiers</h2>
-    <p>Nous faisons appel aux fournisseurs suivants, qui agissent comme sous-traitants pour notre compte. L'audio et le texte qui leur sont transmis servent à produire une transcription ou une traduction et ne sont pas stockés par nous. Dans deux des modes d'écoute, l'application se connecte directement à Deepgram ou à AssemblyAI&nbsp;: ces fournisseurs voient donc aussi votre adresse IP.</p>
+    <p>Nous faisons appel aux fournisseurs suivants, qui agissent comme sous-traitants pour notre compte. L'audio et le texte qui leur sont transmis servent à produire une transcription ou une traduction et ne sont pas stockés par nous. Dans deux des modes d'écoute, l'application se connecte directement à OpenAI (dans les versions 1.0.5 et antérieures, à Deepgram ou à AssemblyAI)&nbsp;: ces fournisseurs voient donc aussi votre adresse IP.</p>
     <div class="tablewrap">
       <table>
         <thead><tr><th>Sous-traitant</th><th>Service</th><th>Politique de confidentialité</th></tr></thead>
         <tbody>
           <tr><td>Google (Firebase)</td><td>Authentification, base de données des comptes</td><td>firebase.google.com/support/privacy</td></tr>
           <tr><td>Amazon Web Services</td><td>Infrastructure dorsale sans serveur, base de données d'utilisation</td><td>aws.amazon.com/privacy</td></tr>
-          <tr><td>OpenAI</td><td>Transcription vocale (Whisper), traduction de texte</td><td>openai.com/policies/privacy-policy</td></tr>
-          <tr><td>Deepgram</td><td>Transcription vocale en temps réel</td><td>deepgram.com/privacy</td></tr>
-          <tr><td>AssemblyAI</td><td>Transcription vocale en temps réel</td><td>assemblyai.com/legal/privacy-policy</td></tr>
-          <tr><td>DeepL</td><td>Traduction de texte (relève automatique)</td><td>deepl.com/en/privacy</td></tr>
+          <tr><td>OpenAI</td><td>Reconnaissance vocale et traduction de texte</td><td>openai.com/policies/privacy-policy</td></tr>
+          <tr><td>Deepgram</td><td>Reconnaissance vocale en temps réel (versions 1.0.5 et antérieures de l'application)</td><td>deepgram.com/privacy</td></tr>
+          <tr><td>AssemblyAI</td><td>Reconnaissance vocale en temps réel (versions 1.0.5 et antérieures de l'application)</td><td>assemblyai.com/legal/privacy-policy</td></tr>
           <tr><td>RevenueCat</td><td>Gestion des abonnements</td><td>revenuecat.com/privacy</td></tr>
           <tr><td>Apple</td><td>Paiements et abonnements App Store; DeviceCheck (iOS)</td><td>apple.com/legal/privacy</td></tr>
           <tr><td>Google (Google Play)</td><td>Paiements et abonnements Google Play (Android)</td><td>policies.google.com/privacy</td></tr>
