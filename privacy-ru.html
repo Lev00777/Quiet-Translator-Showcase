@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Политика конфиденциальности — Quiet Translator</title>
+<meta name="description" content="Политика конфиденциальности Quiet Translator от NeuroOrbit AI. Перевод речи в реальном времени, который хранит как можно меньше данных.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&family=Exo+2:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cyan: #00e5ff;
+    --cyan-dim: rgba(0,229,255,.12);
+    --cyan-glow: rgba(0,229,255,.35);
+    --bg: #03080f;
+    --text: #cde8f0;
+    --text-dim: rgba(205,232,240,.55);
+    --border: rgba(0,229,255,.12);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+  #starfield { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+  body::after { content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.04) 2px, rgba(0,0,0,.04) 4px); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: linear-gradient(180deg, rgba(3,8,15,.97) 0%, transparent 100%); border-bottom: 0.5px solid var(--border); }
+  .nav-logo { font-family: 'Orbitron', monospace; font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 3px; text-decoration: none; text-shadow: 0 0 20px var(--cyan-glow); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-decoration: none; letter-spacing: 2px; text-transform: uppercase; transition: color .2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+  .nav-back { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--cyan); text-decoration: none; letter-spacing: 2px; border: 0.5px solid rgba(0,229,255,.3); padding: 6px 14px; border-radius: 2px; transition: all .2s; }
+  .nav-back:hover { background: var(--cyan-dim); }
+  .wrap { position: relative; z-index: 2; max-width: 860px; margin: 0 auto; padding: 120px 32px 80px; }
+  .doc-header { margin-bottom: 60px; }
+  .doc-badge { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--cyan); border: 0.5px solid rgba(0,229,255,.3); padding: 5px 14px; border-radius: 2px; background: var(--cyan-dim); display: inline-block; margin-bottom: 24px; }
+  .doc-title { font-family: 'Orbitron', monospace; font-size: clamp(24px, 4.5vw, 44px); font-weight: 900; color: #fff; text-shadow: 0 0 30px var(--cyan-glow); margin-bottom: 12px; line-height: 1.1; }
+  .doc-title span { color: var(--cyan); }
+  .doc-meta { font-family: 'Share Tech Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
+  .doc-meta span { color: var(--cyan); margin: 0 8px; }
+  .cyber-line { height: 0.5px; background: linear-gradient(90deg, var(--cyan), rgba(0,229,255,.1), transparent); margin: 40px 0; }
+  .doc-section { margin-bottom: 48px; }
+  .section-tag { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: 3px; color: var(--cyan); text-transform: uppercase; opacity: .6; margin-bottom: 6px; display: block; }
+  h2 { font-family: 'Orbitron', monospace; font-size: 15px; font-weight: 700; color: var(--cyan); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 0.5px solid var(--border); }
+  h3 { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: 2px; color: var(--text); text-transform: uppercase; margin: 22px 0 8px; }
+  p { color: var(--text-dim); margin-bottom: 14px; font-size: 15px; }
+  p strong { color: var(--text); font-weight: 600; }
+  ul { margin: 0 0 14px 0; padding: 0; list-style: none; }
+  ul li { color: var(--text-dim); font-size: 15px; padding: 8px 0 8px 20px; position: relative; border-bottom: 0.5px solid rgba(0,229,255,.05); }
+  ul li::before { content: '→'; position: absolute; left: 0; color: var(--cyan); font-family: 'Share Tech Mono', monospace; font-size: 11px; }
+  ul li strong { color: var(--text); }
+  .highlight-box { background: rgba(0,229,255,.04); border: 0.5px solid rgba(0,229,255,.2); border-left: 2px solid var(--cyan); border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 20px 0; }
+  .highlight-box p { margin: 0; font-size: 14px; }
+  .warning-box { background: rgba(255,45,85,.04); border: 0.5px solid rgba(255,45,85,.25); border-left: 2px solid #ff2d55; border-radius: 0 4px 4px 0; padding: 20px 24px; margin: 24px 0; }
+  .warning-box p { margin: 0; font-size: 15px; color: rgba(255,120,140,.95); }
+  .alert-box { background: rgba(255,200,0,.04); border: 0.5px solid rgba(255,200,0,.2); border-left: 2px solid #ffcc00; border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 20px 0; }
+  .alert-box p { margin: 0; font-size: 14px; color: rgba(255,200,0,.85); }
+  .doc-section a { color: var(--cyan); text-decoration: none; }
+  .doc-section a:hover { text-decoration: underline; }
+  .tablewrap { overflow-x: auto; margin: 0 0 14px; }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 14px; }
+  th { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); text-align: left; padding: 10px 12px; border-bottom: 0.5px solid var(--border); opacity: .75; }
+  td { color: var(--text-dim); padding: 10px 12px; border-bottom: 0.5px solid rgba(0,229,255,.05); vertical-align: top; }
+  td:first-child { color: var(--text); }
+  footer { position: relative; z-index: 2; border-top: 0.5px solid var(--border); padding: 32px; text-align: center; margin-top: 40px; }
+  .footer-logo { font-family: 'Orbitron', monospace; font-size: 10px; letter-spacing: 3px; color: var(--cyan); margin-bottom: 16px; }
+  .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .footer-links a { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-decoration: none; letter-spacing: 1px; transition: color .2s; }
+  .footer-links a:hover { color: var(--cyan); }
+  .footer-copy { font-family: 'Share Tech Mono', monospace; font-size: 9px; color: rgba(205,232,240,.2); letter-spacing: 1px; }
+  @media (max-width: 600px) { nav { padding: 14px 20px; } .nav-links { display: none; } .wrap { padding: 100px 20px 60px; } }
+  .lang-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  .lang-switch a { font-family: 'Share Tech Mono', 'Noto Sans SC', 'Noto Kufi Arabic', monospace; font-size: 12px; color: var(--text-dim); text-decoration: none; border: 0.5px solid var(--border); padding: 5px 12px; border-radius: 2px; letter-spacing: 0; transition: all .2s; }
+  .lang-switch a:hover { color: var(--cyan); border-color: rgba(0,229,255,.4); }
+  .lang-switch a[aria-current] { color: var(--cyan); border-color: var(--cyan); background: var(--cyan-dim); }
+  .lang-note { font-size: 13px; color: var(--text-dim); margin-top: 14px; } .lang-note a { color: var(--cyan); }
+  /* Cyrillic font fallbacks */
+  body { font-family: 'Exo 2', sans-serif; font-size: 15px; }
+  h2, .doc-title { font-family: 'Orbitron', 'Exo 2', sans-serif; }
+  h3, .doc-badge, .doc-meta, .section-tag, .nav-links a, .nav-back, .footer-links a, .footer-copy, th { font-family: 'Share Tech Mono', 'Exo 2', monospace; }
+  .doc-title { line-height: 1.25; }
+</style>
+<link rel="alternate" hreflang="en" href="https://quiettranslator.com/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://quiettranslator.com/privacy-fr.html">
+<link rel="alternate" hreflang="es" href="https://quiettranslator.com/privacy-es.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://quiettranslator.com/privacy-zh.html">
+<link rel="alternate" hreflang="ar" href="https://quiettranslator.com/privacy-ar.html">
+<link rel="alternate" hreflang="ru" href="https://quiettranslator.com/privacy-ru.html">
+<link rel="alternate" hreflang="uk" href="https://quiettranslator.com/privacy-uk.html">
+<link rel="alternate" hreflang="x-default" href="https://quiettranslator.com/privacy.html">
+</head>
+<body>
+<canvas id="starfield"></canvas>
+
+<nav>
+  <a href="ru/index.html" class="nav-logo">&#10216; Quiet Translator &#10217;</a>
+  <div class="nav-links">
+    <a href="privacy-ru.html" class="active">Конфиденциальность</a>
+    <a href="terms-ru.html">Условия</a>
+    <a href="disclaimer.html">Юр. уведомление</a>
+    <a href="ru/index.html" class="nav-back">К приложению</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="doc-header">
+    <div class="lang-switch" role="navigation" aria-label="Language">
+      <a href="privacy.html" hreflang="en" lang="en">English</a>
+      <a href="privacy-fr.html" hreflang="fr" lang="fr">Français</a>
+      <a href="privacy-es.html" hreflang="es" lang="es">Español</a>
+      <a href="privacy-zh.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+      <a href="privacy-ar.html" hreflang="ar" lang="ar">العربية</a>
+      <a href="privacy-ru.html" hreflang="ru" lang="ru" aria-current="page">Русский</a>
+      <a href="privacy-uk.html" hreflang="uk" lang="uk">Українська</a>
+    </div>
+    <div class="doc-badge">Юридический документ</div>
+    <h1 class="doc-title">Политика <span>конфиденциальности</span></h1>
+    <p class="doc-meta">
+      Действует с <span>//</span> 5 октября 2026
+      <span>//</span> Обновлено: 11 ноября 2026
+      <span>//</span> Оператор данных: NeuroOrbit AI
+    </p>
+    <p class="lang-note">Это перевод. При расхождениях действует <a href="privacy.html">английская версия</a>.</p>
+  </div>
+
+  <div class="highlight-box">
+    <p><strong>Quiet Translator устроен так, чтобы хранить как можно меньше данных.</strong> Ваша речь обрабатывается в реальном времени, чтобы показать вам перевод. Мы не храним ваш звук, расшифровки и переводы на наших серверах.</p>
+  </div>
+
+  <div class="cyber-line"></div>
+
+  <!-- 1 -->
+  <div class="doc-section">
+    <span class="section-tag">// 01</span>
+    <h2>Доступ к микрофону и аудиоданные</h2>
+    <p>Quiet Translator использует микрофон вашего устройства только для перевода речи в реальном времени во время активного сеанса.</p>
+    <p>Звук передаётся по зашифрованным соединениям (HTTPS/WSS) поставщикам распознавания речи, перечисленным в разделе 06, где он сразу превращается в текст.</p>
+    <div class="highlight-box">
+      <p><strong>Мы НЕ храним аудиозаписи на наших серверах.</strong> Звук передаётся в реальном времени и удаляется после обработки. В одном из режимов прослушивания короткие фрагменты звука ненадолго сохраняются во временном файле на вашем устройстве, пока отправляются на распознавание, и этот файл удаляется сразу после обработки. Срок хранения звука на сервере: <strong>0 дней</strong>.</p>
+    </div>
+    <div class="alert-box">
+      <p><strong>Версии приложения 1.0.5 и более ранние:</strong> в этом режиме они также сохраняли копию каждого фрагмента в памяти приложения на вашем устройстве, а на iPhone она могла попадать в резервную копию устройства. На наши серверы эти копии никогда не отправлялись. Они удаляются вместе с приложением, а следующее обновление удалит их автоматически.</p>
+    </div>
+    <p>Поставщики распознавания речи и перевода обрабатывают звук и текст для работы сервиса по своим собственным правилам. Некоторые из них могут какое-то время хранить ограниченный объём данных (например, OpenAI может хранить запросы на перевод до 30 дней для выявления злоупотреблений), а в зависимости от поставщика и тарифа могут использовать данные для улучшения своих моделей. Мы не управляем их внутренней обработкой и советуем ознакомиться с их политиками конфиденциальности (раздел 06).</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="doc-section">
+    <span class="section-tag">// 02</span>
+    <h2>Расшифровки не хранятся</h2>
+    <p>Переведённый текст отображается на экране только во время активного сеанса. После окончания сеанса мы не храним расшифровки ни в базах данных, ни в журналах, ни в файлах.</p>
+    <p>Срок хранения расшифровок на сервере: <strong>0 дней</strong>. На устройстве: <strong>0 дней</strong>.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="doc-section">
+    <span class="section-tag">// 03</span>
+    <h2>Какие данные мы собираем</h2>
+    <h3>Данные аккаунта</h3>
+    <ul>
+      <li>Адрес электронной почты (через Firebase Authentication)</li>
+      <li>Псевдонимный идентификатор пользователя</li>
+      <li>При входе через Google или Apple мы получаем от них базовые идентификаторы аккаунта. Ваш пароль мы не получаем и не храним</li>
+      <li>Ваше имя, если вы его указали или если его передали Apple или Google при входе</li>
+      <li>Фото профиля, если вы его выбрали: оно уменьшается до маленького изображения, хранится вместе с аккаунтом и удаляется при удалении аккаунта</li>
+    </ul>
+    <h3>Использование без аккаунта (гостевой режим)</h3>
+    <ul>
+      <li>Если вы нажмёте «Попробовать без аккаунта», мы создадим анонимный аккаунт через Firebase Authentication. В нём есть только случайный идентификатор пользователя. Мы не собираем вашу почту, имя или контактные данные</li>
+      <li>В гостевом режиме доступно 15 минут прослушивания. Чтобы соблюдать этот лимит, мы учитываем использованные минуты и идентификатор устройства, описанный ниже</li>
+      <li>Если позже вы войдёте через Apple, Google или почту, анонимный аккаунт будет связан с этим аккаунтом, а уже использованные минуты сохранятся</li>
+      <li>Гостевые данные хранятся по тем же правилам, что и данные других аккаунтов (см. ниже). Удалить их можно в любой момент в приложении (Настройки → Удалить аккаунт) или написав нам</li>
+    </ul>
+    <h3>Данные об использовании</h3>
+    <ul>
+      <li>Использованное время прослушивания в минутах</li>
+      <li>Ваш текущий тариф и оставшиеся минуты</li>
+      <li>Язык перевода в каждом запросе (нужен для обработки запроса, не сохраняется)</li>
+    </ul>
+    <h3>Идентификатор устройства (защита от злоупотреблений)</h3>
+    <p>Чтобы бесплатный пробный период нельзя было использовать повторно, мы используем признак на уровне устройства: Apple DeviceCheck на iOS или Android ID на Android. Он нужен только для соблюдения лимитов. Он не используется для рекламы, не передаётся рекламодателям и не используется для отслеживания вас в других приложениях и на сайтах.</p>
+    <h3>Данные о подписке</h3>
+    <p>Статус подписки, тариф, покупки и продления, которые передают Apple (App Store), Google (Google Play) и наш сервис управления подписками (RevenueCat). Полные данные вашей банковской карты мы не получаем и не храним: оплату обрабатывают Apple или Google.</p>
+    <p><strong>Мы не храним содержание ваших разговоров.</strong> Оно проходит через наши серверы и поставщиков из раздела 06 только для того, чтобы получить расшифровку и перевод, которые вы видите.</p>
+    <p><strong>Сроки хранения:</strong> данные аккаунта и использования хранятся, пока ваш аккаунт активен. Что удаляется при удалении аккаунта, описано в разделе 07. Наш сервер также ведёт технические журналы (идентификатор аккаунта, тип запроса, объём данных, время и коды ошибок, но без звука, расшифровок и переводов) и хранит их до 30 дней.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="doc-section">
+    <span class="section-tag">// 04</span>
+    <h2>Правовые основания обработки (ст. 6 GDPR)</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Обработка</th><th>Основание</th></tr></thead>
+        <tbody>
+          <tr><td>Передача звука в реальном времени для перевода</td><td>Исполнение договора — ст. 6(1)(b)</td></tr>
+          <tr><td>Управление аккаунтом и подпиской</td><td>Исполнение договора — ст. 6(1)(b)</td></tr>
+          <tr><td>Лимиты использования и оплата</td><td>Исполнение договора — ст. 6(1)(b)</td></tr>
+          <tr><td>Идентификатор устройства для пробного периода и защиты от злоупотреблений</td><td>Законный интерес — ст. 6(1)(f)</td></tr>
+          <tr><td>Технические журналы, безопасность и устранение неполадок</td><td>Законный интерес — ст. 6(1)(f)</td></tr>
+          <tr><td>Маркетинговые сообщения, если они будут</td><td>Ваше согласие — ст. 6(1)(a)</td></tr>
+          <tr><td>Соблюдение закона</td><td>Юридическая обязанность — ст. 6(1)(c)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="doc-section">
+    <span class="section-tag">// 05</span>
+    <h2>Речь других людей — ваша ответственность</h2>
+    <div class="warning-box">
+      <p>В некоторых странах и регионах закон требует согласия других людей, прежде чем их речь будет записана или обработана. <strong>Вы отвечаете</strong> за то, чтобы пользоваться Quiet Translator в соответствии с законами вашего места нахождения.</p>
+    </div>
+    <p>Поскольку мы не храним звук и расшифровки на наших серверах, мы не создаём и не храним записи речи других людей.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="doc-section">
+    <span class="section-tag">// 06</span>
+    <h2>Сторонние обработчики данных</h2>
+    <p>Мы пользуемся услугами следующих поставщиков, которые обрабатывают данные по нашему поручению. Звук и текст, которые им отправляются, используются для получения расшифровки или перевода, и мы их не храним. В двух режимах прослушивания приложение подключается напрямую к Deepgram или AssemblyAI, поэтому эти поставщики также видят ваш IP-адрес.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Обработчик</th><th>Назначение</th><th>Политика конфиденциальности</th></tr></thead>
+        <tbody>
+          <tr><td>Google (Firebase)</td><td>Вход в аккаунт, база данных аккаунтов</td><td>firebase.google.com/support/privacy</td></tr>
+          <tr><td>Amazon Web Services</td><td>Серверная часть, база данных использования</td><td>aws.amazon.com/privacy</td></tr>
+          <tr><td>OpenAI</td><td>Распознавание речи (Whisper), перевод текста</td><td>openai.com/policies/privacy-policy</td></tr>
+          <tr><td>Deepgram</td><td>Распознавание речи в реальном времени</td><td>deepgram.com/privacy</td></tr>
+          <tr><td>AssemblyAI</td><td>Распознавание речи в реальном времени</td><td>assemblyai.com/legal/privacy-policy</td></tr>
+          <tr><td>DeepL</td><td>Перевод текста (автоматический резерв)</td><td>deepl.com/en/privacy</td></tr>
+          <tr><td>RevenueCat</td><td>Управление подписками</td><td>revenuecat.com/privacy</td></tr>
+          <tr><td>Apple</td><td>Оплата и подписки в App Store; DeviceCheck (iOS)</td><td>apple.com/legal/privacy</td></tr>
+          <tr><td>Google (Google Play)</td><td>Оплата и подписки в Google Play (Android)</td><td>policies.google.com/privacy</td></tr>
+          <tr><td>Google (Google Fonts)</td><td>Шрифты приложения, загружаются при первом показе (Google видит ваш IP-адрес)</td><td>policies.google.com/privacy</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="doc-section">
+    <span class="section-tag">// 07</span>
+    <h2>Ваши права и удаление аккаунта</h2>
+    <p>В зависимости от вашей юрисдикции, в том числе по GDPR, UK GDPR, канадскому PIPEDA и CCPA/CPRA, вы имеете право:</p>
+    <ul>
+      <li><strong>получить доступ</strong> к персональным данным, которые у нас есть о вас</li>
+      <li><strong>исправить</strong> неточные данные</li>
+      <li><strong>удалить</strong> свои данные (право на забвение)</li>
+      <li><strong>перенести</strong> свои данные в другой сервис</li>
+      <li><strong>возразить</strong> против обработки на основании законного интереса</li>
+      <li><strong>отозвать согласие</strong> в любой момент, что не влияет на законность обработки до отзыва</li>
+    </ul>
+    <div class="highlight-box">
+      <p><strong>Удаление аккаунта.</strong> Удалить аккаунт можно прямо в приложении: Настройки → Удалить аккаунт (Settings → Delete Account). Это навсегда удаляет ваш аккаунт для входа и профиль (почту, имя, фото профиля). Запись об использовании (использованные минуты, тариф, идентификатор устройства) и запись о подписке в RevenueCat удаляются по запросу: напишите нам, и мы удалим их в течение 30 дней. Технические журналы удаляются автоматически в течение 30 дней. Чтобы пробный период нельзя было использовать повторно, счётчик бесплатных минут для устройства сохраняется, но без связи с вашим аккаунтом. Подробнее: <a href="delete-account.html">Удаление аккаунта</a>. Подписку отменяют в настройках Apple ID (iOS) или аккаунта Google Play (Android). Удаление аккаунта не отменяет действующую подписку.</p>
+    </div>
+    <p><strong>Жители Калифорнии (CCPA/CPRA):</strong> вы имеете право знать, какую личную информацию мы собираем, требовать её удаления и отказаться от её «продажи» или «передачи». Мы не продаём вашу личную информацию.</p>
+    <p>Запросы: <a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a>. Мы отвечаем в течение 30 дней (на запросы по CCPA в течение 45 дней). Вы также можете подать жалобу в местный надзорный орган, например в орган по защите данных вашей страны ЕС, ICO в Великобритании, CNIL, Офис уполномоченного по защите частной жизни Канады, Commission d'accès à l'information du Québec или ANPD.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="doc-section">
+    <span class="section-tag">// 08</span>
+    <h2>Международная передача данных</h2>
+    <p>Данные могут обрабатываться на серверах в США и других странах.</p>
+    <p><strong>Пользователи из ЕС/ЕЭЗ и Великобритании:</strong> передача осуществляется на основании стандартных договорных условий, утверждённых Европейской комиссией (решение 2021/914).</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="doc-section">
+    <span class="section-tag">// 09</span>
+    <h2>Защита данных</h2>
+    <p>Мы применяем принятые в отрасли меры защиты: шифрование TLS при передаче, шифрование данных аккаунта при хранении, строгий контроль доступа и регулярные проверки безопасности.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="doc-section">
+    <span class="section-tag">// 10</span>
+    <h2>Дети</h2>
+    <p>Quiet Translator не предназначен для детей младше 13 лет (в ЕС/ЕЭЗ младше 16 лет) или младше более высокого минимального возраста, установленного в вашей юрисдикции. Мы сознательно не собираем персональные данные детей. Если вы считаете, что ребёнок передал нам данные, напишите нам, и мы их удалим.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="doc-section">
+    <span class="section-tag">// 11</span>
+    <h2>Изменения политики</h2>
+    <p>О существенных изменениях мы сообщим по электронной почте и/или в приложении не менее чем за <strong>14 дней</strong> до их вступления в силу. Продолжая пользоваться приложением после этой даты, вы принимаете обновлённую политику.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="doc-section">
+    <span class="section-tag">// Контакты</span>
+    <h2>Вопросы о конфиденциальности</h2>
+    <p>Вопросы о конфиденциальности &nbsp;&nbsp;<a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a></p>
+    <p>Ответственный за защиту персональных данных (Закон 25 Квебека): <strong>Alex Klimenko</strong>, <a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">&#10216; NeuroOrbit AI &#10217;</div>
+  <div class="footer-links">
+    <a href="privacy-ru.html">Политика конфиденциальности</a>
+    <a href="terms-ru.html">Условия использования</a>
+    <a href="disclaimer.html">Юридическое уведомление</a>
+    <a href="ru/index.html">К приложению</a>
+  </div>
+  <div class="footer-copy">2026 NeuroOrbit AI · Монреаль, Канада · Все права защищены</div>
+</footer>
+
+<script>
+const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
+let stars = [];
+function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+function init() {
+  stars = [];
+  for (let i = 0; i < 300; i++) {
+    stars.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*1.2+0.2, a: Math.random(), speed: Math.random()*0.003+0.001, cyan: Math.random()<0.2 });
+  }
+}
+function draw() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const mw = ctx.createLinearGradient(canvas.width*.2,0,canvas.width*.8,canvas.height);
+  mw.addColorStop(0,'transparent'); mw.addColorStop(.5,'rgba(180,200,255,0.03)'); mw.addColorStop(1,'transparent');
+  ctx.fillStyle=mw; ctx.fillRect(0,0,canvas.width,canvas.height);
+  stars.forEach(s => {
+    s.a+=s.speed;
+    const alpha=(Math.sin(s.a)+1)/2*0.6+0.1;
+    ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle=s.cyan?`rgba(0,229,255,${alpha})`:`rgba(200,220,255,${alpha*.7})`;
+    ctx.fill();
+  });
+  requestAnimationFrame(draw);
+}
+window.addEventListener('resize',()=>{resize();init();});
+resize(); init(); draw();
+</script>
+</body>
+</html>
