@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Умови використання — Quiet Translator</title>
+<meta name="description" content="Умови використання та ліцензійна угода Quiet Translator від NeuroOrbit AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&family=Exo+2:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cyan: #00e5ff;
+    --cyan-dim: rgba(0,229,255,.12);
+    --cyan-glow: rgba(0,229,255,.35);
+    --bg: #03080f;
+    --text: #cde8f0;
+    --text-dim: rgba(205,232,240,.55);
+    --border: rgba(0,229,255,.12);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+  #starfield { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+  body::after { content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.04) 2px, rgba(0,0,0,.04) 4px); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: linear-gradient(180deg, rgba(3,8,15,.97) 0%, transparent 100%); border-bottom: 0.5px solid var(--border); }
+  .nav-logo { font-family: 'Orbitron', monospace; font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 3px; text-decoration: none; text-shadow: 0 0 20px var(--cyan-glow); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-decoration: none; letter-spacing: 2px; text-transform: uppercase; transition: color .2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+  .nav-back { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--cyan); text-decoration: none; letter-spacing: 2px; border: 0.5px solid rgba(0,229,255,.3); padding: 6px 14px; border-radius: 2px; transition: all .2s; }
+  .nav-back:hover { background: var(--cyan-dim); }
+  .wrap { position: relative; z-index: 2; max-width: 860px; margin: 0 auto; padding: 120px 32px 80px; }
+  .doc-header { margin-bottom: 60px; }
+  .doc-badge { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--cyan); border: 0.5px solid rgba(0,229,255,.3); padding: 5px 14px; border-radius: 2px; background: var(--cyan-dim); display: inline-block; margin-bottom: 24px; }
+  .doc-title { font-family: 'Orbitron', monospace; font-size: clamp(24px, 4.5vw, 44px); font-weight: 900; color: #fff; text-shadow: 0 0 30px var(--cyan-glow); margin-bottom: 12px; line-height: 1.1; }
+  .doc-title span { color: var(--cyan); }
+  .doc-meta { font-family: 'Share Tech Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
+  .doc-meta span { color: var(--cyan); margin: 0 8px; }
+  .cyber-line { height: 0.5px; background: linear-gradient(90deg, var(--cyan), rgba(0,229,255,.1), transparent); margin: 40px 0; }
+  .doc-section { margin-bottom: 48px; }
+  .section-tag { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: 3px; color: var(--cyan); text-transform: uppercase; opacity: .6; margin-bottom: 6px; display: block; }
+  h2 { font-family: 'Orbitron', monospace; font-size: 15px; font-weight: 700; color: var(--cyan); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 0.5px solid var(--border); }
+  p { color: var(--text-dim); margin-bottom: 14px; font-size: 15px; }
+  p strong { color: var(--text); font-weight: 600; }
+  ul { margin: 0 0 14px 0; padding: 0; list-style: none; }
+  ul li { color: var(--text-dim); font-size: 15px; padding: 8px 0 8px 20px; position: relative; border-bottom: 0.5px solid rgba(0,229,255,.05); }
+  ul li::before { content: '→'; position: absolute; left: 0; color: var(--cyan); font-family: 'Share Tech Mono', monospace; font-size: 11px; }
+  ul li strong { color: var(--text); }
+  .highlight-box { background: rgba(0,229,255,.04); border: 0.5px solid rgba(0,229,255,.2); border-left: 2px solid var(--cyan); border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 20px 0; }
+  .highlight-box p { margin: 0; font-size: 14px; }
+  .warning-box { background: rgba(255,45,85,.04); border: 0.5px solid rgba(255,45,85,.25); border-left: 2px solid #ff2d55; border-radius: 0 4px 4px 0; padding: 20px 24px; margin: 24px 0; }
+  .warning-box p { margin: 0; font-size: 15px; color: rgba(255,120,140,.95); }
+  .alert-box { background: rgba(255,200,0,.04); border: 0.5px solid rgba(255,200,0,.2); border-left: 2px solid #ffcc00; border-radius: 0 4px 4px 0; padding: 16px 20px; margin: 20px 0; }
+  .alert-box p { margin: 0; font-size: 14px; color: rgba(255,200,0,.85); }
+  .doc-section a { color: var(--cyan); text-decoration: none; }
+  .doc-section a:hover { text-decoration: underline; }
+  footer { position: relative; z-index: 2; border-top: 0.5px solid var(--border); padding: 32px; text-align: center; margin-top: 40px; }
+  .footer-logo { font-family: 'Orbitron', monospace; font-size: 10px; letter-spacing: 3px; color: var(--cyan); margin-bottom: 16px; }
+  .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .footer-links a { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-decoration: none; letter-spacing: 1px; transition: color .2s; }
+  .footer-links a:hover { color: var(--cyan); }
+  .footer-copy { font-family: 'Share Tech Mono', monospace; font-size: 9px; color: rgba(205,232,240,.2); letter-spacing: 1px; }
+  @media (max-width: 600px) { nav { padding: 14px 20px; } .nav-links { display: none; } .wrap { padding: 100px 20px 60px; } }
+  .lang-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  .lang-switch a { font-family: 'Share Tech Mono', 'Noto Sans SC', 'Noto Kufi Arabic', monospace; font-size: 12px; color: var(--text-dim); text-decoration: none; border: 0.5px solid var(--border); padding: 5px 12px; border-radius: 2px; letter-spacing: 0; transition: all .2s; }
+  .lang-switch a:hover { color: var(--cyan); border-color: rgba(0,229,255,.4); }
+  .lang-switch a[aria-current] { color: var(--cyan); border-color: var(--cyan); background: var(--cyan-dim); }
+  .lang-note { font-size: 13px; color: var(--text-dim); margin-top: 14px; } .lang-note a { color: var(--cyan); }
+  /* Cyrillic font fallbacks */
+  body { font-family: 'Exo 2', sans-serif; font-size: 15px; }
+  h2, .doc-title { font-family: 'Orbitron', 'Exo 2', sans-serif; }
+  h3, .doc-badge, .doc-meta, .section-tag, .nav-links a, .nav-back, .footer-links a, .footer-copy, th { font-family: 'Share Tech Mono', 'Exo 2', monospace; }
+  .doc-title { line-height: 1.25; }
+</style>
+<link rel="alternate" hreflang="en" href="https://quiettranslator.com/terms.html">
+<link rel="alternate" hreflang="fr" href="https://quiettranslator.com/terms-fr.html">
+<link rel="alternate" hreflang="es" href="https://quiettranslator.com/terms-es.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://quiettranslator.com/terms-zh.html">
+<link rel="alternate" hreflang="ar" href="https://quiettranslator.com/terms-ar.html">
+<link rel="alternate" hreflang="ru" href="https://quiettranslator.com/terms-ru.html">
+<link rel="alternate" hreflang="uk" href="https://quiettranslator.com/terms-uk.html">
+<link rel="alternate" hreflang="x-default" href="https://quiettranslator.com/terms.html">
+</head>
+<body>
+<canvas id="starfield"></canvas>
+
+<nav>
+  <a href="uk/index.html" class="nav-logo">&#10216; Quiet Translator &#10217;</a>
+  <div class="nav-links">
+    <a href="privacy-uk.html">Конфіденційність</a>
+    <a href="terms-uk.html" class="active">Умови</a>
+    <a href="disclaimer.html">Застереження</a>
+    <a href="uk/index.html" class="nav-back">До застосунку</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="doc-header">
+    <div class="lang-switch" role="navigation" aria-label="Language">
+      <a href="terms.html" hreflang="en" lang="en">English</a>
+      <a href="terms-fr.html" hreflang="fr" lang="fr">Français</a>
+      <a href="terms-es.html" hreflang="es" lang="es">Español</a>
+      <a href="terms-zh.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+      <a href="terms-ar.html" hreflang="ar" lang="ar">العربية</a>
+      <a href="terms-ru.html" hreflang="ru" lang="ru">Русский</a>
+      <a href="terms-uk.html" hreflang="uk" lang="uk" aria-current="page">Українська</a>
+    </div>
+    <div class="doc-badge">Юридичний документ</div>
+    <h1 class="doc-title">Умови використання <span>і ліцензійна угода</span></h1>
+    <p class="doc-meta">
+      Діють з <span>//</span> 19 липня 2026
+      <span>//</span> Оновлено: 11 листопада 2026
+    </p>
+    <p class="lang-note">Це переклад. У разі розбіжностей діє <a href="terms.html">англійська версія</a>.</p>
+  </div>
+
+  <div class="highlight-box">
+    <p><strong>Користуючись Quiet Translator, ви погоджуєтеся з цими умовами.</strong> Це обов’язкова угода між вами та NeuroOrbit AI. Будь ласка, уважно прочитайте її перед використанням застосунку.</p>
+  </div>
+
+  <div class="cyber-line"></div>
+
+  <!-- 1 -->
+  <div class="doc-section">
+    <span class="section-tag">// 01</span>
+    <h2>Ліцензія</h2>
+    <p>NeuroOrbit AI надає вам <strong>обмежену, відкличну, невиключну ліцензію без права передавання та субліцензування</strong> на встановлення й використання Quiet Translator виключно для особистих або внутрішніх ділових цілей відповідно до цих Умов.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="doc-section">
+    <span class="section-tag">// 02</span>
+    <h2>Підписки, автопродовження та оплата</h2>
+    <p>Quiet Translator пропонує підписки з автоматичним продовженням. Для всіх платних тарифів діють такі умови:</p>
+    <ul>
+      <li><strong>Тарифи й ціни.</strong> Варіанти підписки, ціни, період оплати та кількість хвилин прослуховування на місяць показуються в застосунку до покупки. Ціни відображаються у вашій місцевій валюті через App Store або Google Play.</li>
+      <li><strong>Безкоштовні хвилини.</strong> Нові акаунти можуть отримати разовий безкоштовний запас хвилин. Він надається один раз на акаунт і не поновлюється.</li>
+      <li><strong>Оплата.</strong> Кошти списуються з вашого Apple ID або акаунта Google Play під час підтвердження покупки.</li>
+      <li><strong>Автопродовження.</strong> Підписка автоматично продовжується на той самий строк, якщо ви не вимкнете автопродовження щонайпізніше за 24 години до кінця поточного періоду. Плата за продовження списується протягом 24 годин до закінчення поточного періоду.</li>
+      <li><strong>Керування та скасування.</strong> Керувати підпискою і скасовувати її можна в налаштуваннях Apple ID або акаунта Google Play. Після скасування підписка більше не продовжується, а доступ зберігається до кінця оплаченого періоду.</li>
+      <li><strong>Ліміти.</strong> Кожен тариф містить місячний запас хвилин прослуховування. Коли він закінчується, прослуховування призупиняється до наступного розрахункового періоду або до переходу на інший тариф.</li>
+      <li><strong>Повернення коштів.</strong> Покупки обробляють Apple і Google. Запити на повернення розглядаються за їхніми правилами й подаються через них.</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="doc-section">
+    <span class="section-tag">// 03</span>
+    <h2>Заборонені дії</h2>
+    <p>Порушення будь-якого з цих пунктів може призвести до призупинення або закриття вашого акаунта. Заборонено:</p>
+    <ul>
+      <li><strong>(a)</strong> здійснювати зворотну розробку, декомпілювати чи дизасемблювати застосунок</li>
+      <li><strong>(b)</strong> намагатися отримати API-ключі, токени авторизації або інші закриті облікові дані</li>
+      <li><strong>(c)</strong> використовувати ботів або автоматичні скрипти для створення фіктивних запитів на переклад</li>
+      <li><strong>(d)</strong> перепродавати, субліцензувати або передавати доступ до свого акаунта третім особам</li>
+      <li><strong>(e)</strong> обходити чи вимикати технічні засоби захисту, ліміти використання або заходи безпеки</li>
+      <li><strong>(f)</strong> використовувати застосунок усупереч закону, зокрема законам про запис і обробку мовлення інших людей</li>
+    </ul>
+  </div>
+
+  <!-- 4 -->
+  <div class="doc-section">
+    <span class="section-tag">// 04</span>
+    <h2>Інтелектуальна власність</h2>
+    <p>Усі права на застосунок, зокрема інтерфейс, дизайн, вихідний код, алгоритми, бренд і торговельні марки, належать виключно NeuroOrbit AI. Ці Умови не передають вам жодних прав власності на застосунок чи його інтелектуальну власність.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="doc-section">
+    <span class="section-tag">// 05</span>
+    <h2>Зміни сервісу та лімітів</h2>
+    <p>NeuroOrbit AI залишає за собою право змінювати функції, ліміти, ціни або ці Умови, попередивши вас <strong>щонайменше за 14 днів</strong> електронною поштою або в застосунку. Зміна ціни чинних підписок відбувається за правилами App Store і Google Play, які можуть вимагати вашої згоди.</p>
+    <p>Робота сервісу може тимчасово призупинятися для планових або термінових технічних робіт і буде відновлена так швидко, як це розумно можливо.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="doc-section">
+    <span class="section-tag">// 06</span>
+    <h2>Закриття акаунта</h2>
+    <p>NeuroOrbit AI може призупинити або припинити ваш доступ у разі суттєвого порушення цих Умов. Ви можете видалити акаунт будь-коли в налаштуваннях застосунку. Під час видалення назавжди видаляються ваш акаунт для входу та профіль; які інші записи зберігаються і як запросити їх видалення, описано в Політиці конфіденційності. Підписку скасовують у налаштуваннях акаунта Apple або Google.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="doc-section">
+    <span class="section-tag">// 07</span>
+    <h2>Відмова від гарантій</h2>
+    <p>ЗАСТОСУНОК НАДАЄТЬСЯ «ЯК Є» ТА «ЗА НАЯВНОСТІ», БЕЗ БУДЬ-ЯКИХ ЯВНИХ ЧИ ПРИХОВАНИХ ГАРАНТІЙ, ЗОКРЕМА ГАРАНТІЙ ПРИДАТНОСТІ ДО ПРОДАЖУ, ПРИДАТНОСТІ ДЛЯ ПЕВНОЇ МЕТИ ТА НЕПОРУШЕННЯ ПРАВ.</p>
+    <div class="alert-box">
+      <p>Переклади створюються автоматично й можуть містити помилки. Не покладайтеся на них під час важливих юридичних, медичних рішень або рішень, пов’язаних із безпекою, без незалежної перевірки.</p>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="doc-section">
+    <span class="section-tag">// 08</span>
+    <h2>Обмеження відповідальності</h2>
+    <p>У максимальному обсязі, дозволеному законом, NeuroOrbit AI не несе відповідальності за непрямі, випадкові, особливі, наслідкові чи штрафні збитки, що виникли через використання застосунку або неможливість ним скористатися.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="doc-section">
+    <span class="section-tag">// 09</span>
+    <h2>Відшкодування збитків</h2>
+    <p>Ви зобов’язуєтеся відшкодувати NeuroOrbit AI, його керівникам, працівникам, підрядникам і представникам будь-які претензії, збитки, втрати, зобов’язання й витрати (зокрема розумні витрати на юристів), що виникли через: (a) використання застосунку з порушенням цих Умов, (b) порушення вами закону чи нормативних актів, (c) порушення вами прав третіх осіб, і захищати їх від таких претензій.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="doc-section">
+    <span class="section-tag">// 10</span>
+    <h2>Застосовне право та спори</h2>
+    <p>Ці Умови регулюються законодавством <strong>провінції Квебек (Канада)</strong> без урахування колізійних норм.</p>
+    <p>Користувачі з ЄС/ЄЕЗ зберігають право звертатися до судів країни свого постійного проживання відповідно до Регламенту (ЄС) № 1215/2012. Ніщо в цих Умовах не обмежує обов’язкових прав споживачів, що діють у вашій країні.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="doc-section">
+    <span class="section-tag">// 11</span>
+    <h2>Подільність і повнота угоди</h2>
+    <p>Якщо суд визнає будь-яке положення цих Умов недійсним або таким, що не може бути виконане, решта положень залишаються чинними.</p>
+    <p>Ці Умови разом із Політикою конфіденційності та Юридичним застереженням становлять повну угоду між вами та NeuroOrbit AI щодо Quiet Translator.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="doc-section">
+    <span class="section-tag">// Контакти</span>
+    <h2>Юридичні питання</h2>
+    <p>Юридичні питання &nbsp;&nbsp;<a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a></p>
+    <p>Питання щодо конфіденційності &nbsp;&nbsp;<a href="mailto:mission@neuroorbitai.com">mission@neuroorbitai.com</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">&#10216; NeuroOrbit AI &#10217;</div>
+  <div class="footer-links">
+    <a href="privacy-uk.html">Політика конфіденційності</a>
+    <a href="terms-uk.html">Умови використання</a>
+    <a href="disclaimer.html">Юридичне застереження</a>
+    <a href="uk/index.html">До застосунку</a>
+  </div>
+  <div class="footer-copy">2026 NeuroOrbit AI · Монреаль, Канада · Усі права захищені</div>
+</footer>
+
+<script>
+const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
+let stars = [];
+function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+function init() {
+  stars = [];
+  for (let i = 0; i < 300; i++) {
+    stars.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*1.2+0.2, a: Math.random(), speed: Math.random()*0.003+0.001, cyan: Math.random()<0.2 });
+  }
+}
+function draw() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const mw = ctx.createLinearGradient(canvas.width*.2,0,canvas.width*.8,canvas.height);
+  mw.addColorStop(0,'transparent'); mw.addColorStop(.5,'rgba(180,200,255,0.03)'); mw.addColorStop(1,'transparent');
+  ctx.fillStyle=mw; ctx.fillRect(0,0,canvas.width,canvas.height);
+  stars.forEach(s => {
+    s.a+=s.speed;
+    const alpha=(Math.sin(s.a)+1)/2*0.6+0.1;
+    ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle=s.cyan?`rgba(0,229,255,${alpha})`:`rgba(200,220,255,${alpha*.7})`;
+    ctx.fill();
+  });
+  requestAnimationFrame(draw);
+}
+window.addEventListener('resize',()=>{resize();init();});
+resize(); init(); draw();
+</script>
+</body>
+</html>
